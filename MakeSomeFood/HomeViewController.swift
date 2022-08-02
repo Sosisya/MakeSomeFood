@@ -4,7 +4,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var todayCookingView: UIView!
     @IBOutlet weak var profilePhoto: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTodayCooking()
@@ -20,6 +20,4 @@ class HomeViewController: UIViewController {
         profilePhoto.layer.masksToBounds = true
         profilePhoto.layer.cornerRadius = 20 //цифру 20 писала наугад. Как правильно сделать картинку круглой?
     }
-
-    
 }

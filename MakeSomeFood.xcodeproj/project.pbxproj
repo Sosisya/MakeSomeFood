@@ -123,14 +123,14 @@
 		8EFEDA9E28983B2C001A2908 /* MakeSomeFood */ = {
 			isa = PBXGroup;
 			children = (
-				8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */,
-				8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */,
 				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
 				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
 				8E9034EB2899753D00D65515 /* HomeViewController.swift */,
 				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
 				8EFEDAA828983B2D001A2908 /* Assets.xcassets */,
 				8EFEDAAA28983B2D001A2908 /* LaunchScreen.storyboard */,
+				8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */,
+				8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */,
 				8EFEDAAD28983B2D001A2908 /* Info.plist */,
 				8E9034C42898E7AA00D65515 /* Fonts */,
 				8EFEDAB528984855001A2908 /* UI */,
