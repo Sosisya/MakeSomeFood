@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bf6-ge-fA7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FAZ-CJ-Mxd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -182,7 +182,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
         </scene>
-        <!--Item-->
+        <!--Главная-->
         <scene sceneID="G0x-L1-3GU">
             <objects>
                 <viewController id="0E5-aY-dWN" customClass="HomeViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="4kr-o4-MPt">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.clock" translatesAutoresizingMaskIntoConstraints="NO" id="4kr-o4-MPt">
                                         <rect key="frame" x="20" y="265" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="Mxh-dk-BB8"/>
@@ -253,7 +253,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fire" translatesAutoresizingMaskIntoConstraints="NO" id="Xil-D4-y8d">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.fire" translatesAutoresizingMaskIntoConstraints="NO" id="Xil-D4-y8d">
                                         <rect key="frame" x="88.5" y="265" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="RgL-d1-2kq"/>
@@ -266,7 +266,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-Uz-jBQ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon.chef" translatesAutoresizingMaskIntoConstraints="NO" id="02Q-Uz-jBQ">
                                         <rect key="frame" x="157" y="265" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="ZM2-IG-ZOT"/>
@@ -360,7 +360,7 @@
                             <constraint firstItem="A4h-Z5-1WL" firstAttribute="trailing" secondItem="oly-V8-Ihd" secondAttribute="trailing" id="yfV-Tn-kEO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ajm-F7-DVe"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="icon.home" id="ajm-F7-DVe"/>
                     <navigationItem key="navigationItem" id="Htz-6f-UUp"/>
                     <connections>
                         <outlet property="profilePhoto" destination="A4h-Z5-1WL" id="fzZ-dx-M1H"/>
@@ -369,7 +369,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqx-2l-Aoz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4128.985507246377" y="81.696428571428569"/>
+            <point key="canvasLocation" x="3888" y="569"/>
+        </scene>
+        <!--Избранное-->
+        <scene sceneID="4PV-qE-g5Y">
+            <objects>
+                <tableViewController id="E4b-kq-R9F" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Tdl-3a-WXV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cbc-TU-8Lm">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cbc-TU-8Lm" id="P7S-gT-EAv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E4b-kq-R9F" id="mTr-tX-ed7"/>
+                            <outlet property="delegate" destination="E4b-kq-R9F" id="sJz-0v-NUr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Избранное" image="icon.heart" id="Prm-1C-c9l"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XB3-EG-txZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6152" y="569"/>
+        </scene>
+        <!--Поиск-->
+        <scene sceneID="Hcy-43-oFF">
+            <objects>
+                <viewController id="eO2-uO-d0c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mn1-MD-T8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tnb-h8-4ay"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="icon.search" id="Qzd-bK-eOi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2i-cJ-2ev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5032" y="569"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="ql2-n0-bbd">
+            <objects>
+                <viewController id="qhF-39-khg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zBs-Nr-wh9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Qc-lI-lAt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="icon.profile" id="hKn-Ev-fKB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzQ-IZ-ffD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7257" y="569"/>
         </scene>
         <!--Screen Saver View Controller-->
         <scene sceneID="BaD-59-7Gn">
@@ -475,6 +536,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="0E5-aY-dWN" kind="relationship" relationship="viewControllers" id="Qcm-h1-Xnb"/>
+                        <segue destination="eO2-uO-d0c" kind="relationship" relationship="viewControllers" id="KCX-jk-xnt"/>
+                        <segue destination="E4b-kq-R9F" kind="relationship" relationship="viewControllers" id="1KJ-gN-0Dm"/>
+                        <segue destination="qhF-39-khg" kind="relationship" relationship="viewControllers" id="J6l-pg-Nja"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmc-DS-Eh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -483,12 +547,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chef" width="12" height="12"/>
-        <image name="clock" width="12" height="12"/>
-        <image name="fire" width="10" height="13"/>
         <image name="icon.apple" width="22" height="22"/>
+        <image name="icon.chef" width="18" height="18"/>
+        <image name="icon.clock" width="18" height="18"/>
         <image name="icon.close" width="14" height="14"/>
+        <image name="icon.fire" width="18" height="18"/>
         <image name="icon.google" width="22" height="22"/>
+        <image name="icon.heart" width="28" height="28"/>
+        <image name="icon.home" width="28" height="28"/>
+        <image name="icon.profile" width="28" height="28"/>
+        <image name="icon.search" width="28" height="28"/>
         <image name="screenSaverGradient" width="375" height="471"/>
         <image name="screenSaverImage" width="375" height="297"/>
         <namedColor name="grayFill">
