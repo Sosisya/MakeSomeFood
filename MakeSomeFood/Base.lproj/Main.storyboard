@@ -479,17 +479,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenSaverImage" translatesAutoresizingMaskIntoConstraints="NO" id="wgb-oU-69t" userLabel="Image">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="382" height="88.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="88" id="nwr-xz-jz3"/>
                                             </constraints>
                                         </imageView>
                                         <view alpha="0.35999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsD-IG-Mgd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="382" height="88.5"/>
                                             <color key="backgroundColor" name="black"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rps-rA-o9k">
-                                            <rect key="frame" x="16" y="30" width="67.5" height="28.5"/>
+                                            <rect key="frame" x="32" y="30" width="67.5" height="28.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -497,16 +497,16 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="vsD-IG-Mgd" firstAttribute="centerY" secondItem="wgb-oU-69t" secondAttribute="centerY" id="8hf-pM-3Js"/>
-                                        <constraint firstItem="vsD-IG-Mgd" firstAttribute="height" secondItem="wgb-oU-69t" secondAttribute="height" id="DIo-pr-QXD"/>
                                         <constraint firstAttribute="bottom" secondItem="wgb-oU-69t" secondAttribute="bottom" id="Dab-4f-jlT"/>
                                         <constraint firstAttribute="bottom" secondItem="rps-rA-o9k" secondAttribute="bottom" constant="30" id="Kf1-2A-25C"/>
-                                        <constraint firstItem="wgb-oU-69t" firstAttribute="leading" secondItem="Plz-JO-m3k" secondAttribute="leading" id="P7Z-DB-zQa"/>
+                                        <constraint firstItem="wgb-oU-69t" firstAttribute="leading" secondItem="Plz-JO-m3k" secondAttribute="leading" constant="16" id="P7Z-DB-zQa"/>
                                         <constraint firstItem="vsD-IG-Mgd" firstAttribute="centerX" secondItem="wgb-oU-69t" secondAttribute="centerX" id="Rh6-E5-eVr"/>
-                                        <constraint firstItem="vsD-IG-Mgd" firstAttribute="width" secondItem="wgb-oU-69t" secondAttribute="width" id="W3y-2v-J1R"/>
-                                        <constraint firstItem="rps-rA-o9k" firstAttribute="leading" secondItem="Plz-JO-m3k" secondAttribute="leading" constant="16" id="ckU-hw-w28"/>
                                         <constraint firstItem="rps-rA-o9k" firstAttribute="top" secondItem="Plz-JO-m3k" secondAttribute="top" constant="30" id="f0L-7Z-TOV"/>
+                                        <constraint firstItem="rps-rA-o9k" firstAttribute="leading" secondItem="wgb-oU-69t" secondAttribute="leading" constant="16" id="fYE-p9-UUg"/>
                                         <constraint firstItem="wgb-oU-69t" firstAttribute="top" secondItem="Plz-JO-m3k" secondAttribute="top" id="fj5-aE-iS5"/>
-                                        <constraint firstAttribute="trailing" secondItem="wgb-oU-69t" secondAttribute="trailing" id="oYh-uY-rzY"/>
+                                        <constraint firstItem="vsD-IG-Mgd" firstAttribute="height" secondItem="wgb-oU-69t" secondAttribute="height" id="iKD-ut-0G8"/>
+                                        <constraint firstAttribute="trailing" secondItem="wgb-oU-69t" secondAttribute="trailing" constant="16" id="oYh-uY-rzY"/>
+                                        <constraint firstItem="vsD-IG-Mgd" firstAttribute="width" secondItem="wgb-oU-69t" secondAttribute="width" id="yTM-m5-A3f"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

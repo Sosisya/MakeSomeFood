@@ -8,7 +8,7 @@ class CategoryCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setCell(categoryImage)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
