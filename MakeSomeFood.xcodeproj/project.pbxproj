@@ -12,6 +12,9 @@
 		8E6ED27028A159E800EB0CB2 /* TodayCookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED26F28A159E800EB0CB2 /* TodayCookingCell.swift */; };
 		8E6ED27328A21EF400EB0CB2 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27228A21EF400EB0CB2 /* FavouriteCell.swift */; };
 		8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */; };
+		8E6ED27928A2C82C00EB0CB2 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */; };
+		8E6ED27B28A2C85300EB0CB2 /* SelectedCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27A28A2C85300EB0CB2 /* SelectedCategoryCell.swift */; };
+		8E6ED27E28A2C8F900EB0CB2 /* SelectedRecepies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */; };
 		8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */; };
 		8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */; };
 		8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */; };
@@ -47,6 +50,9 @@
 		8E6ED26F28A159E800EB0CB2 /* TodayCookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCookingCell.swift; sourceTree = "<group>"; };
 		8E6ED27228A21EF400EB0CB2 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 		8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
+		8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		8E6ED27A28A2C85300EB0CB2 /* SelectedCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryCell.swift; sourceTree = "<group>"; };
+		8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRecepies.swift; sourceTree = "<group>"; };
 		8E9034C52898E7AA00D65515 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034C72898E7AA00D65515 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -109,6 +115,16 @@
 			path = Favourites;
 			sourceTree = "<group>";
 		};
+		8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */ = {
+			isa = PBXGroup;
+			children = (
+				8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */,
+				8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */,
+				8E6ED27A28A2C85300EB0CB2 /* SelectedCategoryCell.swift */,
+			);
+			path = SelectedCategory;
+			sourceTree = "<group>";
+		};
 		8E9034C42898E7AA00D65515 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +153,8 @@
 		8EFEDA9328983B2C001A2908 = {
 			isa = PBXGroup;
 			children = (
+				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
+				8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */,
 				8EFEDA9E28983B2C001A2908 /* MakeSomeFood */,
 				8EFEDA9D28983B2C001A2908 /* Products */,
 			);
@@ -153,7 +171,6 @@
 		8EFEDA9E28983B2C001A2908 /* MakeSomeFood */ = {
 			isa = PBXGroup;
 			children = (
-				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
 				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
 				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
 				8E31CFD7289BC902006CE7AC /* Home */,
@@ -270,13 +287,16 @@
 				8E6ED27028A159E800EB0CB2 /* TodayCookingCell.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
+				8E6ED27E28A2C8F900EB0CB2 /* SelectedRecepies.swift in Sources */,
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
+				8E6ED27B28A2C85300EB0CB2 /* SelectedCategoryCell.swift in Sources */,
 				8E6ED27328A21EF400EB0CB2 /* FavouriteCell.swift in Sources */,
 				8EFEDAB428984843001A2908 /* BorderedTextField.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
 				8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */,
 				8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */,
 				8E31CF83289A6F84006CE7AC /* FavouritesTableViewController.swift in Sources */,
+				8E6ED27928A2C82C00EB0CB2 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

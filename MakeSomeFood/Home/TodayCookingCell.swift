@@ -22,10 +22,16 @@ class TodayCookingCell: UITableViewCell {
         cellView.layer.cornerRadius = 12
         cellView.layer.borderColor = UIColor.systemGray2.cgColor
         cellView.layer.borderWidth = 1
+
+//        cellView.layer.shadowColor = UIColor.black.cgColor
+//        cellView.layer.shadowOffset = CGSize(width: 1, height: 1)
+//        cellView.layer.shadowOpacity = 1
+//        cellView.layer.shadowRadius = 24
     }
 
     private func setTags(_ label: UILabel) {
         label.layer.masksToBounds = true
+        label.layer.backgroundColor = UIColor.white.cgColor
         label.layer.borderColor = UIColor.orange.cgColor
         label.layer.borderWidth = 1
         label.layer.cornerRadius = 22
