@@ -23,7 +23,6 @@ class CategoryCell: UITableViewCell {
         image.layer.cornerRadius = 12
     }
 
-
     private func setCellView(_ cellView: UIView) {
         cellView.layer.masksToBounds = true
         cellView.layer.cornerRadius = 12

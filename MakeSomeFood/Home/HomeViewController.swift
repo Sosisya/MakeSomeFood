@@ -3,19 +3,39 @@ import UIKit
 class HomeViewController: UITableViewController {
 
 
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setImage()
+
+        greetingLabel.text = "Привет, Луиза!"
+        tableView.separatorStyle = .none
+    }
+
+    private func setImage() {
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = 20
     }
 }
 
 extension HomeViewController {
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return categoryOfMeal.count
+        default:
+            fatalError()
+        }
+
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -33,7 +53,9 @@ extension HomeViewController {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-            cell.categoryLabel.text = "Завтраки"
+            
+            cell.categoryLabel.text = categoryOfMeal[indexPath.row].nameOfCategory
+            cell.categoryImage.image = categoryOfMeal[indexPath.row].imageOfCategory
             return cell
         default:
             fatalError()

@@ -10,6 +10,8 @@
 		8E31CF83289A6F84006CE7AC /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */; };
 		8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CFD3289BC8F0006CE7AC /* CategoryCell.swift */; };
 		8E6ED27028A159E800EB0CB2 /* TodayCookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED26F28A159E800EB0CB2 /* TodayCookingCell.swift */; };
+		8E6ED27328A21EF400EB0CB2 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27228A21EF400EB0CB2 /* FavouriteCell.swift */; };
+		8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */; };
 		8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */; };
 		8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */; };
 		8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */; };
@@ -43,6 +45,8 @@
 		8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		8E31CFD3289BC8F0006CE7AC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8E6ED26F28A159E800EB0CB2 /* TodayCookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCookingCell.swift; sourceTree = "<group>"; };
+		8E6ED27228A21EF400EB0CB2 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
 		8E9034C52898E7AA00D65515 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034C72898E7AA00D65515 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -91,8 +95,18 @@
 				8E9034EB2899753D00D65515 /* HomeViewController.swift */,
 				8E31CFD3289BC8F0006CE7AC /* CategoryCell.swift */,
 				8E6ED26F28A159E800EB0CB2 /* TodayCookingCell.swift */,
+				8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		8E6ED27128A21EC700EB0CB2 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */,
+				8E6ED27228A21EF400EB0CB2 /* FavouriteCell.swift */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 		8E9034C42898E7AA00D65515 /* Fonts */ = {
@@ -139,11 +153,11 @@
 		8EFEDA9E28983B2C001A2908 /* MakeSomeFood */ = {
 			isa = PBXGroup;
 			children = (
+				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
+				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
 				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
 				8E31CFD7289BC902006CE7AC /* Home */,
-				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
-				8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */,
-				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
+				8E6ED27128A21EC700EB0CB2 /* Favourites */,
 				8E9034C42898E7AA00D65515 /* Fonts */,
 				8EFEDAB528984855001A2908 /* UI */,
 				8EFEDAA828983B2D001A2908 /* Assets.xcassets */,
@@ -257,8 +271,10 @@
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
+				8E6ED27328A21EF400EB0CB2 /* FavouriteCell.swift in Sources */,
 				8EFEDAB428984843001A2908 /* BorderedTextField.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
+				8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */,
 				8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */,
 				8E31CF83289A6F84006CE7AC /* FavouritesTableViewController.swift in Sources */,
 			);
