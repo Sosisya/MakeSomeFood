@@ -1,7 +1,6 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
-
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryView: UIView!
@@ -11,7 +10,6 @@ class CategoryCell: UITableViewCell {
 
         setCellImage(categoryImage)
         setCellView(categoryView)
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

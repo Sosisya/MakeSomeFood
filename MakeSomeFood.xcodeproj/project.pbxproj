@@ -153,8 +153,6 @@
 		8EFEDA9328983B2C001A2908 = {
 			isa = PBXGroup;
 			children = (
-				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
-				8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */,
 				8EFEDA9E28983B2C001A2908 /* MakeSomeFood */,
 				8EFEDA9D28983B2C001A2908 /* Products */,
 			);
@@ -173,10 +171,12 @@
 			children = (
 				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
 				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
+				8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */,
 				8E31CFD7289BC902006CE7AC /* Home */,
 				8E6ED27128A21EC700EB0CB2 /* Favourites */,
 				8E9034C42898E7AA00D65515 /* Fonts */,
 				8EFEDAB528984855001A2908 /* UI */,
+				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
 				8EFEDAA828983B2D001A2908 /* Assets.xcassets */,
 				8EFEDAAA28983B2D001A2908 /* LaunchScreen.storyboard */,
 				8EFEDAAD28983B2D001A2908 /* Info.plist */,

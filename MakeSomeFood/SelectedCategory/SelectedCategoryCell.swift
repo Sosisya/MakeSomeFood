@@ -2,9 +2,13 @@ import UIKit
 
 class SelectedCategoryCell: UITableViewCell {
 
+    @IBOutlet weak var selectedCategoryView: UIView!
+    @IBOutlet weak var selectedCategoryImage: UIImageView!
+    @IBOutlet weak var descriptionOfSelectedRecepie: UILabel!
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

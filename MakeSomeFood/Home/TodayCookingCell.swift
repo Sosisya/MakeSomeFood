@@ -1,7 +1,6 @@
 import UIKit
 
 class TodayCookingCell: UITableViewCell {
-
     @IBOutlet weak var todayCookinView: UIView!
     @IBOutlet weak var categoryTagLabel: UILabel!
     @IBOutlet weak var areaTagLabel: UILabel!
@@ -23,6 +22,7 @@ class TodayCookingCell: UITableViewCell {
         cellView.layer.borderColor = UIColor.systemGray2.cgColor
         cellView.layer.borderWidth = 1
 
+// MARK: - Как правильно настраивать тень при наличии закругления углов у Вью?
 //        cellView.layer.shadowColor = UIColor.black.cgColor
 //        cellView.layer.shadowOffset = CGSize(width: 1, height: 1)
 //        cellView.layer.shadowOpacity = 1
@@ -36,5 +36,4 @@ class TodayCookingCell: UITableViewCell {
         label.layer.borderWidth = 1
         label.layer.cornerRadius = 22
     }
-
 }
