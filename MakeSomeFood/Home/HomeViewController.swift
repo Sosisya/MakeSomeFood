@@ -4,22 +4,25 @@ class HomeViewController: UITableViewController {
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
 
+    private var selectedCategory: Category?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setImage()
         tableView.separatorStyle = .none
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "OpenCategorySegue",
-//            let senderCell = sender as? CategoryCell {
-//            print(senderCell.categoryLabel.text)
-//        }
-//    }
-
     private func setImage() {
         profileImage.layer.masksToBounds = true
-        profileImage.layer.cornerRadius = 20 // как правильно сделать круглое фото здесь? 20 я просто подобрала
+        profileImage.layer.cornerRadius = 21 // как правильно сделать круглое фото здесь? 20 я просто подобрала
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let destination = segue.destination as? CategoryTableViewController,
+           let selectedCategory = selectedCategory {
+            destination.category = selectedCategory
+        }
     }
 }
 
@@ -65,5 +68,11 @@ extension HomeViewController {
         default:
             fatalError()
         }
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1 else { return }
+        selectedCategory = categoryOfMeal[indexPath.row]
+        performSegue(withIdentifier: "toCategory", sender: self)
     }
 }

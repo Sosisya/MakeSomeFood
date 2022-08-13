@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Laf-1c-381">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bf6-ge-fA7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -292,6 +292,9 @@
                             <constraint firstItem="baR-wc-lvB" firstAttribute="top" secondItem="dDp-VI-A7W" secondAttribute="top" constant="180" id="zTQ-w0-H8g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="FAZ-CJ-Mxd" kind="presentation" identifier="toAuth" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="eLx-us-4sA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBI-3d-bhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,6 +504,7 @@
                     <connections>
                         <outlet property="greetingLabel" destination="B26-V5-1zE" id="kiR-Wq-2rU"/>
                         <outlet property="profileImage" destination="TUZ-3h-sbA" id="8JS-oQ-ZGg"/>
+                        <segue destination="99n-vH-lXv" kind="show" identifier="toCategory" id="7z7-me-hab"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbr-ky-Ufb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -573,7 +577,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTh-E3-Vjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6076.811594202899" y="-1278.3482142857142"/>
+            <point key="canvasLocation" x="4286" y="-1278"/>
+        </scene>
+        <!--Recepie View Controller-->
+        <scene sceneID="p7q-WV-bmf">
+            <objects>
+                <viewController id="mdl-re-8S5" customClass="RecepieViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3j-CC-RTg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDh-DZ-BBP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="WFf-oe-aUM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZeX-YS-M04"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qDh-DZ-BBP" firstAttribute="top" secondItem="ZeX-YS-M04" secondAttribute="top" id="20r-st-4mf"/>
+                            <constraint firstItem="qDh-DZ-BBP" firstAttribute="leading" secondItem="ZeX-YS-M04" secondAttribute="leading" id="dhZ-KT-pMb"/>
+                            <constraint firstItem="ZeX-YS-M04" firstAttribute="trailing" secondItem="qDh-DZ-BBP" secondAttribute="trailing" id="xIN-2p-No4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L02-it-kki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6329" y="-1278"/>
         </scene>
         <!--Поиск-->
         <scene sceneID="XCq-5w-8vb">
@@ -651,24 +683,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAL-4u-wPv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2729" y="-1278"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Wxo-rw-xBb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Laf-1c-381" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vM3-DW-ArI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="99n-vH-lXv" kind="relationship" relationship="rootViewController" id="VZT-VY-1eu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VYA-kK-K6f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5166.666666666667" y="-1278.3482142857142"/>
         </scene>
     </scenes>
     <resources>
