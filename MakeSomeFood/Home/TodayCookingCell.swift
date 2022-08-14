@@ -8,8 +8,13 @@ class TodayCookingCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setCellView(todayCookinView)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setTags(categoryTagLabel)
         setTags(areaTagLabel)
+//        todayCookinView.layer.shadowPath
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -17,23 +22,20 @@ class TodayCookingCell: UITableViewCell {
     }
 
     private func setCellView(_ cellView: UIView) {
-        cellView.layer.masksToBounds = true
+        cellView.layer.masksToBounds = false
         cellView.layer.cornerRadius = 12
-        cellView.layer.borderColor = UIColor.systemGray2.cgColor
-        cellView.layer.borderWidth = 1
 
-// MARK: - Как правильно настраивать тень при наличии закругления углов у Вью?
-//        cellView.layer.shadowColor = UIColor.black.cgColor
-//        cellView.layer.shadowOffset = CGSize(width: 1, height: 1)
-//        cellView.layer.shadowOpacity = 1
-//        cellView.layer.shadowRadius = 24
+        cellView.layer.shadowColor = UIColor(named: "black")!.cgColor
+        cellView.layer.shadowOpacity = 1
+        cellView.layer.shadowRadius = 12
+        cellView.layer.shadowOffset = CGSize(width: 0, height: 1)
     }
 
     private func setTags(_ label: UILabel) {
         label.layer.masksToBounds = true
         label.layer.backgroundColor = UIColor.white.cgColor
-        label.layer.borderColor = UIColor.orange.cgColor
+        label.layer.borderColor = label.textColor.cgColor
         label.layer.borderWidth = 1
-        label.layer.cornerRadius = 22
+        label.layer.cornerRadius = label.bounds.height / 2
     }
 }

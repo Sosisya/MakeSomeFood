@@ -43,15 +43,20 @@ extension HomeViewController {
         }
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
+            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
         switch section {
         case 0:
-            return "Сегодня готовим"
+            header.configure(title: "Сегодня готовим", actionTitle: "Все рецепты", action: {
+                print("Все рецепты")
+            })
         case 1:
-            return "Категории"
+            header.configure(title: "Категории")
         default:
             return nil
         }
+        return header
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

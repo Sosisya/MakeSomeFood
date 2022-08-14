@@ -16,6 +16,8 @@
 		8E6ED27B28A2C85300EB0CB2 /* SelectedCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27A28A2C85300EB0CB2 /* SelectedCategoryCell.swift */; };
 		8E6ED27E28A2C8F900EB0CB2 /* SelectedRecepies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */; };
 		8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */; };
+		8E6ED28228A8E65900EB0CB2 /* TableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */; };
+		8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */; };
 		8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */; };
 		8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */; };
 		8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */; };
@@ -55,6 +57,8 @@
 		8E6ED27A28A2C85300EB0CB2 /* SelectedCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryCell.swift; sourceTree = "<group>"; };
 		8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRecepies.swift; sourceTree = "<group>"; };
 		8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieViewController.swift; sourceTree = "<group>"; };
+		8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionHeaderView.xib; sourceTree = "<group>"; };
+		8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
 		8E9034C52898E7AA00D65515 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034C72898E7AA00D65515 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				8EFEDAB328984843001A2908 /* BorderedTextField.swift */,
+				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
+				8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				8E9034DA2899294600D65515 /* Montserrat-BoldItalic.ttf in Resources */,
 				8E9034DB2899294600D65515 /* Montserrat-ExtraBold.ttf in Resources */,
 				8E9034DC2899294600D65515 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				8E6ED28228A8E65900EB0CB2 /* TableSectionHeaderView.xib in Resources */,
 				8E9034DD2899294600D65515 /* Montserrat-ExtraLight.ttf in Resources */,
 				8E9034DE2899294600D65515 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				8E9034DF2899294600D65515 /* Montserrat-Italic.ttf in Resources */,
@@ -294,6 +301,7 @@
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
 				8E6ED27B28A2C85300EB0CB2 /* SelectedCategoryCell.swift in Sources */,
 				8E6ED27328A21EF400EB0CB2 /* FavouriteCell.swift in Sources */,
+				8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */,
 				8EFEDAB428984843001A2908 /* BorderedTextField.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
 				8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */,
