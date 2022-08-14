@@ -62,7 +62,6 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            //MARK: - Где настраивать красоту для ячеек и ее содержимого? В функции или в файле TodayCookingCell?
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingCell", for: indexPath) as! TodayCookingCell
             return cell
         case 1:

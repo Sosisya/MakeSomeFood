@@ -22,7 +22,7 @@ class TodayCookingCell: UITableViewCell {
     }
 
     private func setCellView(_ cellView: UIView) {
-        cellView.layer.masksToBounds = false
+        cellView.layer.masksToBounds = true
         cellView.layer.cornerRadius = 12
 
         cellView.layer.shadowColor = UIColor(named: "black")!.cgColor
