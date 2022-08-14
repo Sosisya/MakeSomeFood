@@ -1,13 +1,15 @@
 import UIKit
 
 class TodayCookingCell: UITableViewCell {
-    @IBOutlet weak var todayCookinView: UIView!
+    @IBOutlet weak var todayCookingView: UIView!
+    @IBOutlet weak var todayCookingImage: UIImageView!
+    @IBOutlet weak var nameOfMeal: UILabel!
     @IBOutlet weak var categoryTagLabel: UILabel!
     @IBOutlet weak var areaTagLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setCellView(todayCookinView)
+        setCellView(todayCookingView)
     }
 
     override func layoutSubviews() {
@@ -21,14 +23,14 @@ class TodayCookingCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    private func setCellView(_ cellView: UIView) {
-        cellView.layer.masksToBounds = true
-        cellView.layer.cornerRadius = 12
+    private func setCellView(_ view: UIView) {
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = 12
 
-        cellView.layer.shadowColor = UIColor(named: "black")!.cgColor
-        cellView.layer.shadowOpacity = 1
-        cellView.layer.shadowRadius = 12
-        cellView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        view.layer.shadowColor = UIColor(named: "black")!.cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 12
+        view.layer.shadowOffset = CGSize(width: 0, height: 1)
     }
 
     private func setTags(_ label: UILabel) {

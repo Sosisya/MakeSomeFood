@@ -5,13 +5,13 @@ class SelectedCategoryCell: UITableViewCell {
     @IBOutlet weak var selectedCategoryView: UIView!
     @IBOutlet weak var selectedCategoryImage: UIImageView!
     @IBOutlet weak var descriptionOfSelectedRecepie: UILabel!
-    @IBOutlet weak var areaTag: UILabel!
-    @IBOutlet weak var categoryTag: UILabel!
+    @IBOutlet weak var areaTagLabel: UILabel!
+    @IBOutlet weak var categoryTagLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setTags(categoryTag)
-        setTags(areaTag)
+        setTags(categoryTagLabel)
+        setTags(areaTagLabel)
         setView(selectedCategoryView)
     }
 
@@ -33,6 +33,4 @@ class SelectedCategoryCell: UITableViewCell {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.systemGray2.cgColor
     }
-
-
 }

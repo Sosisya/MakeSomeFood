@@ -1,9 +1,9 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
+    @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var categoryView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +21,8 @@ class CategoryCell: UITableViewCell {
         image.layer.cornerRadius = 12
     }
 
-    private func setCellView(_ cellView: UIView) {
-        cellView.layer.masksToBounds = true
-        cellView.layer.cornerRadius = 12
+    private func setCellView(_ view: UIView) {
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = 12
     }
 }

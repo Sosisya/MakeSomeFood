@@ -2,17 +2,17 @@ import UIKit
 
 class FavouriteCell: UITableViewCell {
 
-    @IBOutlet weak var faroutiteCategoryView: UIView!
-    @IBOutlet weak var faroutiteCategoryImage: UIImageView!
-    @IBOutlet weak var descriptionOfSelectedRecepie: UILabel!
-    @IBOutlet weak var areaTag: UILabel!
-    @IBOutlet weak var categoryTag: UILabel!
+    @IBOutlet weak var faroutiteMealView: UIView!
+    @IBOutlet weak var faroutiteMealImage: UIImageView!
+    @IBOutlet weak var nameOfRecepie: UILabel!
+    @IBOutlet weak var areaTagLabel: UILabel!
+    @IBOutlet weak var categoryTagLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setTags(categoryTag)
-        setTags(areaTag)
-        setView(faroutiteCategoryView)
+        setTags(categoryTagLabel)
+        setTags(areaTagLabel)
+        setView(faroutiteMealView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

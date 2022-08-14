@@ -41,6 +41,7 @@
 		8E9034E82899294600D65515 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CC2898E7AA00D65515 /* Montserrat-ThinItalic.ttf */; };
 		8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */; };
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
+		8EC9137328A94AFD00DE4E4E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9137228A94AFD00DE4E4E /* SearchCell.swift */; };
 		8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */; };
 		8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */; };
 		8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDAA328983B2C001A2908 /* LoginViewController.swift */; };
@@ -85,6 +86,7 @@
 		8E9034D62898E7AB00D65515 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverViewController.swift; sourceTree = "<group>"; };
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8EC9137228A94AFD00DE4E4E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		8EFEDA9C28983B2C001A2908 /* MakeSomeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSomeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */,
+				8EC9137228A94AFD00DE4E4E /* SearchCell.swift */,
 				8E1E99FF28A910F4007349A9 /* SearchFiles.swift */,
 			);
 			path = Searching;
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
+				8EC9137328A94AFD00DE4E4E /* SearchCell.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingCell.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,

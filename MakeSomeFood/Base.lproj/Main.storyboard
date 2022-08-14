@@ -405,7 +405,9 @@
                                 <connections>
                                     <outlet property="areaTagLabel" destination="VvS-sL-0ON" id="ldu-cF-iva"/>
                                     <outlet property="categoryTagLabel" destination="S9b-xs-PId" id="JOo-5s-dZi"/>
-                                    <outlet property="todayCookinView" destination="gTr-rD-2bq" id="S9o-nQ-Yij"/>
+                                    <outlet property="nameOfMeal" destination="jIq-Wo-Rsj" id="UNb-Dy-qjO"/>
+                                    <outlet property="todayCookingImage" destination="zO8-3k-nNv" id="pJ4-3p-R0e"/>
+                                    <outlet property="todayCookingView" destination="gTr-rD-2bq" id="S9o-nQ-Yij"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" id="0Y0-7b-sR3" customClass="CategoryCell" customModule="MakeSomeFood" customModuleProvider="target">
@@ -545,8 +547,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="areaTag" destination="iL5-Re-x1Z" id="YAA-dS-aIa"/>
-                                    <outlet property="categoryTag" destination="wAf-WN-lGO" id="0ha-Eu-Taq"/>
+                                    <outlet property="areaTagLabel" destination="iL5-Re-x1Z" id="YAA-dS-aIa"/>
+                                    <outlet property="categoryTagLabel" destination="wAf-WN-lGO" id="0ha-Eu-Taq"/>
                                     <outlet property="descriptionOfSelectedRecepie" destination="H79-yR-zh3" id="T9I-Kd-7cs"/>
                                     <outlet property="selectedCategoryImage" destination="TGm-is-GYk" id="HPg-lr-t2r"/>
                                     <outlet property="selectedCategoryView" destination="tnF-qy-8kR" id="JcJ-FV-dQ2"/>
@@ -779,11 +781,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="areaTag" destination="bUL-P0-nB2" id="Xbb-y7-h8a"/>
-                                    <outlet property="categoryTag" destination="rTr-Jo-bB3" id="6ZJ-4M-tmB"/>
-                                    <outlet property="descriptionOfSelectedRecepie" destination="ThL-Su-SVb" id="fuS-bj-Y7N"/>
-                                    <outlet property="faroutiteCategoryImage" destination="l3t-aN-psq" id="D43-lL-kr7"/>
-                                    <outlet property="faroutiteCategoryView" destination="FGk-jK-Jed" id="WHm-oj-GUD"/>
+                                    <outlet property="areaTagLabel" destination="bUL-P0-nB2" id="Xbb-y7-h8a"/>
+                                    <outlet property="categoryTagLabel" destination="rTr-Jo-bB3" id="6ZJ-4M-tmB"/>
+                                    <outlet property="faroutiteMealImage" destination="l3t-aN-psq" id="D43-lL-kr7"/>
+                                    <outlet property="faroutiteMealView" destination="FGk-jK-Jed" id="WHm-oj-GUD"/>
+                                    <outlet property="nameOfRecepie" destination="ThL-Su-SVb" id="fuS-bj-Y7N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

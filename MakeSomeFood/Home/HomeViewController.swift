@@ -73,7 +73,7 @@ extension HomeViewController {
             fatalError()
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section == 1 else { return }
         selectedCategory = categoryOfMeal[indexPath.row]
