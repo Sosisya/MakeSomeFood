@@ -613,28 +613,107 @@
             </objects>
             <point key="canvasLocation" x="2729" y="-587"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Search Collection View Controller-->
         <scene sceneID="lQc-1d-rs9">
             <objects>
-                <collectionViewController id="5W9-zM-cHS" sceneMemberID="viewController">
+                <collectionViewController id="5W9-zM-cHS" customClass="SearchCollectionViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QbK-y5-kWQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NdW-b6-W1A">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="171" height="88"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eER-Jz-Fy2">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCategoryCell" id="eER-Jz-Fy2" customClass="SearchCategoryCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="108" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bv5-8Y-5xu">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-FH-BD7">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <backgroundConfiguration key="background">
+                                                    <color key="backgroundColor" name="orange"/>
+                                                </backgroundConfiguration>
+                                                <color key="baseForegroundColor" name="white"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3dU-FH-BD7" firstAttribute="top" secondItem="bv5-8Y-5xu" secondAttribute="top" id="EUm-wr-2kH"/>
+                                        <constraint firstAttribute="bottom" secondItem="3dU-FH-BD7" secondAttribute="bottom" constant="6" id="jkT-g4-LjF"/>
+                                        <constraint firstItem="3dU-FH-BD7" firstAttribute="leading" secondItem="bv5-8Y-5xu" secondAttribute="leading" id="kAR-Xj-tbC"/>
+                                        <constraint firstAttribute="trailing" secondItem="3dU-FH-BD7" secondAttribute="trailing" id="mJi-yI-rlz"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="108" height="46"/>
+                                <connections>
+                                    <outlet property="categiryTagButton" destination="3dU-FH-BD7" id="cgG-q7-ff4"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchAreaCell" id="s8L-2n-b3x" customClass="SearchAreaCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="153" y="0.0" width="108" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3yP-xN-vGA">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ts-6q-DQ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <backgroundConfiguration key="background">
+                                                    <color key="backgroundColor" name="green"/>
+                                                </backgroundConfiguration>
+                                                <color key="baseForegroundColor" name="white"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7Ts-6q-DQ0" firstAttribute="top" secondItem="3yP-xN-vGA" secondAttribute="top" id="09x-Kc-Avl"/>
+                                        <constraint firstItem="7Ts-6q-DQ0" firstAttribute="leading" secondItem="3yP-xN-vGA" secondAttribute="leading" id="Daw-lx-ZAd"/>
+                                        <constraint firstAttribute="bottom" secondItem="7Ts-6q-DQ0" secondAttribute="bottom" constant="6" id="gQy-pp-RMl"/>
+                                        <constraint firstAttribute="trailing" secondItem="7Ts-6q-DQ0" secondAttribute="trailing" id="zo1-uv-JZj"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="108" height="46"/>
+                                <connections>
+                                    <outlet property="areaTagButton" destination="7Ts-6q-DQ0" id="8co-XC-8k2"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchAllRecepies" id="fDo-72-wje" customClass="SearchAllRecepies" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="306" y="0.0" width="108" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wgG-mj-hme">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFV-Fn-7Qv">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <backgroundConfiguration key="background">
+                                                    <color key="backgroundColor" name="green"/>
+                                                </backgroundConfiguration>
+                                                <color key="baseForegroundColor" name="white"/>
+                                            </buttonConfiguration>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QFV-Fn-7Qv" firstAttribute="top" secondItem="wgG-mj-hme" secondAttribute="top" id="0NO-aN-Hgi"/>
+                                        <constraint firstItem="QFV-Fn-7Qv" firstAttribute="leading" secondItem="wgG-mj-hme" secondAttribute="leading" id="6YL-NG-nLS"/>
+                                        <constraint firstAttribute="bottom" secondItem="QFV-Fn-7Qv" secondAttribute="bottom" constant="6" id="H3v-Eo-sv6"/>
+                                        <constraint firstAttribute="trailing" secondItem="QFV-Fn-7Qv" secondAttribute="trailing" id="PkE-VZ-EiQ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="108" height="46"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -646,7 +725,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97Z-44-RdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3490" y="-587"/>
+            <point key="canvasLocation" x="3489.8550724637685" y="-587.27678571428567"/>
         </scene>
         <!--Избранное-->
         <scene sceneID="eF5-yj-ORy">

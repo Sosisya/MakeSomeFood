@@ -13,7 +13,7 @@ class FavouritesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 1
+            return favouriteRecepies.count
         default:
             fatalError()
         }
@@ -32,7 +32,15 @@ class FavouritesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FavouriteCell", for: indexPath)
-        return cell
+
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FavouriteCell", for: indexPath) as! FavouriteCell
+            cell.nameOfRecepie.text = selectedCategoryRecepies[indexPath.row].nameOfRecepie
+            cell.faroutiteMealImage.image = selectedCategoryRecepies[indexPath.row].image
+            return cell
+        default:
+            fatalError()
+        }
     }
 }

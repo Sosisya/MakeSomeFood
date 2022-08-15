@@ -30,21 +30,42 @@ class SearchCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+
+        switch section {
+        case 0:
+            return search.count
+        case 1:
+            return search.count
+        case 2:
+            return 1
+        default:
+            fatalError()
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+
+        switch indexPath.section {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCategoryCell", for: indexPath) as! SearchCategoryCell
+            cell.categiryTagButton.setTitle(search[indexPath.row].categoryButton, for: .normal)
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAreaCell", for: indexPath) as! SearchAreaCell
+            cell.areaTagButton.setTitle(search[indexPath.row].areaButton, for: .normal)
+            return cell
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepies", for: indexPath) as! SearchAllRecepies
+            return cell
+        default:
+            fatalError()
+        }
     }
 
     // MARK: UICollectionViewDelegate
