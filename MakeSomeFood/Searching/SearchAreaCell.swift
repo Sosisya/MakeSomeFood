@@ -10,6 +10,6 @@ class SearchAreaCell: UICollectionViewCell {
 
     func setTagButtons(_ button: UIButton) {
         button.layer.masksToBounds = true
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 16
     }
 }
