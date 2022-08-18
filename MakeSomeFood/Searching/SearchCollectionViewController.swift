@@ -7,35 +7,14 @@ class SearchCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
 
         switch section {
         case 0:
@@ -62,41 +41,29 @@ class SearchCollectionViewController: UICollectionViewController {
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepies", for: indexPath) as! SearchAllRecepies
+            let cellView = UINib(nibName: "CellView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CellView
+            cell.contentView.addSubview(cellView)
             return cell
         default:
             fatalError()
         }
     }
 
-    // MARK: UICollectionViewDelegate
+//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
+//            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
+//        switch section {
+//        case 0:
+//            header.configure(title: "Сегодня готовим", actionTitle: "Все рецепты", action: {
+//                print("Все рецепты")
+//            })
+//        case 1:
+//            header.configure(title: "Категории")
+//        default:
+//            return nil
+//        }
+//        return header
+//    }
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }

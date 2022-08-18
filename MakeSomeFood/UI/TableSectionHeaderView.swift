@@ -1,10 +1,3 @@
-//
-//  TableSectionHeaderView.swift
-//  MakeSomeFood
-//
-//  Created by Луиза Самойленко on 14.08.2022.
-//
-
 import UIKit
 
 class TableSectionHeaderView: UIView {

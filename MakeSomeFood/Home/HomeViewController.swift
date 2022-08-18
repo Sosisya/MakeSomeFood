@@ -10,6 +10,7 @@ class HomeViewController: UITableViewController {
         super.viewDidLoad()
         setImage()
         tableView.separatorStyle = .none
+        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
     }
 
     private func setImage() {
@@ -62,7 +63,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingCell", for: indexPath) as! TodayCookingCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell

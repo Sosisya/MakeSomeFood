@@ -12,5 +12,3 @@ var search = [
     Search(categoryButton: "Мясо", areaButton: "Французская"),
     Search(categoryButton: "Десерты", areaButton: "Ирландская")
 ]
-
-

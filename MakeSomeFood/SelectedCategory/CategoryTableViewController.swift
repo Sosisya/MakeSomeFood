@@ -9,6 +9,7 @@ class CategoryTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         title = category.nameOfCategory
+        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,9 +28,13 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCategoryCell", for: indexPath) as! SelectedCategoryCell
-            cell.descriptionOfSelectedRecepie.text = selectedCategoryRecepies[indexPath.row].nameOfRecepie
-            cell.selectedCategoryImage.image = selectedCategoryRecepies[indexPath.row].image
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
+            let item = selectedCategoryRecepies[indexPath.row]
+            cell.todayCookingView.nameOfMeal.text = item.nameOfRecepie
+            cell.todayCookingView.todayCookingImage.image = item.image
+            cell.todayCookingView.setIsFavourite(true)
+//            cell.descriptionOfSelectedRecepie.text = selectedCategoryRecepies[indexPath.row].nameOfRecepie
+//            cell.selectedCategoryImage.image = selectedCategoryRecepies[indexPath.row].image
             return cell
         default:
             fatalError()
