@@ -3,17 +3,16 @@ import UIKit
 
 struct SelectedCategoryRecepies {
     var image: UIImage?
-    var nameOfRecepie: String
-//    var categoryTagLabel: String
-//    var areaTagLabel: String
-//    var addToFavorite: UIImage?
+    var nameOfMeal: String
+    var categoryTagLabel: String
+    var areaTagLabel: String
 }
 
 var selectedCategoryRecepies = [
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
-    SelectedCategoryRecepies(image: UIImage(named: "selectedCategory"), nameOfRecepie: "Знаменитый красный борщ любят за особенный аромат, удивительный вкус и насыщенный цвет. Идеальное сочетание овощей придают красному борщу тот индивидуальный вкус, благодаря которому он входит в список самых известных супов мира. Борщ подают в дорогих ресторанах и готовят дома. Всякий раз, когда есть возможность попробовать борщ, мы выбираем именно его."),
+    SelectedCategoryRecepies(image: UIImage(named: "блины"), nameOfMeal: "Блины", categoryTagLabel: "Завтрак", areaTagLabel: "Русская"),
+    SelectedCategoryRecepies(image: UIImage(named: "глазуньяСБеконом"), nameOfMeal: "Глазунья с беконом", categoryTagLabel: "Завтрак", areaTagLabel: "Американская"),
+    SelectedCategoryRecepies(image: UIImage(named: "крокМадам"), nameOfMeal: "Крок Мадам", categoryTagLabel: "Завтрак", areaTagLabel: "Французская"),
+    SelectedCategoryRecepies(image: UIImage(named: "крокМесье"), nameOfMeal: "Крок Месье", categoryTagLabel: "Завтрак", areaTagLabel: "Французская"),
+    SelectedCategoryRecepies(image: UIImage(named: "овсянаяКаша"), nameOfMeal: "Овсяная каша", categoryTagLabel: "Завтрак", areaTagLabel: "Английская"),
+    SelectedCategoryRecepies(image: UIImage(named: "пуддингСЧиа"), nameOfMeal: "Пудинг с семенами Чиа", categoryTagLabel: "Завтрак", areaTagLabel: "Латинская америка")
 ]
