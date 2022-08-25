@@ -52,7 +52,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-zz-MNM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-zz-MNM" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
                                     <rect key="frame" x="16" y="318" width="55" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="PfB-6W-BZr"/>
@@ -61,7 +61,7 @@
                                     <color key="textColor" name="orange"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyd-XE-wM9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyd-XE-wM9" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
                                     <rect key="frame" x="87" y="318" width="54.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="vBa-Zd-f5y"/>
@@ -111,11 +111,12 @@
             <connections>
                 <outlet property="areaTagLabel" destination="xyd-XE-wM9" id="Gk3-H0-JG3"/>
                 <outlet property="categoryTagLabel" destination="qAT-zz-MNM" id="nO5-6B-2IK"/>
+                <outlet property="containerView" destination="fcE-e7-a2Y" id="hv7-MH-YAO"/>
+                <outlet property="coverImageHeight" destination="ynA-EY-MNk" id="Ovf-9x-EJT"/>
+                <outlet property="coverImageView" destination="E4d-hO-vCW" id="yr5-oO-Mvg"/>
                 <outlet property="favouriteButton" destination="ZCe-cA-vCe" id="a8g-gh-mMY"/>
                 <outlet property="nameOfMeal" destination="3wl-DZ-wjz" id="1HX-in-dXa"/>
                 <outlet property="shadowView" destination="INv-2m-WrU" id="DgF-88-lEF"/>
-                <outlet property="todayCookingImage" destination="E4d-hO-vCW" id="yr5-oO-Mvg"/>
-                <outlet property="todayCookingView" destination="fcE-e7-a2Y" id="hv7-MH-YAO"/>
             </connections>
             <point key="canvasLocation" x="155.07246376811597" y="-188.50446428571428"/>
         </view>

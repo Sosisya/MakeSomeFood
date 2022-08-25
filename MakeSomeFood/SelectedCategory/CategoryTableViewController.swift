@@ -9,7 +9,9 @@ class CategoryTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         title = category.nameOfCategory
-        tableView.register(UINib(nibName: "SelectedCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "SelectedCategoryTableViewCell")
+        self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "Montserrat-SemiBold", size: 24)!]
+        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
+        tableView.separatorStyle = .none
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,13 +30,14 @@ class CategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCategoryTableViewCell", for: indexPath) as! SelectedCategoryTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             let item = selectedCategoryRecepies[indexPath.row]
-            cell.selectedCategoryView.nameOfMeal.text = item.nameOfMeal
-            cell.selectedCategoryView.todayCookingImage.image = item.image
-            cell.selectedCategoryView.areaTagLabel.text = item.areaTagLabel
-            cell.selectedCategoryView.categoryTagLabel.text = item.categoryTagLabel
-            cell.selectedCategoryView.setIsFavourite(false)
+            cell.cellView.nameOfMeal.text = item.nameOfMeal
+            cell.cellView.coverImageView.image = item.image
+            cell.cellView.areaTagLabel.text = item.areaTagLabel
+            cell.cellView.categoryTagLabel.text = item.categoryTagLabel
+            cell.cellView.setIsFavourite(false)
+            cell.cellView.hasLargeImage = false
             return cell
         default:
             fatalError()

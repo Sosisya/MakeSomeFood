@@ -1,17 +1,25 @@
 import UIKit
 
 class CellView: UIView {
-    @IBOutlet weak var todayCookingView: UIView!
-    @IBOutlet weak var todayCookingImage: UIImageView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var nameOfMeal: UILabel!
     @IBOutlet weak var categoryTagLabel: UILabel!
     @IBOutlet weak var areaTagLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var coverImageHeight: NSLayoutConstraint!
+
+    var hasLargeImage: Bool = false {
+        didSet {
+            let height: CGFloat = hasLargeImage ? 230 : 160
+            coverImageHeight.constant = height
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        setContainerView(todayCookingView)
+        setContainerView(containerView)
         setShadowView(shadowView)
     }
 

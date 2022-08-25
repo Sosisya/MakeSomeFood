@@ -40,7 +40,7 @@ class FavouritesTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavouriteTableViewCell", for: indexPath) as! FavouriteTableViewCell
             let item = favouriteRecepies[indexPath.row]
             cell.favouriteView.nameOfMeal.text = item.nameOfMeal
-            cell.favouriteView.todayCookingImage.image = item.image
+            cell.favouriteView.coverImageView.image = item.image
             cell.favouriteView.categoryTagLabel.text = item.categoryTagLabel
             cell.favouriteView.areaTagLabel.text = item.areaTagLabel
             cell.favouriteView.setIsFavourite(true)

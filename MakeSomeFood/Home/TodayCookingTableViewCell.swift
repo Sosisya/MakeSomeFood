@@ -1,5 +1,5 @@
 import UIKit
 
 class TodayCookingTableViewCell: UITableViewCell {
-    @IBOutlet weak var todayCookingView: CellView!
+    @IBOutlet weak var cellView: CellView!
 }
