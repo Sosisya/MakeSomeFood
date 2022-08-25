@@ -6,7 +6,6 @@ struct FavouriteRecepies {
     var nameOfMeal: String
     var categoryTagLabel: String
     var areaTagLabel: String
-    //    var addToFavorite: UIImage?
 }
 
 var favouriteRecepies = [

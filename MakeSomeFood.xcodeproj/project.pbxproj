@@ -43,15 +43,12 @@
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
 		8EFBA2A828AEAEA90098644F /* TodayCookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */; };
 		8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */; };
-		8EFBA2AD28B38E010098644F /* SelectedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2AB28B38E010098644F /* SelectedCategoryTableViewCell.swift */; };
-		8EFBA2AE28B38E010098644F /* SelectedCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2AC28B38E010098644F /* SelectedCategoryTableViewCell.xib */; };
-		8EFBA2B128B3CDD60098644F /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2AF28B3CDD60098644F /* FavouriteTableViewCell.swift */; };
-		8EFBA2B228B3CDD60098644F /* FavouriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B028B3CDD60098644F /* FavouriteTableViewCell.xib */; };
 		8EFBA2B528B4D3B80098644F /* SearchingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */; };
 		8EFBA2B628B4D3B80098644F /* SearchingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B428B4D3B80098644F /* SearchingViewCell.xib */; };
 		8EFBA2C128B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2BF28B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift */; };
 		8EFBA2C228B4D5790098644F /* SearchAllRecepiesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2C028B4D5790098644F /* SearchAllRecepiesCollectionViewCell.xib */; };
 		8EFBA2C428B6997D0098644F /* LabelWithInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2C328B6997D0098644F /* LabelWithInsets.swift */; };
+		8EFBA2C628B77B570098644F /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2C528B77B570098644F /* ProfileTableViewController.swift */; };
 		8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */; };
 		8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */; };
 		8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDAA328983B2C001A2908 /* LoginViewController.swift */; };
@@ -98,15 +95,12 @@
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCookingTableViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
-		8EFBA2AB28B38E010098644F /* SelectedCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTableViewCell.swift; sourceTree = "<group>"; };
-		8EFBA2AC28B38E010098644F /* SelectedCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedCategoryTableViewCell.xib; sourceTree = "<group>"; };
-		8EFBA2AF28B3CDD60098644F /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
-		8EFBA2B028B3CDD60098644F /* FavouriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteTableViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewCell.swift; sourceTree = "<group>"; };
 		8EFBA2B428B4D3B80098644F /* SearchingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2BF28B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAllRecepiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EFBA2C028B4D5790098644F /* SearchAllRecepiesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchAllRecepiesCollectionViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2C328B6997D0098644F /* LabelWithInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithInsets.swift; sourceTree = "<group>"; };
+		8EFBA2C528B77B570098644F /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		8EFEDA9C28983B2C001A2908 /* MakeSomeFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSomeFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFEDAA128983B2C001A2908 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,8 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */,
-				8EFBA2AF28B3CDD60098644F /* FavouriteTableViewCell.swift */,
-				8EFBA2B028B3CDD60098644F /* FavouriteTableViewCell.xib */,
 				8E1E9A0128A91805007349A9 /* FavouriteFiles.swift */,
 			);
 			path = Favourites;
@@ -175,8 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */,
-				8EFBA2AB28B38E010098644F /* SelectedCategoryTableViewCell.swift */,
-				8EFBA2AC28B38E010098644F /* SelectedCategoryTableViewCell.xib */,
 				8E6ED27D28A2C8F900EB0CB2 /* SelectedRecepies.swift */,
 			);
 			path = SelectedCategory;
@@ -207,6 +197,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8EFBA2C828B77B6A0098644F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBA2C528B77B570098644F /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		8EFEDA9328983B2C001A2908 = {
 			isa = PBXGroup;
 			children = (
@@ -235,8 +233,9 @@
 				8E1E99FE28A910BF007349A9 /* Recepie */,
 				8E9034C42898E7AA00D65515 /* Fonts */,
 				8EFEDAB528984855001A2908 /* UI */,
-				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
+				8EFBA2C828B77B6A0098644F /* Profile */,
 				8EFEDAA828983B2D001A2908 /* Assets.xcassets */,
+				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
 				8EFEDAAA28983B2D001A2908 /* LaunchScreen.storyboard */,
 				8EFEDAAD28983B2D001A2908 /* Info.plist */,
 				8EFEDA9F28983B2C001A2908 /* AppDelegate.swift */,
@@ -320,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */,
-				8EFBA2B228B3CDD60098644F /* FavouriteTableViewCell.xib in Resources */,
 				8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */,
 				8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */,
 				8E9034DA2899294600D65515 /* Montserrat-BoldItalic.ttf in Resources */,
@@ -334,7 +332,6 @@
 				8E9034DF2899294600D65515 /* Montserrat-Italic.ttf in Resources */,
 				8E9034E02899294600D65515 /* Montserrat-Light.ttf in Resources */,
 				8E9034E12899294600D65515 /* Montserrat-LightItalic.ttf in Resources */,
-				8EFBA2AE28B38E010098644F /* SelectedCategoryTableViewCell.xib in Resources */,
 				8E9034E22899294600D65515 /* Montserrat-Medium.ttf in Resources */,
 				8E9034E32899294600D65515 /* Montserrat-MediumItalic.ttf in Resources */,
 				8E9034E42899294600D65515 /* Montserrat-Regular.ttf in Resources */,
@@ -359,8 +356,8 @@
 			files = (
 				8EFBA2C128B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift in Sources */,
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
-				8EFBA2AD28B38E010098644F /* SelectedCategoryTableViewCell.swift in Sources */,
 				8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */,
+				8EFBA2C628B77B570098644F /* ProfileTableViewController.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
@@ -375,7 +372,6 @@
 				8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */,
 				8E1E9A0028A910F4007349A9 /* SearchFiles.swift in Sources */,
 				8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */,
-				8EFBA2B128B3CDD60098644F /* FavouriteTableViewCell.swift in Sources */,
 				8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */,
 				8EFBA2B528B4D3B80098644F /* SearchingViewCell.swift in Sources */,
 				8E31CF83289A6F84006CE7AC /* FavouritesTableViewController.swift in Sources */,

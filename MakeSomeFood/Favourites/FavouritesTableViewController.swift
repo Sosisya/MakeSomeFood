@@ -6,7 +6,6 @@ class FavouritesTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
         tableView.separatorStyle = .none
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

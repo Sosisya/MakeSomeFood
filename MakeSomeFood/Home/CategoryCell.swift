@@ -7,7 +7,6 @@ class CategoryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setCellImage(categoryImage)
         setCellView(categoryView)
     }

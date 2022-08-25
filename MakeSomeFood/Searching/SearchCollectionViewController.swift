@@ -35,14 +35,18 @@ class SearchCollectionViewController: UICollectionViewController {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = categoryTags[indexPath.row]
+            cell.tagLabel.layer.backgroundColor = UIColor(named: "orange")?.cgColor
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = areaTags[indexPath.row]
+            cell.tagLabel.layer.backgroundColor = UIColor(named: "green")?.cgColor
+
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = ingredientTags[indexPath.row]
+            cell.tagLabel.layer.backgroundColor = UIColor(named: "orange")?.cgColor
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepiesCollectionViewCell", for: indexPath) as! SearchAllRecepiesCollectionViewCell
