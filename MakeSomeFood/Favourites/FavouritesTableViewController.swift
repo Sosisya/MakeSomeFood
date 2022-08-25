@@ -4,7 +4,7 @@ class FavouritesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "FavouriteTableViewCell", bundle: nil), forCellReuseIdentifier: "FavouriteTableViewCell")
+        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
         tableView.separatorStyle = .none
         
     }
@@ -37,13 +37,14 @@ class FavouritesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FavouriteTableViewCell", for: indexPath) as! FavouriteTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             let item = favouriteRecepies[indexPath.row]
-            cell.favouriteView.nameOfMeal.text = item.nameOfMeal
-            cell.favouriteView.coverImageView.image = item.image
-            cell.favouriteView.categoryTagLabel.text = item.categoryTagLabel
-            cell.favouriteView.areaTagLabel.text = item.areaTagLabel
-            cell.favouriteView.setIsFavourite(true)
+            cell.cellView.nameOfMeal.text = item.nameOfMeal
+            cell.cellView.coverImageView.image = item.image
+            cell.cellView.categoryTagLabel.text = item.categoryTagLabel
+            cell.cellView.areaTagLabel.text = item.areaTagLabel
+            cell.cellView.setIsFavourite(true)
+            cell.cellView.hasLargeImage = false
             return cell
         default:
             fatalError()

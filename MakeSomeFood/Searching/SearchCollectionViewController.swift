@@ -4,15 +4,13 @@ class SearchCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .red
-        
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
         collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
 
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 4
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,6 +21,8 @@ class SearchCollectionViewController: UICollectionViewController {
         case 1:
             return areaTags.count
         case 2:
+            return ingredientTags.count
+        case 3:
             return 1
         default:
             fatalError()
@@ -41,6 +41,10 @@ class SearchCollectionViewController: UICollectionViewController {
             cell.tagLabel.text = areaTags[indexPath.row]
             return cell
         case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
+            cell.tagLabel.text = ingredientTags[indexPath.row]
+            return cell
+        case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepiesCollectionViewCell", for: indexPath) as! SearchAllRecepiesCollectionViewCell
             return cell
         default:
