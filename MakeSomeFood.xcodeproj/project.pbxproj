@@ -14,6 +14,9 @@
 		8E31CF83289A6F84006CE7AC /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */; };
 		8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31CFD3289BC8F0006CE7AC /* CategoryCell.swift */; };
 		8E37A1ED28ABF8D200F1BA0F /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E37A1EC28ABF8D200F1BA0F /* CellView.xib */; };
+		8E4C5C7128BBA0DF00367312 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C5C7028BBA0DF00367312 /* ProfileTableViewCell.swift */; };
+		8E4C5C7328BBA11900367312 /* ProfileFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C5C7228BBA11900367312 /* ProfileFiles.swift */; };
+		8E4C5C7528BBA5F300367312 /* ProfileImageAndNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C5C7428BBA5F300367312 /* ProfileImageAndNameTableViewCell.swift */; };
 		8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED26F28A159E800EB0CB2 /* TodayCookingTableViewCell.swift */; };
 		8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */; };
 		8E6ED27928A2C82C00EB0CB2 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */; };
@@ -41,6 +44,8 @@
 		8E9034E82899294600D65515 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CC2898E7AA00D65515 /* Montserrat-ThinItalic.ttf */; };
 		8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */; };
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
+		8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */; };
+		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EFBA2A828AEAEA90098644F /* TodayCookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */; };
 		8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */; };
 		8EFBA2B528B4D3B80098644F /* SearchingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */; };
@@ -66,6 +71,9 @@
 		8E31CF82289A6F84006CE7AC /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		8E31CFD3289BC8F0006CE7AC /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8E37A1EC28ABF8D200F1BA0F /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		8E4C5C7028BBA0DF00367312 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		8E4C5C7228BBA11900367312 /* ProfileFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFiles.swift; sourceTree = "<group>"; };
+		8E4C5C7428BBA5F300367312 /* ProfileImageAndNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageAndNameTableViewCell.swift; sourceTree = "<group>"; };
 		8E6ED26F28A159E800EB0CB2 /* TodayCookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCookingTableViewCell.swift; sourceTree = "<group>"; };
 		8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
 		8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +101,8 @@
 		8E9034D62898E7AB00D65515 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverViewController.swift; sourceTree = "<group>"; };
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionSectionHeaderView.xib; sourceTree = "<group>"; };
+		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCookingTableViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
 		8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewCell.swift; sourceTree = "<group>"; };
@@ -201,6 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				8EFBA2C528B77B570098644F /* ProfileTableViewController.swift */,
+				8E4C5C7028BBA0DF00367312 /* ProfileTableViewCell.swift */,
+				8E4C5C7428BBA5F300367312 /* ProfileImageAndNameTableViewCell.swift */,
+				8E4C5C7228BBA11900367312 /* ProfileFiles.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -252,6 +265,8 @@
 				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
 				8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */,
 				8EFBA2C328B6997D0098644F /* LabelWithInsets.swift */,
+				8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */,
+				8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */,
 				8E19074028ABFE3B00ECD830 /* CellView.swift */,
 				8E37A1EC28ABF8D200F1BA0F /* CellView.xib */,
 				8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */,
@@ -334,6 +349,7 @@
 				8E9034E12899294600D65515 /* Montserrat-LightItalic.ttf in Resources */,
 				8E9034E22899294600D65515 /* Montserrat-Medium.ttf in Resources */,
 				8E9034E32899294600D65515 /* Montserrat-MediumItalic.ttf in Resources */,
+				8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */,
 				8E9034E42899294600D65515 /* Montserrat-Regular.ttf in Resources */,
 				8E9034E52899294600D65515 /* Montserrat-SemiBold.ttf in Resources */,
 				8E9034E62899294600D65515 /* Montserrat-SemiBoldItalic.ttf in Resources */,
@@ -355,14 +371,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFBA2C128B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift in Sources */,
+				8E4C5C7328BBA11900367312 /* ProfileFiles.swift in Sources */,
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
 				8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */,
+				8E4C5C7528BBA5F300367312 /* ProfileImageAndNameTableViewCell.swift in Sources */,
 				8EFBA2C628B77B570098644F /* ProfileTableViewController.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
+				8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
 				8E6ED27E28A2C8F900EB0CB2 /* SelectedRecepies.swift in Sources */,
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
+				8E4C5C7128BBA0DF00367312 /* ProfileTableViewCell.swift in Sources */,
 				8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */,
 				8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */,
 				8EFEDAB428984843001A2908 /* BorderedTextField.swift in Sources */,

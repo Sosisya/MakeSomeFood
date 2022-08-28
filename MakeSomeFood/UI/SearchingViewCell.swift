@@ -7,11 +7,15 @@ class SearchingViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setTags(tagLabel)
+        layer.masksToBounds = true
     }
 
     private func setTags(_ label: UILabel) {
-        label.layer.masksToBounds = true
-        label.layer.cornerRadius = 13
         label.textColor = .white
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = bounds.height / 2
     }
 }

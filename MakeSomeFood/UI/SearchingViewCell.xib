@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yD-rf-M2v" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
-                        <rect key="frame" x="4" y="6" width="332" height="176"/>
+                        <rect key="frame" x="16" y="4" width="308" height="180"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -26,10 +26,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="9yD-rf-M2v" secondAttribute="bottom" constant="6" id="Cah-Ij-kvf"/>
-                <constraint firstAttribute="trailing" secondItem="9yD-rf-M2v" secondAttribute="trailing" constant="4" id="mOZ-7j-ni9"/>
-                <constraint firstItem="9yD-rf-M2v" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="mls-Bm-Z6I"/>
-                <constraint firstItem="9yD-rf-M2v" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="wo7-bV-Ijc"/>
+                <constraint firstAttribute="bottom" secondItem="9yD-rf-M2v" secondAttribute="bottom" constant="4" id="Cah-Ij-kvf"/>
+                <constraint firstAttribute="trailing" secondItem="9yD-rf-M2v" secondAttribute="trailing" constant="16" id="mOZ-7j-ni9"/>
+                <constraint firstItem="9yD-rf-M2v" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="mls-Bm-Z6I"/>
+                <constraint firstItem="9yD-rf-M2v" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="wo7-bV-Ijc"/>
             </constraints>
             <size key="customSize" width="340" height="188"/>
             <connections>
