@@ -46,6 +46,7 @@
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
 		8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */; };
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
+		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
 		8EFBA2A828AEAEA90098644F /* TodayCookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */; };
 		8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */; };
 		8EFBA2B528B4D3B80098644F /* SearchingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */; };
@@ -103,6 +104,7 @@
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
+		8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompositionalLayout.swift; sourceTree = "<group>"; };
 		8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCookingTableViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
 		8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */,
+				8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */,
 				8EFBA2BF28B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift */,
 				8EFBA2C028B4D5790098644F /* SearchAllRecepiesCollectionViewCell.xib */,
 				8E1E99FF28A910F4007349A9 /* SearchFiles.swift */,
@@ -385,6 +388,7 @@
 				8E4C5C7128BBA0DF00367312 /* ProfileTableViewCell.swift in Sources */,
 				8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */,
 				8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */,
+				8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */,
 				8EFEDAB428984843001A2908 /* BorderedTextField.swift in Sources */,
 				8E1E99FC28A90E37007349A9 /* SearchCollectionViewController.swift in Sources */,
 				8EFBA2C428B6997D0098644F /* LabelWithInsets.swift in Sources */,

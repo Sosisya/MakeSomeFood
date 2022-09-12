@@ -6,9 +6,31 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
         collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
-        collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: "Header", withReuseIdentifier: "CollectionSectionHeaderView")
-
+        collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
     }
+
+    private func createLayout() -> UICollectionViewLayout {
+           let itemSize = NSCollectionLayoutSize(
+               widthDimension: .fractionalWidth(1.0),
+               heightDimension: .fractionalHeight(1.0))
+           let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+           let groupSize = NSCollectionLayoutSize(
+               widthDimension: .fractionalWidth(1.0),
+               heightDimension: .absolute(44))
+           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+           let section = NSCollectionLayoutSection(group: group)
+
+           let layout = UICollectionViewCompositionalLayout(section: section)
+           return layout
+       }
+
+       private func configureHierarchy() {
+           collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+           // ...
+       }
+
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
@@ -78,20 +100,4 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             fatalError()
         }
     }
-
-    //    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    //        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
-    //            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-    //        switch section {
-    //        case 0:
-    //            header.configure(title: "Сегодня готовим", actionTitle: "Все рецепты", action: {
-    //                print("Все рецепты")
-    //            })
-    //        case 1:
-    //            header.configure(title: "Категории")
-    //        default:
-    //            return nil
-    //        }
-    //        return header
-    //    }
 }
