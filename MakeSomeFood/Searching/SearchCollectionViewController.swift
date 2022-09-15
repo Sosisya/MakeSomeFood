@@ -19,34 +19,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     }
 
-//    private func createLayout() -> UICollectionViewLayout {
-//           let itemSize = NSCollectionLayoutSize(
-//               widthDimension: .fractionalWidth(1.0),
-//               heightDimension: .fractionalHeight(1.0))
-//           let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//
-//           let groupSize = NSCollectionLayoutSize(
-//               widthDimension: .fractionalWidth(1.0),
-//               heightDimension: .absolute(44))
-//           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-//
-//           let section = NSCollectionLayoutSection(group: group)
-//
-//           let layout = UICollectionViewCompositionalLayout(section: section)
-//           return layout
-//       }
-//
-//       private func configureHierarchy() {
-//           collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-//       }
-
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 4
     }
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        guard kind == "Header" else { return UICollectionReusableView() }
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
         switch indexPath.section {
         case 0:
@@ -56,7 +33,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         case 2:
             header.configure(title: Spec.titleOfIngredient)
         case 3:
-            header.configure(title: Spec.titleOfAllRecepies)
+            header.configure(title: Spec.titleOfAllRecepies, offset: 16)
         default:
             break
         }
@@ -73,7 +50,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         case 2:
             return ingredientTags.count
         case 3:
-            return 1
+            return 2
         default:
             fatalError()
         }

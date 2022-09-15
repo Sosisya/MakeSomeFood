@@ -7,59 +7,83 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
         case kitchen
         case ingredient
         case allRecepie
-
-        var columnCount: Int {
-            switch self {
-            case .allRecepie:
-                return 1
-            default:
-                return 3
-            }
-        }
     }
 
     private static func createLayout() -> ((Int, NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection?) {
 
         return { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-
             guard let sectionKind = Section(rawValue: sectionIndex) else { return nil }
-
-            let columns = sectionKind.columnCount
-
-            let itemSize = NSCollectionLayoutSize(
-                widthDimension: .estimated(100),
-                heightDimension: .estimated(100)
-            )
-
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = .init(top: 6, leading: 6, bottom: 6, trailing: 6)
-
-            let groupHeight = columns == 1 ?
-                NSCollectionLayoutDimension.estimated(350):
-            NSCollectionLayoutDimension.absolute(34)
-
-            let groupWidht = columns == 1 ?
-            NSCollectionLayoutDimension.fractionalWidth(1):
-            NSCollectionLayoutDimension.fractionalWidth(1)
-
-            let groupSize = NSCollectionLayoutSize(
-                widthDimension: groupWidht,
-                heightDimension: groupHeight
-            )
-
-           // let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
-            let group = NSCollectionLayoutGroup.horizontal(
-                layoutSize: .init(
-                    widthDimension: .fractionalWidth(1.0),
-                    heightDimension: itemSize.heightDimension
-                ),  subitems: [.init(layoutSize: itemSize)])
-            group.interItemSpacing = .fixed(8)
-
-            let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets = .init(top: 20, leading: 20, bottom: 20, trailing: 20)
-            section.interGroupSpacing = 12
-            return section
+            if sectionKind == .allRecepie {
+                return createRecepieLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
+            } else {
+                return createChipsLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
+            }
         }
+    }
+
+    private static func createRecepieLayout(sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
+
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .estimated(200)
+        )
+
+        let group = NSCollectionLayoutGroup.vertical(
+            layoutSize: .init(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: itemSize.heightDimension
+            ),  subitems: [.init(layoutSize: itemSize)])
+        group.interItemSpacing = .fixed(0)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 10, leading: 0, bottom: 16, trailing: 0)
+        section.interGroupSpacing = 0
+
+        let footerHeaderSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(42.0)
+        )
+
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [header]
+
+        return section
+    }
+
+    private static func createChipsLayout(sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .estimated(100),
+            heightDimension: .estimated(100)
+        )
+
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: .init(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: itemSize.heightDimension
+            ),  subitems: [.init(layoutSize: itemSize)])
+        group.interItemSpacing = .fixed(8)
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 10, leading: 16, bottom: 16, trailing: 16)
+        section.interGroupSpacing = 12
+
+        let footerHeaderSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(42.0)
+        )
+
+        let header = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        section.boundarySupplementaryItems = [header]
+
+        return section
     }
 
     init() {

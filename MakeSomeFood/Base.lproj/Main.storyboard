@@ -529,7 +529,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bDY-BZ-ALq" kind="relationship" relationship="rootViewController" id="swo-38-3Ve"/>
+                        <segue destination="NI2-lb-Hpv" kind="relationship" relationship="rootViewController" id="POP-TS-TaA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04g-DN-jbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -651,121 +651,15 @@
             <point key="canvasLocation" x="3490" y="82"/>
         </scene>
         <!--Profile Table View Controller-->
-        <scene sceneID="ps6-w5-ynM">
-            <objects>
-                <tableViewController id="bDY-BZ-ALq" customClass="ProfileTableViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qqb-O2-cZ4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageAndNameTableViewCell" rowHeight="243" id="6B9-QO-Iaf" userLabel="ProfileImageAndNameTableViewCell" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="243"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6B9-QO-Iaf" id="FjK-ye-IJp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="243"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Луиза" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sf-mB-7eQ" userLabel="profileName">
-                                            <rect key="frame" x="172" y="170" width="70" height="49"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="someGirl" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-IC-dPA" userLabel="profileImage">
-                                            <rect key="frame" x="132" y="16" width="150" height="150"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="hDk-QA-2yq"/>
-                                                <constraint firstAttribute="width" constant="150" id="jqS-g7-MJQ"/>
-                                            </constraints>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Zsu-IC-dPA" secondAttribute="trailing" constant="132" id="5L2-VM-epX"/>
-                                        <constraint firstItem="Zsu-IC-dPA" firstAttribute="leading" secondItem="FjK-ye-IJp" secondAttribute="leading" constant="132" id="Hux-8C-xS0"/>
-                                        <constraint firstAttribute="bottom" secondItem="7sf-mB-7eQ" secondAttribute="bottom" constant="24" id="Saz-HF-0c5"/>
-                                        <constraint firstItem="Zsu-IC-dPA" firstAttribute="centerX" secondItem="FjK-ye-IJp" secondAttribute="centerX" id="d1m-67-GUO"/>
-                                        <constraint firstItem="7sf-mB-7eQ" firstAttribute="top" secondItem="Zsu-IC-dPA" secondAttribute="bottom" constant="4" id="dn5-h8-k1g"/>
-                                        <constraint firstItem="7sf-mB-7eQ" firstAttribute="centerX" secondItem="FjK-ye-IJp" secondAttribute="centerX" id="h9c-dX-dgQ"/>
-                                        <constraint firstItem="Zsu-IC-dPA" firstAttribute="top" secondItem="FjK-ye-IJp" secondAttribute="top" constant="16" id="vHT-jS-f8c"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="profileImage" destination="Zsu-IC-dPA" id="vSE-nr-nhe"/>
-                                    <outlet property="profileName" destination="7sf-mB-7eQ" id="ppu-AG-LWG"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileTableViewCell" id="szi-aL-jSB" customClass="ProfileTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="287.5" width="414" height="50.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="szi-aL-jSB" id="dvm-Ke-Pvw">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84z-7f-mp8">
-                                            <rect key="frame" x="16" y="0.0" width="382" height="50.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Личные данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gW-VM-fX2">
-                                                    <rect key="frame" x="48" y="12" width="286" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EdD-8V-nUL">
-                                                    <rect key="frame" x="10" y="13.5" width="24" height="24"/>
-                                                    <color key="tintColor" name="gray"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="Al7-ah-6yH"/>
-                                                        <constraint firstAttribute="height" constant="24" id="JTd-Sm-e7U"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="3gW-VM-fX2" secondAttribute="bottom" constant="12" id="6iJ-5k-Ea5"/>
-                                                <constraint firstItem="EdD-8V-nUL" firstAttribute="centerY" secondItem="84z-7f-mp8" secondAttribute="centerY" id="COI-wM-RjF"/>
-                                                <constraint firstAttribute="height" constant="50" id="Xz5-Uu-ydh"/>
-                                                <constraint firstItem="3gW-VM-fX2" firstAttribute="leading" secondItem="84z-7f-mp8" secondAttribute="leading" constant="48" id="dfb-9d-E9n"/>
-                                                <constraint firstItem="3gW-VM-fX2" firstAttribute="top" secondItem="84z-7f-mp8" secondAttribute="top" constant="12" id="hVa-a8-oVs"/>
-                                                <constraint firstItem="3gW-VM-fX2" firstAttribute="leading" secondItem="EdD-8V-nUL" secondAttribute="trailing" constant="14" id="lsw-C1-8qh"/>
-                                                <constraint firstAttribute="trailing" secondItem="3gW-VM-fX2" secondAttribute="trailing" constant="48" id="ovO-8T-kna"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="84z-7f-mp8" firstAttribute="leading" secondItem="dvm-Ke-Pvw" secondAttribute="leading" constant="16" id="3jy-Pd-D3d"/>
-                                        <constraint firstAttribute="bottom" secondItem="84z-7f-mp8" secondAttribute="bottom" id="52s-GI-Ief"/>
-                                        <constraint firstItem="84z-7f-mp8" firstAttribute="top" secondItem="dvm-Ke-Pvw" secondAttribute="top" id="fZR-4P-beI"/>
-                                        <constraint firstAttribute="trailing" secondItem="84z-7f-mp8" secondAttribute="trailing" constant="16" id="nTB-IV-TPw"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="profileImage" destination="EdD-8V-nUL" id="lcl-hr-Uyf"/>
-                                    <outlet property="profileLabel" destination="3gW-VM-fX2" id="CNz-aB-NLG"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bDY-BZ-ALq" id="QO0-mi-alU"/>
-                            <outlet property="delegate" destination="bDY-BZ-ALq" id="SIe-Pu-Qqv"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="c0I-L9-hwR"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rxP-Kh-UZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3489.2523364485978" y="824.8380129589633"/>
-        </scene>
-        <!--Table View Controller-->
         <scene sceneID="hfM-ro-gMZ">
             <objects>
-                <tableViewController id="NI2-lb-Hpv" sceneMemberID="viewController">
+                <tableViewController id="NI2-lb-Hpv" customClass="ProfileTableViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WAf-5i-CH2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="h55-mB-Sgm" userLabel="ProfilePhoto" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfilePhotoTableViewCell" rowHeight="138" id="h55-mB-Sgm" userLabel="ProfilePhoto" customClass="ProfilePhotoTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h55-mB-Sgm" id="Qbr-Hm-d8R">
@@ -797,10 +691,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="profileImage" destination="Xm0-zi-8AW" id="wFc-Zv-20Y"/>
+                                    <outlet property="profileImage" destination="Xm0-zi-8AW" id="iLV-FM-OkC"/>
+                                    <outlet property="takePhoto" destination="Efn-GU-uzu" id="4je-s8-LZR"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageAndNameTableViewCell" rowHeight="61" id="l3T-mi-DTE" userLabel="TextField" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileTextFieldTableViewCell" rowHeight="61" id="l3T-mi-DTE" userLabel="TextField" customClass="ProfileTextFieldTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="182.5" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l3T-mi-DTE" id="fvs-Ic-AJA">
@@ -823,23 +718,29 @@
                                         <constraint firstItem="8v0-Im-pXg" firstAttribute="leading" secondItem="fvs-Ic-AJA" secondAttribute="leading" constant="16" id="hk8-5B-a5s"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dataTextField" destination="8v0-Im-pXg" id="zvk-nT-prC"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageAndNameTableViewCell" rowHeight="72" id="63U-FK-ZpC" userLabel="TextField" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileAppendButtonTableViewCell" rowHeight="72" id="63U-FK-ZpC" userLabel="Button" customClass="ProfileAppendButtonTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="243.5" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="63U-FK-ZpC" id="yZR-Gh-n95">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-0F-fde">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-0F-fde">
                                             <rect key="frame" x="16" y="8" width="382" height="56"/>
                                             <color key="backgroundColor" name="orange"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="Vaa-Ac-YZC"/>
                                             </constraints>
                                             <color key="tintColor" name="white"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Сохранить"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                                <fontDescription key="titleFontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                            </buttonConfiguration>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -849,6 +750,9 @@
                                         <constraint firstItem="fAs-0F-fde" firstAttribute="leading" secondItem="yZR-Gh-n95" secondAttribute="leading" constant="16" id="vO9-Fl-LQZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appendButton" destination="fAs-0F-fde" id="nbZ-Sn-IQr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -856,10 +760,11 @@
                             <outlet property="delegate" destination="NI2-lb-Hpv" id="iQL-3a-G6g"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="jQm-MU-g8b"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfc-rA-wey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4279.7101449275369" y="823.66071428571422"/>
+            <point key="canvasLocation" x="3490" y="825"/>
         </scene>
     </scenes>
     <resources>
@@ -871,16 +776,12 @@
         <image name="icon.home" width="28" height="28"/>
         <image name="icon.profile" width="28" height="28"/>
         <image name="icon.search" width="28" height="28"/>
-        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <image name="screenSaverGradient" width="375" height="471"/>
         <image name="screenSaverImage" width="375" height="297"/>
         <image name="selectedCategory" width="343" height="230"/>
         <image name="someGirl" width="1080" height="1350"/>
         <namedColor name="black">
             <color red="0.035294117647058823" green="0.035294117647058823" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="gray">
-            <color red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grayFill">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
