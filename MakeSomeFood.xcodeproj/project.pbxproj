@@ -210,6 +210,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		8EDBF57628D2E8C30013AD0D /* ScreenSaverViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
+			);
+			path = ScreenSaverViewController;
+			sourceTree = "<group>";
+		};
+		8EDBF57728D2E8F40013AD0D /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
 		8EFBA2C828B77B6A0098644F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,16 +256,16 @@
 		8EFEDA9E28983B2C001A2908 /* MakeSomeFood */ = {
 			isa = PBXGroup;
 			children = (
-				8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */,
-				8EFEDAA328983B2C001A2908 /* LoginViewController.swift */,
+				8EDBF57628D2E8C30013AD0D /* ScreenSaverViewController */,
 				8E31CFD7289BC902006CE7AC /* Home */,
-				8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */,
 				8E6ED27128A21EC700EB0CB2 /* Favourites */,
-				8E1E99FD28A910A9007349A9 /* Searching */,
-				8E1E99FE28A910BF007349A9 /* Recepie */,
-				8E9034C42898E7AA00D65515 /* Fonts */,
-				8EFEDAB528984855001A2908 /* UI */,
+				8EDBF57728D2E8F40013AD0D /* LoginViewController */,
 				8EFBA2C828B77B6A0098644F /* Profile */,
+				8E1E99FD28A910A9007349A9 /* Searching */,
+				8E6ED27C28A2C86100EB0CB2 /* SelectedCategory */,
+				8E1E99FE28A910BF007349A9 /* Recepie */,
+				8EFEDAB528984855001A2908 /* UI */,
+				8E9034C42898E7AA00D65515 /* Fonts */,
 				8EFEDAA828983B2D001A2908 /* Assets.xcassets */,
 				8EFEDAA528983B2C001A2908 /* Main.storyboard */,
 				8EFEDAAA28983B2D001A2908 /* LaunchScreen.storyboard */,

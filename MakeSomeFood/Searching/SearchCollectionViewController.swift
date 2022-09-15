@@ -2,34 +2,43 @@ import UIKit
 
 class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    private struct Spec {
+        static let titleOfCategory = "Категории"
+        static let titleOfKitchen = "Кухня"
+        static let titleOfIngredient = "Ингредиенты"
+        static let titleOfAllRecepies = "Все рецепты"
+        static let colorOfTagOrange = UIColor(named: "orange")
+        static let colorOfTagsGreen = UIColor(named: "green")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
         collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
         collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
+
     }
 
-    private func createLayout() -> UICollectionViewLayout {
-           let itemSize = NSCollectionLayoutSize(
-               widthDimension: .fractionalWidth(1.0),
-               heightDimension: .fractionalHeight(1.0))
-           let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-           let groupSize = NSCollectionLayoutSize(
-               widthDimension: .fractionalWidth(1.0),
-               heightDimension: .absolute(44))
-           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-           let section = NSCollectionLayoutSection(group: group)
-
-           let layout = UICollectionViewCompositionalLayout(section: section)
-           return layout
-       }
-
-       private func configureHierarchy() {
-           collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-           // ...
-       }
+//    private func createLayout() -> UICollectionViewLayout {
+//           let itemSize = NSCollectionLayoutSize(
+//               widthDimension: .fractionalWidth(1.0),
+//               heightDimension: .fractionalHeight(1.0))
+//           let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//
+//           let groupSize = NSCollectionLayoutSize(
+//               widthDimension: .fractionalWidth(1.0),
+//               heightDimension: .absolute(44))
+//           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+//
+//           let section = NSCollectionLayoutSection(group: group)
+//
+//           let layout = UICollectionViewCompositionalLayout(section: section)
+//           return layout
+//       }
+//
+//       private func configureHierarchy() {
+//           collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+//       }
 
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -41,13 +50,13 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
         switch indexPath.section {
         case 0:
-            header.configure(title: "Категории")
+            header.configure(title: Spec.titleOfCategory)
         case 1:
-            header.configure(title: "Кухня")
+            header.configure(title: Spec.titleOfKitchen)
         case 2:
-            header.configure(title: "Ингредиенты")
+            header.configure(title: Spec.titleOfIngredient)
         case 3:
-            header.configure(title: "Все рецепты")
+            header.configure(title: Spec.titleOfAllRecepies)
         default:
             break
         }
@@ -80,18 +89,18 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = categoryTags[indexPath.row]
-            cell.backgroundColor = UIColor(named: "orange")
+            cell.backgroundColor = Spec.colorOfTagOrange
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = areaTags[indexPath.row]
-            cell.backgroundColor = UIColor(named: "green")
+            cell.backgroundColor = Spec.colorOfTagsGreen
 
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             cell.tagLabel.text = ingredientTags[indexPath.row]
-            cell.backgroundColor = UIColor(named: "orange")
+            cell.backgroundColor = Spec.colorOfTagOrange
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepiesCollectionViewCell", for: indexPath) as! SearchAllRecepiesCollectionViewCell

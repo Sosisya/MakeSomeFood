@@ -31,10 +31,6 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
                 heightDimension: .estimated(100)
             )
 
-//            let itemSize = NSCollectionLayoutSize(
-//                widthDimension: .fractionalWidth(1.0),
-//                heightDimension: .fractionalHeight(1.0))
-
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.contentInsets = .init(top: 6, leading: 6, bottom: 6, trailing: 6)
 
@@ -43,7 +39,7 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
             NSCollectionLayoutDimension.absolute(34)
 
             let groupWidht = columns == 1 ?
-                NSCollectionLayoutDimension.fractionalWidth(1):
+            NSCollectionLayoutDimension.fractionalWidth(1):
             NSCollectionLayoutDimension.fractionalWidth(1)
 
             let groupSize = NSCollectionLayoutSize(
@@ -51,19 +47,17 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
                 heightDimension: groupHeight
             )
 
- //           let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
+           // let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: columns)
             let group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: .init(
                     widthDimension: .fractionalWidth(1.0),
                     heightDimension: itemSize.heightDimension
-                ),
-                subitems: [.init(layoutSize: itemSize)]
-            )
-            group.interItemSpacing = .fixed(10)
+                ),  subitems: [.init(layoutSize: itemSize)])
+            group.interItemSpacing = .fixed(8)
 
             let section = NSCollectionLayoutSection(group: group)
             section.contentInsets = .init(top: 20, leading: 20, bottom: 20, trailing: 20)
-            section.interGroupSpacing = 10
+            section.interGroupSpacing = 12
             return section
         }
     }
@@ -77,3 +71,10 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
         super.init(sectionProvider: SearchCompositionalLayout.createLayout())
     }
 }
+
+//private func supplimentaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+//    .init(layoutSize: .init(widthDimension: .fractionalWidth(1),
+//                            heightDimension: .absolute(40)),
+//          elementKind: "Luiza",
+//          alignment: .top)
+//}

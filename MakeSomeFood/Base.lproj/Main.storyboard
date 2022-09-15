@@ -756,8 +756,114 @@
             </objects>
             <point key="canvasLocation" x="3489.2523364485978" y="824.8380129589633"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="hfM-ro-gMZ">
+            <objects>
+                <tableViewController id="NI2-lb-Hpv" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WAf-5i-CH2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="h55-mB-Sgm" userLabel="ProfilePhoto" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="138"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h55-mB-Sgm" id="Qbr-Hm-d8R">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="someGirl" translatesAutoresizingMaskIntoConstraints="NO" id="Xm0-zi-8AW" userLabel="profileImage">
+                                            <rect key="frame" x="157" y="24" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="DBN-Ft-XHw"/>
+                                                <constraint firstAttribute="width" constant="100" id="YYJ-JH-0Eu"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Efn-GU-uzu">
+                                            <rect key="frame" x="221" y="88.5" width="44" height="42"/>
+                                            <color key="backgroundColor" name="orange"/>
+                                            <color key="tintColor" name="white"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="cZZ-cJ-mn9"/>
+                                                <constraint firstAttribute="width" constant="44" id="yW0-vA-j4u"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Xm0-zi-8AW" firstAttribute="top" secondItem="Qbr-Hm-d8R" secondAttribute="top" constant="24" id="2a0-kH-Y5f"/>
+                                        <constraint firstItem="Efn-GU-uzu" firstAttribute="top" secondItem="Xm0-zi-8AW" secondAttribute="top" constant="64" id="Iu8-dn-dVy"/>
+                                        <constraint firstItem="Efn-GU-uzu" firstAttribute="leading" secondItem="Xm0-zi-8AW" secondAttribute="leading" constant="64" id="KdE-OG-OVd"/>
+                                        <constraint firstItem="Xm0-zi-8AW" firstAttribute="centerX" secondItem="Qbr-Hm-d8R" secondAttribute="centerX" id="XOc-f7-OiV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImage" destination="Xm0-zi-8AW" id="wFc-Zv-20Y"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageAndNameTableViewCell" rowHeight="61" id="l3T-mi-DTE" userLabel="TextField" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="182.5" width="414" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l3T-mi-DTE" id="fvs-Ic-AJA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8v0-Im-pXg" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="8" width="382" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="cDG-2h-mH0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8v0-Im-pXg" firstAttribute="top" secondItem="fvs-Ic-AJA" secondAttribute="top" constant="8" id="2vc-Rt-Ikk"/>
+                                        <constraint firstAttribute="trailing" secondItem="8v0-Im-pXg" secondAttribute="trailing" constant="16" id="RwN-9K-5Rc"/>
+                                        <constraint firstAttribute="bottom" secondItem="8v0-Im-pXg" secondAttribute="bottom" constant="8" id="XQU-CM-Eji"/>
+                                        <constraint firstItem="8v0-Im-pXg" firstAttribute="leading" secondItem="fvs-Ic-AJA" secondAttribute="leading" constant="16" id="hk8-5B-a5s"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageAndNameTableViewCell" rowHeight="72" id="63U-FK-ZpC" userLabel="TextField" customClass="ProfileImageAndNameTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="243.5" width="414" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="63U-FK-ZpC" id="yZR-Gh-n95">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-0F-fde">
+                                            <rect key="frame" x="16" y="8" width="382" height="56"/>
+                                            <color key="backgroundColor" name="orange"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Vaa-Ac-YZC"/>
+                                            </constraints>
+                                            <color key="tintColor" name="white"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="fAs-0F-fde" secondAttribute="bottom" constant="8" id="Nb4-U5-YG2"/>
+                                        <constraint firstItem="fAs-0F-fde" firstAttribute="top" secondItem="yZR-Gh-n95" secondAttribute="top" constant="8" id="hkd-28-eQB"/>
+                                        <constraint firstAttribute="trailing" secondItem="fAs-0F-fde" secondAttribute="trailing" constant="16" id="ne3-TE-fGN"/>
+                                        <constraint firstItem="fAs-0F-fde" firstAttribute="leading" secondItem="yZR-Gh-n95" secondAttribute="leading" constant="16" id="vO9-Fl-LQZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NI2-lb-Hpv" id="KcK-bp-RfD"/>
+                            <outlet property="delegate" destination="NI2-lb-Hpv" id="iQL-3a-G6g"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfc-rA-wey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4279.7101449275369" y="823.66071428571422"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="icon.apple" width="22" height="22"/>
         <image name="icon.close" width="14" height="14"/>
         <image name="icon.google" width="22" height="22"/>
@@ -784,6 +890,9 @@
         </namedColor>
         <namedColor name="orange">
             <color red="0.98039215686274506" green="0.69019607843137254" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

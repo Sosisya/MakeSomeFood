@@ -5,6 +5,12 @@ class HomeViewController: UITableViewController {
     @IBOutlet weak var profileImage: UIImageView!
     
     private var selectedCategory: Category?
+
+    private struct Spec {
+        static let titleTodayCooking = "Сегодня готовим"
+        static let titleActionAllRecepies = "Все рецепты"
+        static let titleCategory = "Категории"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +21,7 @@ class HomeViewController: UITableViewController {
     
     private func setImage() {
         profileImage.layer.masksToBounds = true
-        profileImage.layer.cornerRadius = 21 // как правильно сделать круглое фото здесь? 20 я просто подобрала
+        profileImage.layer.cornerRadius = 21
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,11 +55,11 @@ extension HomeViewController {
             .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
         switch section {
         case 0:
-            header.configure(title: "Сегодня готовим", actionTitle: "Все рецепты", action: {
+            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecepies, action: {
                 print("Все рецепты")
             })
         case 1:
-            header.configure(title: "Категории")
+            header.configure(title: Spec.titleCategory)
         default:
             return nil
         }
@@ -68,8 +74,9 @@ extension HomeViewController {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-            cell.categoryLabel.text = categoryOfMeal[indexPath.row].nameOfCategory
-            cell.categoryImage.image = categoryOfMeal[indexPath.row].imageOfCategory
+            let item = categoryOfMeal[indexPath.row]
+            cell.categoryLabel.text = item.nameOfCategory
+            cell.categoryImage.image = item.imageOfCategory
             return cell
         default:
             fatalError()

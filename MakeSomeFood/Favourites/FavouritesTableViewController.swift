@@ -1,6 +1,10 @@
 import UIKit
 
 class FavouritesTableViewController: UITableViewController {
+
+    private struct Spec {
+        static let titleOfHeader = "Избранное"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,7 @@ class FavouritesTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            header.configure(title: "Избранное")
+            header.configure(title: Spec.titleOfHeader)
         default:
             return nil
         }
