@@ -46,6 +46,7 @@
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
 		8EDBF57B28D43BB70013AD0D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57A28D43BB70013AD0D /* ProfileViewController.swift */; };
+		8EDBF57D28D4B2220013AD0D /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */; };
 		8EFBA2A828AEAEA90098644F /* TodayCookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */; };
 		8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */; };
 		8EFBA2B528B4D3B80098644F /* SearchingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */; };
@@ -102,6 +103,7 @@
 		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompositionalLayout.swift; sourceTree = "<group>"; };
 		8EDBF57A28D43BB70013AD0D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
 		8EFBA2A728AEAEA90098644F /* TodayCookingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayCookingTableViewCell.xib; sourceTree = "<group>"; };
 		8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
 		8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewCell.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFEDAB328984843001A2908 /* BorderedTextField.swift */,
+				8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */,
 				8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */,
 				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
 				8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */,
@@ -388,6 +391,7 @@
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
 				8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */,
+				8EDBF57D28D4B2220013AD0D /* ProfileTextField.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,

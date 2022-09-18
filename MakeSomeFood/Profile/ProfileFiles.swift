@@ -3,6 +3,7 @@ import UIKit
 
 struct Profile {
     var iconImage: UIImage?
+    
 //    var profileLabel: String
 //    var isDestructive: Bool
 }
