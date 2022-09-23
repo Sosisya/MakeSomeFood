@@ -48,6 +48,7 @@ extension HomeViewController {
         default:
             fatalError()
         }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

@@ -14,13 +14,11 @@ class RecepieViewController: UIViewController {
 
         tableView.separatorStyle = .none
 
-        tableView.register(IngredientsForRecepieTableViewCell.self, forCellReuseIdentifier: "IngredientsForRecepieTableViewCell")
-        tableView.register(DescriptionOfRecepieTableViewCell.self, forCellReuseIdentifier: "DescriptionOfRecepieTableViewCell")
-        tableView.register(NameOfPecepieTableViewCell.self, forCellReuseIdentifier: "NameOfPecepieTableViewCell")
+
     }
 }
 
-extension UIViewController: UITableViewDelegate, UITableViewDataSource {
+extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 3
@@ -42,16 +40,16 @@ extension UIViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfPecepieTableViewCell", for: indexPath) as! NameOfPecepieTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
+            cell.first.text = "luiza"
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
-            //            let item = categoryOfMeal[indexPath.row]
-            //            cell.categoryLabel.text = item.nameOfCategory
-            //            cell.categoryImage.image = item.imageOfCategory
+            cell.textLabel?.text = "Ингредиенты"
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionOfRecepieTableViewCell", for: indexPath) as! DescriptionOfRecepieTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
+            cell.textLabel?.text = "Суп – жидкое блюдо, первое блюдо. Многие разновидности супов получили самостоятельные наименования, некоторые сохранили в своем названии слово «суп». Вы найдете на нашем сайте многие тысячи рецептов супов на каждый день и оригинальных, рецепты простых супов и не очень, пошаговые рецепты супов с фото и видео, а также ответы на вопросы, как приготовить суп, как сварить суп, советы по приготовлению супа. И ваш домашний суп всегда будет вкусным супом. А, может, и вы пришлете нам рецепт супа с пошаговыми фото?"
             return cell
         default:
             fatalError()

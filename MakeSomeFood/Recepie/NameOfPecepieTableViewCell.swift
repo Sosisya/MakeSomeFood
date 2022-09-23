@@ -1,10 +1,10 @@
 import UIKit
 
-class NameOfPecepieTableViewCell: UITableViewCell {
+class NameOfRecepieTableViewCell: UITableViewCell {
+    @IBOutlet weak var first: UILabel!
 
-    @IBOutlet weak var nameOfMeal: UILabel!
-    @IBOutlet weak var tagOfCategory: LabelWithInsets!
-    @IBOutlet weak var tagOfArea: LabelWithInsets!
+//        @IBOutlet weak var tagOfCategory: LabelWithInsets!
+//        @IBOutlet weak var tagOfArea: LabelWithInsets!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -13,5 +13,4 @@ class NameOfPecepieTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }

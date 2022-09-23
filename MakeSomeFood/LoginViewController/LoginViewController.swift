@@ -19,7 +19,8 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            scrollViewBottom.constant = keyboardSize.height
+            let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0
+            scrollViewBottom.constant = keyboardSize.height - tabBarHeight
         }
     }
     
