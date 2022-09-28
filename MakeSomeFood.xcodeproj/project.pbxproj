@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E0C056528D82BAE00C45692 /* RecepieDescriptionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0C056428D82BAE00C45692 /* RecepieDescriptionFile.swift */; };
 		8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19074028ABFE3B00ECD830 /* CellView.swift */; };
 		8E1E99FC28A90E37007349A9 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */; };
 		8E1E9A0028A910F4007349A9 /* SearchFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1E99FF28A910F4007349A9 /* SearchFiles.swift */; };
@@ -35,6 +34,7 @@
 		8E59C98228DCB21000D6FEBE /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E59C97028DCB21000D6FEBE /* SF-Pro-Text-LightItalic.otf */; };
 		8E59C98328DCB21000D6FEBE /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E59C97128DCB21000D6FEBE /* SF-Pro-Text-Semibold.otf */; };
 		8E59C98428DCB21000D6FEBE /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E59C97228DCB21000D6FEBE /* SF-Pro-Text-Heavy.otf */; };
+		8E59C98728E0355F00D6FEBE /* FloatingTitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E59C98628E0355F00D6FEBE /* FloatingTitleTextField.swift */; };
 		8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED26F28A159E800EB0CB2 /* TodayCookingTableViewCell.swift */; };
 		8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */; };
 		8E6ED27928A2C82C00EB0CB2 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */; };
@@ -42,6 +42,7 @@
 		8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */; };
 		8E6ED28228A8E65900EB0CB2 /* TableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */; };
 		8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */; };
+		8E89EA5928E458530063B821 /* StrechyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */; };
 		8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */; };
 		8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */; };
 		8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */; };
@@ -86,7 +87,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E0C056428D82BAE00C45692 /* RecepieDescriptionFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieDescriptionFile.swift; sourceTree = "<group>"; };
 		8E19074028ABFE3B00ECD830 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		8E1E99FF28A910F4007349A9 /* SearchFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFiles.swift; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 		8E59C97028DCB21000D6FEBE /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-LightItalic.otf"; path = "../../../../../../../Library/Fonts/SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
 		8E59C97128DCB21000D6FEBE /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Semibold.otf"; path = "../../../../../../../Library/Fonts/SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		8E59C97228DCB21000D6FEBE /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Heavy.otf"; path = "../../../../../../../Library/Fonts/SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		8E59C98628E0355F00D6FEBE /* FloatingTitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTitleTextField.swift; sourceTree = "<group>"; };
 		8E6ED26F28A159E800EB0CB2 /* TodayCookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCookingTableViewCell.swift; sourceTree = "<group>"; };
 		8E6ED27628A2241E00EB0CB2 /* HomeCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategories.swift; sourceTree = "<group>"; };
 		8E6ED27828A2C82B00EB0CB2 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieViewController.swift; sourceTree = "<group>"; };
 		8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionHeaderView.xib; sourceTree = "<group>"; };
 		8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
+		8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechyTableHeaderView.swift; sourceTree = "<group>"; };
 		8E9034C52898E7AA00D65515 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034C72898E7AA00D65515 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -193,10 +195,10 @@
 			isa = PBXGroup;
 			children = (
 				8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */,
+				8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */,
 				8EDBF58228D74E660013AD0D /* NameOfPecepieTableViewCell.swift */,
 				8EDBF57E28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift */,
 				8E37564428D982220033E360 /* DescritionOfRecepieTableViewCell.swift */,
-				8E0C056428D82BAE00C45692 /* RecepieDescriptionFile.swift */,
 			);
 			path = Recepie;
 			sourceTree = "<group>";
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFEDAB328984843001A2908 /* BorderedTextField.swift */,
+				8E59C98628E0355F00D6FEBE /* FloatingTitleTextField.swift */,
 				8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */,
 				8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */,
 				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
@@ -475,12 +478,12 @@
 				8E4C5C7328BBA11900367312 /* ProfileFiles.swift in Sources */,
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
 				8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */,
+				8E89EA5928E458530063B821 /* StrechyTableHeaderView.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */,
 				8EDBF57D28D4B2220013AD0D /* ProfileTextField.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
-				8E0C056528D82BAE00C45692 /* RecepieDescriptionFile.swift in Sources */,
 				8E6ED27E28A2C8F900EB0CB2 /* SelectedRecepies.swift in Sources */,
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
 				8EDBF57B28D43BB70013AD0D /* ProfileViewController.swift in Sources */,
@@ -492,6 +495,7 @@
 				8EFBA2C428B6997D0098644F /* LabelWithInsets.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
 				8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */,
+				8E59C98728E0355F00D6FEBE /* FloatingTitleTextField.swift in Sources */,
 				8E1E9A0028A910F4007349A9 /* SearchFiles.swift in Sources */,
 				8EDBF58328D74E660013AD0D /* NameOfPecepieTableViewCell.swift in Sources */,
 				8E6ED27728A2241E00EB0CB2 /* HomeCategories.swift in Sources */,

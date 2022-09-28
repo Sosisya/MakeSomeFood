@@ -1,13 +1,17 @@
 import UIKit
 
 class RecepieViewController: UIViewController {
-    @IBOutlet weak var mealImage: UIImageView!
     @IBOutlet var tableView: UITableView!
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.layer.cornerRadius = 12
+
+        let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
+               // Image from unsplash: https://unsplash.com/photos/iVPWGCbFwd8
+               headerView.imageView.image = UIImage(named: "headerbg")
+               self.tableView.tableHeaderView = headerView
+
+
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -70,5 +74,12 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         }
         return header
+    }
+}
+
+extension RecepieViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let headerView = self.tableView.tableHeaderView as! StretchyTableHeaderView
+        headerView.scrollViewDidScroll(scrollView: scrollView)
     }
 }
