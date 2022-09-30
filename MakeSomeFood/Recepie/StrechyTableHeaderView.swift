@@ -1,6 +1,7 @@
 import UIKit
 
 class StretchyTableHeaderView: UIView {
+
     var imageViewHeight = NSLayoutConstraint()
     var imageViewBottom = NSLayoutConstraint()
 

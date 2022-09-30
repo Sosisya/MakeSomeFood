@@ -20,7 +20,7 @@ class FloatingTitleTextField: UIView {
 
     let titleLabel = UILabel()
     let textField = UITextField()
-    let contentView = UIView()
+    let contentStackView = UIStackView()
     let stackView = UIStackView()
     let clearButton = UIButton()
     let hideButton = UIButton()
@@ -32,6 +32,10 @@ class FloatingTitleTextField: UIView {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
         commonInit()
     }
 
@@ -39,33 +43,30 @@ class FloatingTitleTextField: UIView {
         addSubview(stackView)
         stackView.axis = .horizontal
         stackView.spacing = 6
-        stackView.addArrangedSubview(contentView)
+        contentStackView.axis = .vertical
+        contentStackView.spacing = 0
+        stackView.addArrangedSubview(contentStackView)
         stackView.addArrangedSubview(clearButton)
         stackView.addArrangedSubview(hideButton)
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(textField)
+        contentStackView.addArrangedSubview(titleLabel)
+        contentStackView.addArrangedSubview(textField)
         setupConstraints()
         setupViews()
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0),
-            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 32),
-            stackView.heightAnchor.constraint(equalToConstant: 32),
+            contentStackView.heightAnchor.constraint(equalToConstant: 32),
             clearButton.heightAnchor.constraint(equalToConstant: 32),
             clearButton.widthAnchor.constraint(equalToConstant: 32),
             hideButton.heightAnchor.constraint(equalToConstant: 32),
             hideButton.widthAnchor.constraint(equalToConstant: 32),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        stackView.frame = CGRect(x: 12, y: 0, width: bounds.width - 24, height: bounds.height)
     }
 
     private func setupViews() {
@@ -73,6 +74,7 @@ class FloatingTitleTextField: UIView {
         textField.text = text
         clearButton.isHidden = !hasClearButton || text.isEmpty
         hideButton.isHidden = !hasHideButton
+        clearButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
+        hideButton.setImage(UIImage(systemName: "eye"), for: .normal)
     }
 }
-

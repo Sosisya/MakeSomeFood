@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dtH-L8-k4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bf6-ge-fA7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -410,39 +410,55 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameOfRecepieTableViewCell" rowHeight="68" id="C0I-rB-Z76" customClass="NameOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="68"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameOfRecepieTableViewCell" rowHeight="138" id="C0I-rB-Z76" customClass="NameOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C0I-rB-Z76" id="2pM-mX-13K">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJM-OR-9YR">
-                                                    <rect key="frame" x="186" y="23.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-aT-P3P" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="3" y="106" width="55" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Msr-He-YMx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
+                                                    <color key="textColor" name="orange"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edW-Ch-IX3" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="74" y="106" width="54.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="S0r-ti-mhx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
+                                                    <color key="textColor" name="green"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-FD-T45">
+                                                    <rect key="frame" x="86" y="35" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GJM-OR-9YR" firstAttribute="centerX" secondItem="2pM-mX-13K" secondAttribute="centerX" id="0aQ-oL-HFH"/>
-                                                <constraint firstItem="GJM-OR-9YR" firstAttribute="centerY" secondItem="2pM-mX-13K" secondAttribute="centerY" id="DAw-EB-Gst"/>
+                                                <constraint firstItem="MUZ-aT-P3P" firstAttribute="centerY" secondItem="edW-Ch-IX3" secondAttribute="centerY" id="AIK-Qx-5G5"/>
+                                                <constraint firstItem="edW-Ch-IX3" firstAttribute="leading" secondItem="MUZ-aT-P3P" secondAttribute="trailing" constant="16" id="Ul3-n8-VPV"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="first" destination="GJM-OR-9YR" id="CiN-9q-awc"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsForRecepieTableViewCell" rowHeight="79" id="wOe-E2-3hT" customClass="IngredientsForRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118" width="414" height="79"/>
+                                        <rect key="frame" x="0.0" y="188" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wOe-E2-3hT" id="MTo-cw-MHC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-Cj-ZpH">
-                                                    <rect key="frame" x="186" y="29" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-Cj-ZpH">
+                                                    <rect key="frame" x="184" y="29" width="46.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -457,7 +473,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescritionOfRecepieTableViewCell" rowHeight="91" id="aAh-of-pyH" customClass="DescritionOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="197" width="414" height="91"/>
+                                        <rect key="frame" x="0.0" y="267" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAh-of-pyH" id="72g-EV-lnW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
@@ -603,14 +619,14 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="someGirl" translatesAutoresizingMaskIntoConstraints="NO" id="YFk-QL-tOn">
-                                        <rect key="frame" x="141" y="16" width="100" height="100"/>
+                                        <rect key="frame" x="157" y="16" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="FiB-gr-HRy"/>
                                             <constraint firstAttribute="width" constant="100" id="nE5-YY-Y3l"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ID3-QR-zYZ">
-                                        <rect key="frame" x="205" y="80.5" width="44" height="42"/>
+                                        <rect key="frame" x="221" y="80.5" width="44" height="42"/>
                                         <color key="backgroundColor" name="orange"/>
                                         <color key="tintColor" name="white"/>
                                         <constraints>
@@ -626,7 +642,30 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Имя"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Луиза"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AX-at-p5j" customClass="FloatingTitleTextField" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="260" width="382" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="iT1-hA-EVl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пароль"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="78W-Xb-axu" customClass="FloatingTitleTextField" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="200" width="382" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vxx-QI-cPg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Почта"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="NO"/>
                                         </userDefinedRuntimeAttributes>
@@ -635,13 +674,19 @@
                                 <constraints>
                                     <constraint firstItem="YFk-QL-tOn" firstAttribute="top" secondItem="piq-Iw-6hU" secondAttribute="top" constant="16" id="0hL-Rj-U2r"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="leading" secondItem="piq-Iw-6hU" secondAttribute="leading" constant="16" id="6pi-4F-jGz"/>
+                                    <constraint firstItem="78W-Xb-axu" firstAttribute="top" secondItem="dvx-ue-Btp" secondAttribute="bottom" constant="16" id="Cot-Ny-1MG"/>
                                     <constraint firstItem="ID3-QR-zYZ" firstAttribute="leading" secondItem="YFk-QL-tOn" secondAttribute="leading" constant="64" id="DTX-AA-FxY"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="top" secondItem="YFk-QL-tOn" secondAttribute="bottom" constant="24" id="F38-yY-GpE"/>
                                     <constraint firstItem="YFk-QL-tOn" firstAttribute="centerX" secondItem="piq-Iw-6hU" secondAttribute="centerX" id="GUd-fb-IKx"/>
+                                    <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="9AX-at-p5j" secondAttribute="trailing" constant="16" id="Smf-wc-Gqg"/>
+                                    <constraint firstItem="9AX-at-p5j" firstAttribute="top" secondItem="78W-Xb-axu" secondAttribute="bottom" constant="16" id="ZZz-TD-098"/>
+                                    <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="78W-Xb-axu" secondAttribute="trailing" constant="16" id="c8u-8h-2S4"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="width" secondItem="Vcy-mu-bSV" secondAttribute="width" constant="-32" id="dTk-n9-OOL"/>
-                                    <constraint firstItem="dvx-ue-Btp" firstAttribute="trailing" secondItem="piq-Iw-6hU" secondAttribute="trailing" constant="16" id="j55-Z4-qLx"/>
+                                    <constraint firstItem="dvx-ue-Btp" firstAttribute="trailing" secondItem="piq-Iw-6hU" secondAttribute="trailing" constant="-16" id="j55-Z4-qLx"/>
                                     <constraint firstItem="ID3-QR-zYZ" firstAttribute="top" secondItem="YFk-QL-tOn" secondAttribute="top" constant="64" id="mZN-aT-9VW"/>
-                                    <constraint firstItem="dvx-ue-Btp" firstAttribute="bottom" secondItem="piq-Iw-6hU" secondAttribute="bottom" constant="16" id="u8M-md-sk2"/>
+                                    <constraint firstItem="9AX-at-p5j" firstAttribute="leading" secondItem="piq-Iw-6hU" secondAttribute="leading" constant="16" id="s0Z-LV-L3W"/>
+                                    <constraint firstItem="dvx-ue-Btp" firstAttribute="bottom" secondItem="piq-Iw-6hU" secondAttribute="bottom" constant="-16" id="u8M-md-sk2"/>
+                                    <constraint firstItem="78W-Xb-axu" firstAttribute="leading" secondItem="piq-Iw-6hU" secondAttribute="leading" constant="16" id="zFV-h4-qWK"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="piq-Iw-6hU"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iWe-mT-mYZ"/>
@@ -663,6 +708,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nameTextField" destination="dvx-ue-Btp" id="qQp-l9-cjm"/>
                         <outlet property="profileImage" destination="YFk-QL-tOn" id="tdI-16-RJu"/>
                         <outlet property="scrollViewBottom" destination="SV4-HZ-uPr" id="U5I-bD-tuO"/>
                         <outlet property="takePhotoImage" destination="ID3-QR-zYZ" id="iKX-AN-MGB"/>
