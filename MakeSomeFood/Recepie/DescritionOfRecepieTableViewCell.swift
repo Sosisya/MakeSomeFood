@@ -2,8 +2,8 @@ import UIKit
 
 class DescritionOfRecepieTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var third: UILabel!
-
+    @IBOutlet weak var descriptionOfRecepie: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

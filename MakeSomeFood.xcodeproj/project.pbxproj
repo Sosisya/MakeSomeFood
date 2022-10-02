@@ -44,7 +44,6 @@
 		8E6ED28228A8E65900EB0CB2 /* TableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */; };
 		8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */; };
 		8E89EA5928E458530063B821 /* StrechyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */; };
-		8E89EA5B28E598CB0063B821 /* StrechyTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E89EA5A28E598CB0063B821 /* StrechyTableHeaderView.xib */; };
 		8E9034D72899294600D65515 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */; };
 		8E9034D82899294600D65515 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */; };
 		8E9034D92899294600D65515 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */; };
@@ -64,6 +63,7 @@
 		8E9034E82899294600D65515 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CC2898E7AA00D65515 /* Montserrat-ThinItalic.ttf */; };
 		8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */; };
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
+		8E9BB4A328E87492008B9FF6 /* RecepieFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */; };
 		8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */; };
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
@@ -124,7 +124,6 @@
 		8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionHeaderView.xib; sourceTree = "<group>"; };
 		8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
 		8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechyTableHeaderView.swift; sourceTree = "<group>"; };
-		8E89EA5A28E598CB0063B821 /* StrechyTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StrechyTableHeaderView.xib; sourceTree = "<group>"; };
 		8E9034C52898E7AA00D65515 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034C72898E7AA00D65515 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		8E9034D62898E7AB00D65515 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverViewController.swift; sourceTree = "<group>"; };
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieFiles.swift; sourceTree = "<group>"; };
 		8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompositionalLayout.swift; sourceTree = "<group>"; };
@@ -198,10 +198,10 @@
 			children = (
 				8E6ED27F28A54AB200EB0CB2 /* RecepieViewController.swift */,
 				8E89EA5828E458530063B821 /* StrechyTableHeaderView.swift */,
-				8E89EA5A28E598CB0063B821 /* StrechyTableHeaderView.xib */,
 				8EDBF58228D74E660013AD0D /* NameOfPecepieTableViewCell.swift */,
 				8EDBF57E28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift */,
 				8E37564428D982220033E360 /* DescritionOfRecepieTableViewCell.swift */,
+				8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */,
 			);
 			path = Recepie;
 			sourceTree = "<group>";
@@ -452,7 +452,6 @@
 				8E9034E22899294600D65515 /* Montserrat-Medium.ttf in Resources */,
 				8E9034E32899294600D65515 /* Montserrat-MediumItalic.ttf in Resources */,
 				8E59C97C28DCB21000D6FEBE /* SF-Pro-Text-Regular.otf in Resources */,
-				8E89EA5B28E598CB0063B821 /* StrechyTableHeaderView.xib in Resources */,
 				8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */,
 				8E59C97F28DCB21000D6FEBE /* SF-Pro-Text-Bold.otf in Resources */,
 				8E9034E42899294600D65515 /* Montserrat-Regular.ttf in Resources */,
@@ -499,6 +498,7 @@
 				8EFBA2C428B6997D0098644F /* LabelWithInsets.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
 				8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */,
+				8E9BB4A328E87492008B9FF6 /* RecepieFiles.swift in Sources */,
 				8E59C98728E0355F00D6FEBE /* FloatingTitleTextField.swift in Sources */,
 				8E1E9A0028A910F4007349A9 /* SearchFiles.swift in Sources */,
 				8EDBF58328D74E660013AD0D /* NameOfPecepieTableViewCell.swift in Sources */,

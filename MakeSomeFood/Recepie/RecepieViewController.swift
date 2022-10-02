@@ -7,18 +7,12 @@ class RecepieViewController: UIViewController {
         super.viewDidLoad()
 
         let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
-               // Image from unsplash: https://unsplash.com/photos/iVPWGCbFwd8
-               headerView.imageView.image = UIImage(named: "headerbg")
-               self.tableView.tableHeaderView = headerView
-
-
+        headerView.imageView.image = UIImage(named: "бургер")
+       tableView.tableHeaderView = headerView
 
         tableView.dataSource = self
         tableView.delegate = self
-
         tableView.separatorStyle = .none
-
-
     }
 }
 
@@ -45,15 +39,21 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
-            cell.first.text = "luiza"
+            let item = someRecepie[indexPath.row]
+            cell.nameOfRecepieLabel.text = item.nameOfRecepie
+            cell.categoryTagLabel.text = item.categoryTagLabel
+            cell.areaTagLabel.text = item.areaTagLabel
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
-            cell.textLabel?.text = "Ингредиенты"
+            let item = someRecepie[indexPath.row]
+            cell.ingredientLabel.text = item.nameOfIngredient
+            cell.amountLabel.text = item.amountOfIngredient
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.textLabel?.text = "Суп – жидкое блюдо, первое блюдо. Многие разновидности супов получили самостоятельные наименования, некоторые сохранили в своем названии слово «суп». Вы найдете на нашем сайте многие тысячи рецептов супов на каждый день и оригинальных, рецепты простых супов и не очень, пошаговые рецепты супов с фото и видео, а также ответы на вопросы, как приготовить суп, как сварить суп, советы по приготовлению супа. И ваш домашний суп всегда будет вкусным супом. А, может, и вы пришлете нам рецепт супа с пошаговыми фото?"
+            let item = someRecepie[indexPath.row]
+            cell.descriptionOfRecepie.text = item.descriptionOfRecepie
             return cell
         default:
             fatalError()

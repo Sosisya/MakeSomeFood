@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bf6-ge-fA7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dtH-L8-k4z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -410,15 +410,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameOfRecepieTableViewCell" rowHeight="138" id="C0I-rB-Z76" customClass="NameOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="138"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameOfRecepieTableViewCell" rowHeight="74" id="C0I-rB-Z76" customClass="NameOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C0I-rB-Z76" id="2pM-mX-13K">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-aT-P3P" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
-                                                    <rect key="frame" x="3" y="106" width="55" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-aT-P3P" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="33" width="55" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Msr-He-YMx"/>
                                                     </constraints>
@@ -426,8 +426,8 @@
                                                     <color key="textColor" name="orange"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edW-Ch-IX3" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
-                                                    <rect key="frame" x="74" y="106" width="54.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edW-Ch-IX3" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="87" y="33" width="54.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="S0r-ti-mhx"/>
                                                     </constraints>
@@ -435,64 +435,87 @@
                                                     <color key="textColor" name="green"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-FD-T45">
-                                                    <rect key="frame" x="86" y="35" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование блюда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-FD-T45">
+                                                    <rect key="frame" x="16" y="0.0" width="286" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MUZ-aT-P3P" secondAttribute="bottom" constant="20" id="2Ie-Yd-eQo"/>
+                                                <constraint firstItem="PVX-FD-T45" firstAttribute="leading" secondItem="2pM-mX-13K" secondAttribute="leading" constant="16" id="7yp-Aw-Nkm"/>
                                                 <constraint firstItem="MUZ-aT-P3P" firstAttribute="centerY" secondItem="edW-Ch-IX3" secondAttribute="centerY" id="AIK-Qx-5G5"/>
+                                                <constraint firstItem="PVX-FD-T45" firstAttribute="top" secondItem="2pM-mX-13K" secondAttribute="top" id="Pha-ui-TEY"/>
                                                 <constraint firstItem="edW-Ch-IX3" firstAttribute="leading" secondItem="MUZ-aT-P3P" secondAttribute="trailing" constant="16" id="Ul3-n8-VPV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsForRecepieTableViewCell" rowHeight="79" id="wOe-E2-3hT" customClass="IngredientsForRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="188" width="414" height="79"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wOe-E2-3hT" id="MTo-cw-MHC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-Cj-ZpH">
-                                                    <rect key="frame" x="184" y="29" width="46.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="mCc-Cj-ZpH" firstAttribute="centerX" secondItem="MTo-cw-MHC" secondAttribute="centerX" id="9iO-in-Me5"/>
-                                                <constraint firstItem="mCc-Cj-ZpH" firstAttribute="centerY" secondItem="MTo-cw-MHC" secondAttribute="centerY" id="s4v-fe-A02"/>
+                                                <constraint firstItem="MUZ-aT-P3P" firstAttribute="top" secondItem="PVX-FD-T45" secondAttribute="bottom" constant="8" id="Vma-MT-CjR"/>
+                                                <constraint firstItem="MUZ-aT-P3P" firstAttribute="leading" secondItem="PVX-FD-T45" secondAttribute="leading" id="sfp-01-9BY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="second" destination="mCc-Cj-ZpH" id="dEm-Jt-9B2"/>
+                                            <outlet property="areaTagLabel" destination="edW-Ch-IX3" id="xLs-UV-A2A"/>
+                                            <outlet property="categoryTagLabel" destination="MUZ-aT-P3P" id="oa1-RT-J0Y"/>
+                                            <outlet property="nameOfRecepieLabel" destination="PVX-FD-T45" id="Hw9-ZG-7Or"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescritionOfRecepieTableViewCell" rowHeight="91" id="aAh-of-pyH" customClass="DescritionOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="267" width="414" height="91"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsForRecepieTableViewCell" rowHeight="33" id="wOe-E2-3hT" customClass="IngredientsForRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="124" width="414" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAh-of-pyH" id="72g-EV-lnW">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wOe-E2-3hT" id="MTo-cw-MHC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="привет" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K4-ze-atf">
-                                                    <rect key="frame" x="181" y="35" width="52.5" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-Cj-ZpH">
+                                                    <rect key="frame" x="318.5" y="8" width="79.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ингредиент" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXG-60-78R">
+                                                    <rect key="frame" x="16" y="5" width="83" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0K4-ze-atf" firstAttribute="centerX" secondItem="72g-EV-lnW" secondAttribute="centerX" id="2nN-HQ-CpC"/>
-                                                <constraint firstItem="0K4-ze-atf" firstAttribute="centerY" secondItem="72g-EV-lnW" secondAttribute="centerY" id="tsV-gi-ejn"/>
+                                                <constraint firstItem="mCc-Cj-ZpH" firstAttribute="centerY" secondItem="NXG-60-78R" secondAttribute="centerY" id="88u-Ls-fkE"/>
+                                                <constraint firstItem="mCc-Cj-ZpH" firstAttribute="top" secondItem="MTo-cw-MHC" secondAttribute="top" constant="8" id="bV9-UO-5iB"/>
+                                                <constraint firstItem="NXG-60-78R" firstAttribute="leading" secondItem="MTo-cw-MHC" secondAttribute="leading" constant="16" id="dlm-ZV-bZq"/>
+                                                <constraint firstAttribute="trailing" secondItem="mCc-Cj-ZpH" secondAttribute="trailing" constant="16" id="etX-Iy-1ch"/>
+                                                <constraint firstItem="NXG-60-78R" firstAttribute="top" secondItem="MTo-cw-MHC" secondAttribute="top" constant="5" id="mAZ-uT-2v4"/>
+                                                <constraint firstAttribute="bottom" secondItem="NXG-60-78R" secondAttribute="bottom" id="wan-PW-wnc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="third" destination="0K4-ze-atf" id="S80-8M-I3I"/>
+                                            <outlet property="amountLabel" destination="mCc-Cj-ZpH" id="rWV-8U-FR5"/>
+                                            <outlet property="ingredientLabel" destination="NXG-60-78R" id="gGd-CL-XGM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescritionOfRecepieTableViewCell" rowHeight="387" id="aAh-of-pyH" customClass="DescritionOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="157" width="414" height="387"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAh-of-pyH" id="72g-EV-lnW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K4-ze-atf">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="387"/>
+                                                    <string key="text">Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.</string>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0K4-ze-atf" firstAttribute="top" secondItem="72g-EV-lnW" secondAttribute="top" id="8uN-Wx-tOx"/>
+                                                <constraint firstAttribute="trailing" secondItem="0K4-ze-atf" secondAttribute="trailing" constant="16" id="Bsf-u4-JtV"/>
+                                                <constraint firstItem="0K4-ze-atf" firstAttribute="leading" secondItem="72g-EV-lnW" secondAttribute="leading" constant="16" id="IMN-Xy-85g"/>
+                                                <constraint firstAttribute="bottom" secondItem="0K4-ze-atf" secondAttribute="bottom" id="dW0-db-o8x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionOfRecepie" destination="0K4-ze-atf" id="wRM-SA-XUB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

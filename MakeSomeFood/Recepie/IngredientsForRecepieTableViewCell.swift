@@ -1,10 +1,10 @@
 import UIKit
 
 class IngredientsForRecepieTableViewCell: UITableViewCell {
-    @IBOutlet weak var second: UILabel!
-    //        @IBOutlet weak var ingredient: UILabel!
-    //        @IBOutlet weak var amount: UILabel!
 
+    @IBOutlet weak var ingredientLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

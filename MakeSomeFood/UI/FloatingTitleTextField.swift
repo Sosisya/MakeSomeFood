@@ -114,7 +114,7 @@ class FloatingTitleTextField: UIView {
     }
 
     @objc func showCloseButton(textField: UITextField) {
-        if textField.text == "" {
+        if textField.text == "" {    // почему не работает isEmpty
             clearButton.isHidden = true
         } else {
             clearButton.isHidden = false

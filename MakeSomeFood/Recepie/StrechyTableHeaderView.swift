@@ -30,9 +30,8 @@ class StretchyTableHeaderView: UIView {
 
         // ImageView for background
         imageView = UIImageView()
-        imageView.image = UIImage(named: "Бургер")
         imageView.clipsToBounds = true
-        imageView.backgroundColor = .red
+        imageView.backgroundColor = .yellow
         imageView.contentMode = .scaleAspectFill
         containerView.addSubview(imageView)
     }
@@ -67,5 +66,6 @@ class StretchyTableHeaderView: UIView {
         imageViewBottom.constant = offsetY >= 0 ? 0 : -offsetY / 2
         imageViewHeight.constant = max(offsetY + scrollView.contentInset.top, scrollView.contentInset.top)
     }
-
 }
+
+
