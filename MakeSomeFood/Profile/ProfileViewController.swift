@@ -12,6 +12,11 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
 
     @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
 
+
+    @IBOutlet weak var saveButton: UIButton!
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +33,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
 
     @objc func keyboardWillShow(notification: Notification) {
@@ -39,5 +45,11 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
 
     @objc func keyboardWillHide(notification: Notification) {
         scrollViewBottom.constant = 0
+    }
+
+    func hideSaveButton() {
+        if nameTextField.text == "" && emailTextField.text == "" && passwordTextField.text == "" {
+            saveButton.isHidden = true
+        }
     }
 }

@@ -645,11 +645,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-mu-bSV">
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-mu-bSV">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-ch-BZr">
-                                        <rect key="frame" x="16" y="338" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="657" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="h74-ki-hwj"/>
                                         </constraints>
@@ -725,11 +725,11 @@
                                     <constraint firstItem="YgK-ch-BZr" firstAttribute="leading" secondItem="iWe-mT-mYZ" secondAttribute="leading" constant="16" id="Kvj-iM-DyA"/>
                                     <constraint firstItem="iWe-mT-mYZ" firstAttribute="trailing" secondItem="YgK-ch-BZr" secondAttribute="trailing" constant="16" id="PtH-th-hUi"/>
                                     <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="9AX-at-p5j" secondAttribute="trailing" constant="16" id="Smf-wc-Gqg"/>
-                                    <constraint firstItem="YgK-ch-BZr" firstAttribute="top" secondItem="9AX-at-p5j" secondAttribute="bottom" constant="34" id="YU5-ve-KkD"/>
                                     <constraint firstItem="9AX-at-p5j" firstAttribute="top" secondItem="78W-Xb-axu" secondAttribute="bottom" constant="16" id="ZZz-TD-098"/>
                                     <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="78W-Xb-axu" secondAttribute="trailing" constant="16" id="c8u-8h-2S4"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="width" secondItem="Vcy-mu-bSV" secondAttribute="width" constant="-32" id="dTk-n9-OOL"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="trailing" secondItem="piq-Iw-6hU" secondAttribute="trailing" constant="-16" id="j55-Z4-qLx"/>
+                                    <constraint firstItem="iWe-mT-mYZ" firstAttribute="bottom" secondItem="YgK-ch-BZr" secondAttribute="bottom" constant="16" id="l2m-qT-w2k"/>
                                     <constraint firstItem="ID3-QR-zYZ" firstAttribute="top" secondItem="YFk-QL-tOn" secondAttribute="top" constant="64" id="mZN-aT-9VW"/>
                                     <constraint firstItem="9AX-at-p5j" firstAttribute="leading" secondItem="piq-Iw-6hU" secondAttribute="leading" constant="16" id="s0Z-LV-L3W"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="bottom" secondItem="piq-Iw-6hU" secondAttribute="bottom" constant="-16" id="u8M-md-sk2"/>
@@ -740,7 +740,6 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-pA-8wL">
                                 <rect key="frame" x="16" y="749" width="382" height="48"/>
-                                <color key="backgroundColor" name="grayFill"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="rCy-c0-Kx8"/>
                                 </constraints>
@@ -777,6 +776,7 @@
                         <outlet property="exitButton" destination="EH7-pA-8wL" id="8eW-Nq-3qK"/>
                         <outlet property="nameTextField" destination="dvx-ue-Btp" id="qQp-l9-cjm"/>
                         <outlet property="profileImage" destination="YFk-QL-tOn" id="tdI-16-RJu"/>
+                        <outlet property="saveButton" destination="YgK-ch-BZr" id="jRj-qR-Yto"/>
                         <outlet property="scrollViewBottom" destination="SV4-HZ-uPr" id="U5I-bD-tuO"/>
                         <outlet property="takePhotoImage" destination="ID3-QR-zYZ" id="iKX-AN-MGB"/>
                     </connections>
