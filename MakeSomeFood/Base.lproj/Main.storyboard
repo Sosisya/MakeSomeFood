@@ -648,6 +648,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-mu-bSV">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-ch-BZr">
+                                        <rect key="frame" x="16" y="338" width="382" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="h74-ki-hwj"/>
+                                        </constraints>
+                                        <color key="tintColor" name="white"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                            <backgroundConfiguration key="background" cornerRadius="12">
+                                                <color key="backgroundColor" name="orange"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="someGirl" translatesAutoresizingMaskIntoConstraints="NO" id="YFk-QL-tOn">
                                         <rect key="frame" x="157" y="16" width="100" height="100"/>
                                         <constraints>
@@ -708,7 +722,10 @@
                                     <constraint firstItem="ID3-QR-zYZ" firstAttribute="leading" secondItem="YFk-QL-tOn" secondAttribute="leading" constant="64" id="DTX-AA-FxY"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="top" secondItem="YFk-QL-tOn" secondAttribute="bottom" constant="24" id="F38-yY-GpE"/>
                                     <constraint firstItem="YFk-QL-tOn" firstAttribute="centerX" secondItem="piq-Iw-6hU" secondAttribute="centerX" id="GUd-fb-IKx"/>
+                                    <constraint firstItem="YgK-ch-BZr" firstAttribute="leading" secondItem="iWe-mT-mYZ" secondAttribute="leading" constant="16" id="Kvj-iM-DyA"/>
+                                    <constraint firstItem="iWe-mT-mYZ" firstAttribute="trailing" secondItem="YgK-ch-BZr" secondAttribute="trailing" constant="16" id="PtH-th-hUi"/>
                                     <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="9AX-at-p5j" secondAttribute="trailing" constant="16" id="Smf-wc-Gqg"/>
+                                    <constraint firstItem="YgK-ch-BZr" firstAttribute="top" secondItem="9AX-at-p5j" secondAttribute="bottom" constant="34" id="YU5-ve-KkD"/>
                                     <constraint firstItem="9AX-at-p5j" firstAttribute="top" secondItem="78W-Xb-axu" secondAttribute="bottom" constant="16" id="ZZz-TD-098"/>
                                     <constraint firstItem="piq-Iw-6hU" firstAttribute="trailing" secondItem="78W-Xb-axu" secondAttribute="trailing" constant="16" id="c8u-8h-2S4"/>
                                     <constraint firstItem="dvx-ue-Btp" firstAttribute="width" secondItem="Vcy-mu-bSV" secondAttribute="width" constant="-32" id="dTk-n9-OOL"/>
@@ -722,9 +739,10 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="iWe-mT-mYZ"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-pA-8wL">
-                                <rect key="frame" x="16" y="753" width="382" height="44"/>
+                                <rect key="frame" x="16" y="749" width="382" height="48"/>
+                                <color key="backgroundColor" name="grayFill"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="rCy-c0-Kx8"/>
+                                    <constraint firstAttribute="height" constant="48" id="rCy-c0-Kx8"/>
                                 </constraints>
                                 <color key="tintColor" name="coral"/>
                                 <state key="normal" title="Button"/>
