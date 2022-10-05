@@ -2,6 +2,12 @@ import UIKit
 
 @IBDesignable
 class FloatingTitleTextField: UIView {
+
+    private struct Spec {
+        static var hideOnIcon = UIImage(systemName: "eye.slash")!
+        static var hideOffIcon = UIImage(systemName: "eye")!
+    }
+
     @IBInspectable var title: String = "" {
         didSet { setupViews() }
     }
@@ -84,13 +90,14 @@ class FloatingTitleTextField: UIView {
         textField.text = text
         textField.font = UIFont(name: "SFProText-Regular", size: 5) //почему не срабатывает size из этой строчки??
         textField.textColor = UIColor(named: "black")
+        textField.isSecureTextEntry = hasHideButton
 
         clearButton.isHidden = !hasClearButton || text.isEmpty
         hideButton.isHidden = !hasHideButton
 
         clearButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
         clearButton.tintColor = UIColor(named: "darkGray")
-        hideButton.setImage(UIImage(systemName: "eye"), for: .normal)
+        hideButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         hideButton.setTitleColor(UIColor(named: "darkGray"), for: .normal)
         hideButton.tintColor = UIColor(named: "darkGray")
 
@@ -100,24 +107,17 @@ class FloatingTitleTextField: UIView {
     }
 
     @objc func clearTextField() {
-       textField.text = ""
+        textField.text = ""
     }
 
     @objc func hidePassword() {
-        let isSecureTextEntry = textField.isSecureTextEntry
-        textField.isSecureTextEntry = isSecureTextEntry ? false : true
-        if textField.isSecureTextEntry == true {
-            hideButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-        } else {
-            hideButton.setImage(UIImage(systemName: "eye"), for: .normal)
-        }
+        textField.isSecureTextEntry.toggle()
+        let hideIcon = textField.isSecureTextEntry ? Spec.hideOnIcon : Spec.hideOffIcon
+        hideButton.setImage(hideIcon, for: .normal)
     }
 
     @objc func showCloseButton(textField: UITextField) {
-        if textField.text == "" {    // почему не работает isEmpty
-            clearButton.isHidden = true
-        } else {
-            clearButton.isHidden = false
-        }
+        guard hasClearButton else { return }
+        clearButton.isHidden = textField.text?.isEmpty ?? true
     }
 }

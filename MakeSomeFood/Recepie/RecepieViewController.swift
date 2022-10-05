@@ -2,17 +2,22 @@ import UIKit
 
 class RecepieViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet weak var recepieHeader: StrechyHeader!
+    var headerHeight: CGFloat = 280
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
-        headerView.imageView.image = UIImage(named: "бургер")
-       tableView.tableHeaderView = headerView
 
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+
+        recepieHeader = tableView.tableHeaderView as? StrechyHeader
+        tableView.tableHeaderView = nil
+        tableView.addSubview(recepieHeader)
+        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+        updateHeader()
     }
 }
 
@@ -27,7 +32,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return 5
+            return ingredients.count
         case 2:
             return 1
         default:
@@ -39,21 +44,19 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
-            let item = someRecepie[indexPath.row]
-            cell.nameOfRecepieLabel.text = item.nameOfRecepie
-            cell.categoryTagLabel.text = item.categoryTagLabel
-            cell.areaTagLabel.text = item.areaTagLabel
+            cell.nameOfRecepieLabel.text = nameAndTags.nameOfRecepie
+            cell.categoryTagLabel.text = nameAndTags.categoryTagLabel
+            cell.areaTagLabel.text = nameAndTags.areaTagLabel
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
-            let item = someRecepie[indexPath.row]
+            let item = ingredients[indexPath.row]
             cell.ingredientLabel.text = item.nameOfIngredient
             cell.amountLabel.text = item.amountOfIngredient
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            let item = someRecepie[indexPath.row]
-            cell.descriptionOfRecepie.text = item.descriptionOfRecepie
+            cell.descriptionOfRecepie.text = description // не работает
             return cell
         default:
             fatalError()
@@ -75,11 +78,16 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return header
     }
-}
 
-extension RecepieViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let headerView = self.tableView.tableHeaderView as! StretchyTableHeaderView
-        headerView.scrollViewDidScroll(scrollView: scrollView)
+    func updateHeader() {
+        if tableView.contentOffset.y <= -headerHeight {
+            recepieHeader.frame.origin.y = tableView.contentOffset.y
+            recepieHeader.frame.size.height = -tableView.contentOffset.y
+        }
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateHeader()
+    }
+
 }

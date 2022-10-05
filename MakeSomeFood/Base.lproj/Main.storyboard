@@ -409,9 +409,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eOT-OH-GeX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="st5-rP-tQR" customClass="StrechyHeader" customModule="MakeSomeFood" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NameOfRecepieTableViewCell" rowHeight="74" id="C0I-rB-Z76" customClass="NameOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="74"/>
+                                        <rect key="frame" x="0.0" y="330" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C0I-rB-Z76" id="2pM-mX-13K">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
@@ -435,8 +440,8 @@
                                                     <color key="textColor" name="green"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование блюда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-FD-T45">
-                                                    <rect key="frame" x="16" y="0.0" width="286" height="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Наименование блюда" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-FD-T45">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -449,6 +454,7 @@
                                                 <constraint firstItem="PVX-FD-T45" firstAttribute="top" secondItem="2pM-mX-13K" secondAttribute="top" id="Pha-ui-TEY"/>
                                                 <constraint firstItem="edW-Ch-IX3" firstAttribute="leading" secondItem="MUZ-aT-P3P" secondAttribute="trailing" constant="16" id="Ul3-n8-VPV"/>
                                                 <constraint firstItem="MUZ-aT-P3P" firstAttribute="top" secondItem="PVX-FD-T45" secondAttribute="bottom" constant="8" id="Vma-MT-CjR"/>
+                                                <constraint firstAttribute="trailing" secondItem="PVX-FD-T45" secondAttribute="trailing" constant="16" id="n5D-97-oAb"/>
                                                 <constraint firstItem="MUZ-aT-P3P" firstAttribute="leading" secondItem="PVX-FD-T45" secondAttribute="leading" id="sfp-01-9BY"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -459,7 +465,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsForRecepieTableViewCell" rowHeight="33" id="wOe-E2-3hT" customClass="IngredientsForRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124" width="414" height="33"/>
+                                        <rect key="frame" x="0.0" y="404" width="414" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wOe-E2-3hT" id="MTo-cw-MHC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -493,7 +499,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescritionOfRecepieTableViewCell" rowHeight="387" id="aAh-of-pyH" customClass="DescritionOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="157" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="437" width="414" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAh-of-pyH" id="72g-EV-lnW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
@@ -501,7 +507,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K4-ze-atf">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="387"/>
-                                                    <string key="text">Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.</string>
+                                                    <string key="text">Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте. Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.</string>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -536,6 +542,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vVH-y9-TJO"/>
                     <connections>
+                        <outlet property="recepieHeader" destination="st5-rP-tQR" id="C1F-VQ-TXS"/>
                         <outlet property="tableView" destination="eOT-OH-GeX" id="ETa-D7-Wdp"/>
                     </connections>
                 </viewController>
@@ -638,7 +645,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-mu-bSV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-mu-bSV">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="someGirl" translatesAutoresizingMaskIntoConstraints="NO" id="YFk-QL-tOn">
@@ -714,14 +721,22 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="piq-Iw-6hU"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="iWe-mT-mYZ"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-pA-8wL">
+                                <rect key="frame" x="169" y="758" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wEx-5Y-gHp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wEx-5Y-gHp" firstAttribute="bottom" secondItem="EH7-pA-8wL" secondAttribute="bottom" constant="20" id="7hW-so-xDm"/>
                             <constraint firstItem="Vcy-mu-bSV" firstAttribute="leading" secondItem="wEx-5Y-gHp" secondAttribute="leading" id="Ltq-AY-OBW"/>
                             <constraint firstItem="wEx-5Y-gHp" firstAttribute="trailing" secondItem="Vcy-mu-bSV" secondAttribute="trailing" id="RFi-He-iPy"/>
                             <constraint firstItem="wEx-5Y-gHp" firstAttribute="bottom" secondItem="Vcy-mu-bSV" secondAttribute="bottom" id="SV4-HZ-uPr"/>
                             <constraint firstItem="Vcy-mu-bSV" firstAttribute="top" secondItem="wEx-5Y-gHp" secondAttribute="top" id="jdY-fK-WaE"/>
+                            <constraint firstItem="wEx-5Y-gHp" firstAttribute="trailing" secondItem="EH7-pA-8wL" secondAttribute="trailing" constant="170" id="mQ3-ii-tKT"/>
+                            <constraint firstItem="EH7-pA-8wL" firstAttribute="leading" secondItem="wEx-5Y-gHp" secondAttribute="leading" constant="169" id="tof-Bm-jz3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bVX-uK-eJL">
@@ -1064,6 +1079,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
