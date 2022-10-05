@@ -4,6 +4,7 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var takePhotoImage: UIImageView!
+    @IBOutlet weak var exitButton: UIButton!
 
     @IBOutlet weak var nameTextField: FloatingTitleTextField!
     @IBOutlet weak var emailTextField: ProfileTextField!

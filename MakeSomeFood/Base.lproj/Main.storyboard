@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dtH-L8-k4z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bf6-ge-fA7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -722,21 +722,31 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="iWe-mT-mYZ"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH7-pA-8wL">
-                                <rect key="frame" x="169" y="758" width="75" height="35"/>
+                                <rect key="frame" x="16" y="753" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rCy-c0-Kx8"/>
+                                </constraints>
+                                <color key="tintColor" name="coral"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right" catalog="system" title="Выйти из приложения">
+                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                        <color key="backgroundColor" name="grayFill"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wEx-5Y-gHp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wEx-5Y-gHp" firstAttribute="bottom" secondItem="EH7-pA-8wL" secondAttribute="bottom" constant="20" id="7hW-so-xDm"/>
                             <constraint firstItem="Vcy-mu-bSV" firstAttribute="leading" secondItem="wEx-5Y-gHp" secondAttribute="leading" id="Ltq-AY-OBW"/>
                             <constraint firstItem="wEx-5Y-gHp" firstAttribute="trailing" secondItem="Vcy-mu-bSV" secondAttribute="trailing" id="RFi-He-iPy"/>
                             <constraint firstItem="wEx-5Y-gHp" firstAttribute="bottom" secondItem="Vcy-mu-bSV" secondAttribute="bottom" id="SV4-HZ-uPr"/>
                             <constraint firstItem="Vcy-mu-bSV" firstAttribute="top" secondItem="wEx-5Y-gHp" secondAttribute="top" id="jdY-fK-WaE"/>
-                            <constraint firstItem="wEx-5Y-gHp" firstAttribute="trailing" secondItem="EH7-pA-8wL" secondAttribute="trailing" constant="170" id="mQ3-ii-tKT"/>
-                            <constraint firstItem="EH7-pA-8wL" firstAttribute="leading" secondItem="wEx-5Y-gHp" secondAttribute="leading" constant="169" id="tof-Bm-jz3"/>
+                            <constraint firstItem="wEx-5Y-gHp" firstAttribute="trailing" secondItem="EH7-pA-8wL" secondAttribute="trailing" constant="16" id="mQ3-ii-tKT"/>
+                            <constraint firstItem="EH7-pA-8wL" firstAttribute="leading" secondItem="wEx-5Y-gHp" secondAttribute="leading" constant="16" id="tof-Bm-jz3"/>
+                            <constraint firstItem="EH7-pA-8wL" firstAttribute="centerX" secondItem="iUm-bG-2I2" secondAttribute="centerX" id="xil-tH-hGU"/>
+                            <constraint firstItem="EH7-pA-8wL" firstAttribute="bottom" secondItem="iUm-bG-2I2" secondAttribute="bottomMargin" constant="-16" id="zB3-7Q-h3o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bVX-uK-eJL">
@@ -746,6 +756,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="exitButton" destination="EH7-pA-8wL" id="8eW-Nq-3qK"/>
                         <outlet property="nameTextField" destination="dvx-ue-Btp" id="qQp-l9-cjm"/>
                         <outlet property="profileImage" destination="YFk-QL-tOn" id="tdI-16-RJu"/>
                         <outlet property="scrollViewBottom" destination="SV4-HZ-uPr" id="U5I-bD-tuO"/>
@@ -1058,12 +1069,16 @@
         <image name="icon.profile" width="28" height="28"/>
         <image name="icon.search" width="28" height="28"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <image name="screenSaverGradient" width="375" height="471"/>
         <image name="screenSaverImage" width="375" height="297"/>
         <image name="selectedCategory" width="343" height="230"/>
         <image name="someGirl" width="1080" height="1350"/>
         <namedColor name="black">
             <color red="0.035294117647058823" green="0.035294117647058823" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coral">
+            <color red="1" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grayFill">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
