@@ -9,12 +9,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginWithAppleAccountButton: UIButton!
     @IBOutlet weak var loginWithGoogleAccountButton: UIButton!
     @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
-    
+    @IBOutlet weak var linksTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var registerStackView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var linksLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let filledHeight = registerStackView.frame.maxY
+        let fullHeight = scrollView.frame.height
+        let minOffset = 8 + linksLabel.frame.height
+        let realOffSet = fullHeight - filledHeight - 16
+        linksTopConstraint.constant = max(realOffSet, minOffset)
     }
     
     @objc func keyboardWillShow(notification: Notification) {

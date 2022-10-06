@@ -56,7 +56,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.descriptionOfRecepie.text = description // не работает
+            cell.descriptionOfRecepie.text = "Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте."
             return cell
         default:
             fatalError()
@@ -68,7 +68,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
         switch section {
         case 0:
-            header.configure(title:  "")
+            return nil
         case 1:
             header.configure(title: "Ингредиенты")
         case 2:
@@ -78,11 +78,24 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return header
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 0.01
+        case 1:
+            return UITableView.automaticDimension
+        case 2:
+            return UITableView.automaticDimension
+        default:
+            return 0.01
+        }
+    }
 
     func updateHeader() {
         if tableView.contentOffset.y <= -headerHeight {
             recepieHeader.frame.origin.y = tableView.contentOffset.y
             recepieHeader.frame.size.height = -tableView.contentOffset.y
+            recepieHeader.frame.size.width = tableView.frame.size.width
         }
     }
 

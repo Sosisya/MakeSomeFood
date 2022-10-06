@@ -27,6 +27,7 @@ class StrechyHeader: UIView {
         headerBottomView.layer.cornerRadius = 10
         headerBottomView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         headerFavouriteButton.layer.cornerRadius = 22
+//        headerFavouriteButton.isHidden = true
     }
 
     private func setContentView() {
