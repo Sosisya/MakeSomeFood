@@ -21,7 +21,7 @@ class HomeViewController: UITableViewController {
     
     private func setImage() {
         profileImage.layer.masksToBounds = true
-        profileImage.layer.cornerRadius = 21
+        profileImage.layer.cornerRadius = 12
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,8 +52,9 @@ extension HomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
-            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
+//        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
+//            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
+        let header = TableSectionHeaderView.f_loadInstanceFromNib()
         switch section {
         case 0:
             header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecepies, action: {

@@ -27,7 +27,6 @@ class FavouritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UINib(nibName: "TableSectionHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-        
         switch section {
         case 0:
             header.configure(title: Spec.titleOfHeader)

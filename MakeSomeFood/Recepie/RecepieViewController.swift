@@ -24,7 +24,7 @@ class RecepieViewController: UIViewController {
 extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,8 +32,12 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return ingredients.count
+            return 1
         case 2:
+            return ingredients.count
+        case 3:
+            return 1
+        case 4:
             return 1
         default:
             fatalError()
@@ -49,12 +53,20 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             cell.areaTagLabel.text = nameAndTags.areaTagLabel
             return cell
         case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientHeaderViewCell", for: indexPath) as! IngredientHeaderViewCell
+            cell.ingredientHeaderView.headerTitle.text = "Ингредиенты"
+            return cell
+        case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
             let item = ingredients[indexPath.row]
             cell.ingredientLabel.text = item.nameOfIngredient
             cell.amountLabel.text = item.amountOfIngredient
             return cell
-        case 2:
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionHeaderViewCell", for: indexPath) as! DescriptionHeaderViewCell
+            cell.descriptionHeaderView.headerTitle.text = "Описание"
+            return cell
+        case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
             cell.descriptionOfRecepie.text = "Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте."
             return cell
@@ -62,22 +74,23 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
     }
+//
+//    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
+//            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
+//        switch section {
+//        case 0:
+//            return nil
+//        case 1:
+//            header.configure(title: "Ингредиенты")
+//        case 2:
+//            header.configure(title: "Описание")
+//        default:
+//            return nil
+//        }
+//        return header
+//    }
 
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
-            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-        switch section {
-        case 0:
-            return nil
-        case 1:
-            header.configure(title: "Ингредиенты")
-        case 2:
-            header.configure(title: "Описание")
-        default:
-            return nil
-        }
-        return header
-    }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:

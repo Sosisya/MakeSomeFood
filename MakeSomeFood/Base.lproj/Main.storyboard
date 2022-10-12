@@ -37,13 +37,13 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9v-9K-Kct">
-                                        <rect key="frame" x="166" y="60" width="382" height="29.5"/>
+                                        <rect key="frame" x="16" y="60" width="382" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-kp-LAq" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="166" y="113.5" width="382" height="44"/>
+                                        <rect key="frame" x="16" y="113.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="yz4-IM-qBa"/>
@@ -52,7 +52,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFi-9R-Rh1" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="166" y="173.5" width="382" height="44"/>
+                                        <rect key="frame" x="16" y="173.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="KWT-s0-tIm"/>
@@ -61,7 +61,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gs-gO-9lc">
-                                        <rect key="frame" x="166" y="241.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="241.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Qw4-He-TvG"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQS-iT-LI0">
-                                        <rect key="frame" x="166" y="369.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="369.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="ln1-Lz-EoP"/>
                                         </constraints>
@@ -91,7 +91,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13V-Or-NK6">
-                                        <rect key="frame" x="166" y="313.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="313.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="VEU-Y7-n5C"/>
                                         </constraints>
@@ -106,7 +106,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="syM-9N-6hG">
-                                        <rect key="frame" x="232.5" y="441.5" width="249.5" height="20"/>
+                                        <rect key="frame" x="82.5" y="441.5" width="249.5" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Впервые здесь?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-Lm-sVZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.5" height="20"/>
@@ -123,7 +123,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Входя в аккаунт, я  cоглашаюсь c правилами и условиями" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nna-kG-sCr">
-                                        <rect key="frame" x="166" y="700.5" width="382" height="41"/>
+                                        <rect key="frame" x="16" y="700.5" width="382" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -476,8 +476,31 @@
                                             <outlet property="nameOfRecepieLabel" destination="PVX-FD-T45" id="Hw9-ZG-7Or"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientHeaderViewCell" id="Lfx-DW-O1a" customClass="IngredientHeaderViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="404" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lfx-DW-O1a" id="9e4-rg-qwH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="666" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlV-2a-9Rf" customClass="Header" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mlV-2a-9Rf" secondAttribute="trailing" id="V6D-HR-zaC"/>
+                                                <constraint firstAttribute="bottom" secondItem="mlV-2a-9Rf" secondAttribute="bottom" id="e2d-DE-dqQ"/>
+                                                <constraint firstItem="mlV-2a-9Rf" firstAttribute="top" secondItem="9e4-rg-qwH" secondAttribute="top" id="eFr-cE-mt0"/>
+                                                <constraint firstItem="mlV-2a-9Rf" firstAttribute="leading" secondItem="9e4-rg-qwH" secondAttribute="leading" id="irc-sP-OYK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ingredientHeaderView" destination="mlV-2a-9Rf" id="zha-jN-eW2"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientsForRecepieTableViewCell" rowHeight="33" id="wOe-E2-3hT" customClass="IngredientsForRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="404" width="414" height="33"/>
+                                        <rect key="frame" x="0.0" y="447.5" width="414" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wOe-E2-3hT" id="MTo-cw-MHC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -510,8 +533,31 @@
                                             <outlet property="ingredientLabel" destination="NXG-60-78R" id="gGd-CL-XGM"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DescriptionHeaderViewCell" id="ggi-yq-HxM" customClass="DescriptionHeaderViewCell" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="480.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggi-yq-HxM" id="6My-hP-Vr2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="666" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du8-SF-aYd" customClass="Header" customModule="MakeSomeFood" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Du8-SF-aYd" firstAttribute="top" secondItem="6My-hP-Vr2" secondAttribute="top" id="30O-a8-Zfa"/>
+                                                <constraint firstItem="Du8-SF-aYd" firstAttribute="leading" secondItem="6My-hP-Vr2" secondAttribute="leading" id="41E-ZP-ifg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Du8-SF-aYd" secondAttribute="bottom" id="66P-Pj-jEy"/>
+                                                <constraint firstAttribute="trailing" secondItem="Du8-SF-aYd" secondAttribute="trailing" id="fjn-wE-bYf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionHeaderView" destination="Du8-SF-aYd" id="8ki-EH-A7A"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescritionOfRecepieTableViewCell" rowHeight="387" id="aAh-of-pyH" customClass="DescritionOfRecepieTableViewCell" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="437" width="414" height="387"/>
+                                        <rect key="frame" x="0.0" y="524" width="414" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aAh-of-pyH" id="72g-EV-lnW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
@@ -785,8 +831,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="78W-Xb-axu" id="vVT-fz-v2W"/>
                         <outlet property="exitButton" destination="EH7-pA-8wL" id="8eW-Nq-3qK"/>
                         <outlet property="nameTextField" destination="dvx-ue-Btp" id="qQp-l9-cjm"/>
+                        <outlet property="passwordTextField" destination="9AX-at-p5j" id="35m-la-Rf5"/>
                         <outlet property="profileImage" destination="YFk-QL-tOn" id="tdI-16-RJu"/>
                         <outlet property="saveButton" destination="YgK-ch-BZr" id="jRj-qR-Yto"/>
                         <outlet property="scrollViewBottom" destination="SV4-HZ-uPr" id="U5I-bD-tuO"/>
@@ -923,13 +971,13 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-bo-rZ5">
-                                        <rect key="frame" x="166" y="60" width="382" height="29.5"/>
+                                        <rect key="frame" x="16" y="60" width="382" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCT-UL-aui" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="166" y="113.5" width="382" height="44"/>
+                                        <rect key="frame" x="16" y="113.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Bmp-5u-1zw"/>
@@ -938,7 +986,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-q0-4HX" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="166" y="173.5" width="382" height="44"/>
+                                        <rect key="frame" x="16" y="173.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="w3j-65-Ebo"/>
@@ -947,7 +995,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-Td-mam">
-                                        <rect key="frame" x="166" y="241.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="241.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="AcC-gL-Qpf"/>
                                         </constraints>
@@ -965,7 +1013,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBk-TJ-aFS">
-                                        <rect key="frame" x="166" y="369.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="369.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="0sF-hd-frh"/>
                                         </constraints>
@@ -980,7 +1028,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-jl-pq4">
-                                        <rect key="frame" x="166" y="313.5" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="313.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IJI-pm-4j6"/>
                                         </constraints>
@@ -995,7 +1043,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GiE-9o-9r2">
-                                        <rect key="frame" x="232.5" y="441.5" width="249.5" height="20"/>
+                                        <rect key="frame" x="82.5" y="441.5" width="249.5" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Впервые здесь?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-tJ-GWA">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.5" height="20"/>
@@ -1012,8 +1060,8 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Входя в аккаунт, я  cоглашаюсь c правилами и условиями" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-EX-2zN">
-                                        <rect key="frame" x="166" y="470.5" width="382" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="16" y="479.5" width="382" height="32"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>

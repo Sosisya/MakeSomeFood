@@ -104,6 +104,7 @@ class FloatingTitleTextField: UIView {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 12
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
     @objc func clearTextField() {
@@ -119,5 +120,10 @@ class FloatingTitleTextField: UIView {
     @objc func showCloseButton(textField: UITextField) {
         guard hasClearButton else { return }
         clearButton.isHidden = textField.text?.isEmpty ?? true
+    }
+
+    @objc private func textFieldDidChange() {
+        guard textField.text != text else { return }
+        text = textField.text ?? ""
     }
 }
