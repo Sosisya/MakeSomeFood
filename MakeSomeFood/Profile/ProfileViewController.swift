@@ -2,6 +2,21 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
+    private struct Spec {
+        static var navigationTitle = "Профиль"
+        static var navigationTitleFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
+        static var profileImageCornerRadius: CGFloat = 12
+        static var takePhotoButtonCornerRadius: CGFloat = 22
+
+        static var takePhotoButtonFirstAlertTitle = "Сделать фото"
+        static var takePhotoButtonSecondAlertTitle = "Выбрать из галлереи"
+        static var takePhotoButtonCancelAlertTitle = "Отмена"
+
+        static var exitButtonMainAlertTitle = "Вы уверены, что хотите выйти из профиля?"
+        static var exitButtonFirstAlertTitle = "Выйти из профиля"
+        static var exitButtonCancelAlertTitle = "Отмена"
+    }
+
     struct ProfileData: Equatable {
         var changedPhoto: Bool
         var name: String
@@ -32,12 +47,12 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Профиль"
+        title = Spec.navigationTitle
         
-        self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "Montserrat-SemiBold", size: 24)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [.font: Spec.navigationTitleFont]
 
-        profileImage.layer.cornerRadius = 12
-        takePhotoButton.layer.cornerRadius = 22
+        profileImage.layer.cornerRadius = Spec.profileImageCornerRadius
+        takePhotoButton.layer.cornerRadius = Spec.takePhotoButtonCornerRadius
 
         nameTextField.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         emailTextField.textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -73,15 +88,15 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     @IBAction func showPhotoAllert(_ sender: UIButton) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
 
-        alert.addAction(UIAlertAction(title: "Сделать фото", style: .default , handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: Spec.takePhotoButtonFirstAlertTitle, style: .default , handler:{ (UIAlertAction) in
             print("User click Approve button")
         }))
 
-        alert.addAction(UIAlertAction(title: "Выбрать из галлереи", style: .default , handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: Spec.takePhotoButtonSecondAlertTitle, style: .default , handler:{ (UIAlertAction) in
             print("User click Edit button")
         }))
 
-        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: Spec.takePhotoButtonCancelAlertTitle, style: .cancel, handler:{ (UIAlertAction) in
             print("User click Dismiss button")
         }))
 
@@ -91,27 +106,15 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     }
 
     @IBAction func showExitAllert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Вы уверены что хотите выйти из профиля?", message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: Spec.exitButtonMainAlertTitle, message: nil, preferredStyle: .actionSheet)
 
-            alert.addAction(UIAlertAction(title: "Выйти из профиля", style: .default , handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: Spec.exitButtonFirstAlertTitle, style: .destructive , handler:{ (UIAlertAction)in
                 print("User click Approve button")
             }))
 
-//            alert.addAction(UIAlertAction(title: "Edit", style: .default , handler:{ (UIAlertAction)in
-//                print("User click Edit button")
-//            }))
-//
-//            alert.addAction(UIAlertAction(title: "Delete", style: .destructive , handler:{ (UIAlertAction)in
-//                print("User click Delete button")
-//            }))
-
-            alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: Spec.exitButtonCancelAlertTitle, style: .cancel, handler:{ (UIAlertAction)in
                 print("User click Dismiss button")
             }))
-
-
-            //uncomment for iPad Support
-            //alert.popoverPresentationController?.sourceView = self.view
 
             self.present(alert, animated: true, completion: {
                 print("completion block")
