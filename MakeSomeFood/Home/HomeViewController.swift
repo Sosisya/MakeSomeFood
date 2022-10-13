@@ -10,6 +10,9 @@ class HomeViewController: UITableViewController {
         static let titleTodayCooking = "Сегодня готовим"
         static let titleActionAllRecepies = "Все рецепты"
         static let titleCategory = "Категории"
+        static let segueTitle = "toCategory"
+        static let profileImageCornerRadius: CGFloat = 12
+
     }
     
     override func viewDidLoad() {
@@ -21,7 +24,7 @@ class HomeViewController: UITableViewController {
     
     private func setImage() {
         profileImage.layer.masksToBounds = true
-        profileImage.layer.cornerRadius = 12
+        profileImage.layer.cornerRadius = Spec.profileImageCornerRadius
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,18 +51,15 @@ extension HomeViewController {
         default:
             fatalError()
         }
-        return 0
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
-//            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-        let header = TableSectionHeaderView.f_loadInstanceFromNib()
+        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
+            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
+//        let header = TableSectionHeaderView.f_loadInstanceFromNib()
         switch section {
         case 0:
-            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecepies, action: {
-                print("Все рецепты")
-            })
+            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecepies)
         case 1:
             header.configure(title: Spec.titleCategory)
         default:
@@ -88,6 +88,6 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section == 1 else { return }
         selectedCategory = categoryOfMeal[indexPath.row]
-        performSegue(withIdentifier: "toCategory", sender: self)
+        performSegue(withIdentifier: Spec.segueTitle, sender: self)
     }
 }

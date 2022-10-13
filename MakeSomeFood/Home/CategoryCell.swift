@@ -4,6 +4,12 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+
+    private struct Spec {
+        static var categoryViewCornerRadius: CGFloat = 12
+        static var categoryImageCornerRadius: CGFloat = 12
+
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,11 +23,11 @@ class CategoryCell: UITableViewCell {
     
     private func setCellImage(_ image: UIImageView) {
         image.layer.masksToBounds = true
-        image.layer.cornerRadius = 12
+        image.layer.cornerRadius = Spec.categoryImageCornerRadius
     }
     
     private func setCellView(_ view: UIView) {
         view.layer.masksToBounds = true
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = Spec.categoryViewCornerRadius
     }
 }

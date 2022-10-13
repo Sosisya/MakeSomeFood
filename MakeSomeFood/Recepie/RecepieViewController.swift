@@ -3,7 +3,12 @@ import UIKit
 class RecepieViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var recepieHeader: StrechyHeader!
-    var headerHeight: CGFloat = 280
+
+    private struct Spec {
+        static var headerHeight: CGFloat = 280
+        static var ingredientHeaderTitle = "Ингредиенты"
+        static var descritionHeaderTitle = "Описание"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +20,8 @@ class RecepieViewController: UIViewController {
         recepieHeader = tableView.tableHeaderView as? StrechyHeader
         tableView.tableHeaderView = nil
         tableView.addSubview(recepieHeader)
-        tableView.contentInset = UIEdgeInsets(top: headerHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -headerHeight)
+        tableView.contentInset = UIEdgeInsets(top: Spec.headerHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerHeight)
         updateHeader()
     }
 }
@@ -54,7 +59,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientHeaderViewCell", for: indexPath) as! IngredientHeaderViewCell
-            cell.ingredientHeaderView.headerTitle.text = "Ингредиенты"
+            cell.ingredientHeaderView.headerTitle.text = Spec.ingredientHeaderTitle
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
@@ -64,32 +69,16 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionHeaderViewCell", for: indexPath) as! DescriptionHeaderViewCell
-            cell.descriptionHeaderView.headerTitle.text = "Описание"
+            cell.descriptionHeaderView.headerTitle.text = Spec.descritionHeaderTitle
             return cell
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.descriptionOfRecepie.text = "Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте.Смешайте все сухие ингредиенты: муку просейте с неполной ч.л. разрыхлителя, добавьте мелкой соли, сахара, хорошо перемешайте./Блины с таким количеством сахара получатся умеренно сладкими, с интенсивным золотистым цветом. С меньшим количеством будут бледнее, с большим - быстро румянятся и даже могут пригорать/.Если кладёте соду, её также нужно смешать с мукой и предварительно не гасить - это сделает кефир прямо в тесте."
+            cell.descriptionOfRecepie.text = description
             return cell
         default:
             fatalError()
         }
     }
-//
-//    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = UINib(nibName: "TableSectionHeaderView", bundle: nil)
-//            .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-//        switch section {
-//        case 0:
-//            return nil
-//        case 1:
-//            header.configure(title: "Ингредиенты")
-//        case 2:
-//            header.configure(title: "Описание")
-//        default:
-//            return nil
-//        }
-//        return header
-//    }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
@@ -105,7 +94,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func updateHeader() {
-        if tableView.contentOffset.y <= -headerHeight {
+        if tableView.contentOffset.y <= -Spec.headerHeight {
             recepieHeader.frame.origin.y = tableView.contentOffset.y
             recepieHeader.frame.size.height = -tableView.contentOffset.y
             recepieHeader.frame.size.width = tableView.frame.size.width

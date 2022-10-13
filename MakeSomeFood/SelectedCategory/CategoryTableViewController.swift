@@ -1,15 +1,18 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-    
     var category: Category!
+
+    private struct Spec {
+        static var fontOfHeaderFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         title = category.nameOfCategory
-        self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "Montserrat-SemiBold", size: 24)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [.font: Spec.fontOfHeaderFont]
         tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
         tableView.separatorStyle = .none
     }

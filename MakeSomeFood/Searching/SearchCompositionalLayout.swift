@@ -95,10 +95,3 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
         super.init(sectionProvider: SearchCompositionalLayout.createLayout())
     }
 }
-
-//private func supplimentaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
-//    .init(layoutSize: .init(widthDimension: .fractionalWidth(1),
-//                            heightDimension: .absolute(40)),
-//          elementKind: "Luiza",
-//          alignment: .top)
-//}
