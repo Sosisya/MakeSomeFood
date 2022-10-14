@@ -71,7 +71,6 @@
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
 		8EDBF57B28D43BB70013AD0D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57A28D43BB70013AD0D /* ProfileViewController.swift */; };
-		8EDBF57D28D4B2220013AD0D /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */; };
 		8EDBF57F28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57E28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift */; };
 		8EDBF58328D74E660013AD0D /* NameOfPecepieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF58228D74E660013AD0D /* NameOfPecepieTableViewCell.swift */; };
 		8EFB367928EB5A87005C758B /* StrechyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB367828EB5A87005C758B /* StrechyHeader.swift */; };
@@ -157,7 +156,6 @@
 		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompositionalLayout.swift; sourceTree = "<group>"; };
 		8EDBF57A28D43BB70013AD0D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
 		8EDBF57E28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsForRecepieTableViewCell.swift; sourceTree = "<group>"; };
 		8EDBF58228D74E660013AD0D /* NameOfPecepieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOfPecepieTableViewCell.swift; sourceTree = "<group>"; };
 		8EFB367828EB5A87005C758B /* StrechyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechyHeader.swift; sourceTree = "<group>"; };
@@ -358,22 +356,21 @@
 			isa = PBXGroup;
 			children = (
 				8EFEDAB328984843001A2908 /* BorderedTextField.swift */,
+				8E59C98628E0355F00D6FEBE /* FloatingTitleTextField.swift */,
+				8EFBA2C328B6997D0098644F /* LabelWithInsets.swift */,
 				8EFB367828EB5A87005C758B /* StrechyHeader.swift */,
 				8EFB367A28EB5A94005C758B /* StrechyHeader.xib */,
-				8E59C98628E0355F00D6FEBE /* FloatingTitleTextField.swift */,
-				8EDBF57C28D4B2220013AD0D /* ProfileTextField.swift */,
-				8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */,
 				8E4148BB28F5763700DEB191 /* Header.swift */,
 				8E4148B928F5762900DEB191 /* Header.xib */,
 				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
 				8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */,
-				8EFBA2C328B6997D0098644F /* LabelWithInsets.swift */,
-				8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */,
 				8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */,
+				8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */,
 				8E19074028ABFE3B00ECD830 /* CellView.swift */,
 				8E37A1EC28ABF8D200F1BA0F /* CellView.xib */,
 				8EFBA2B328B4D3B80098644F /* SearchingViewCell.swift */,
 				8EFBA2B428B4D3B80098644F /* SearchingViewCell.xib */,
+				8EFBA2A928AEB0500098644F /* UIView+FromNib.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -499,7 +496,6 @@
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
 				8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */,
 				8E6ED27028A159E800EB0CB2 /* TodayCookingTableViewCell.swift in Sources */,
-				8EDBF57D28D4B2220013AD0D /* ProfileTextField.swift in Sources */,
 				8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */,
 				8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */,
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,

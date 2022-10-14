@@ -3,16 +3,29 @@ import UIKit
 @IBDesignable
 class FloatingTitleTextField: UIView {
 
+    //надо ли пустые стркои выносить?
+
     private struct Spec {
+        static var emptyTitle = ""
+        static var titleLabelFont = UIFont(name: "SFProText-Regular", size: 10)
+        static var titleLabelColor = UIColor(named: "darkGray")
+        static var textFieldFont = UIFont(name: "SFProText-Regular", size: 5)
+        static var textFieldColor = UIColor(named: "black")
+        static var clearButtonIcon = UIImage(systemName: "xmark.circle")
+        static var clearButtonColor = UIColor(named: "darkGray")
         static var hideOnIcon = UIImage(systemName: "eye.slash")!
         static var hideOffIcon = UIImage(systemName: "eye")!
+        static var hideButtonColor = UIColor(named: "darkGray")
+        static var textFieldBorderWidth: CGFloat = 1
+        static var textFieldBorderColor = UIColor(named: "black")?.cgColor
+        static var textFieldCornerRadius: CGFloat = 12
     }
 
-    @IBInspectable var title: String = "" {
+    @IBInspectable var title: String = Spec.emptyTitle {
         didSet { setupViews() }
     }
 
-    @IBInspectable var text: String = "" {
+    @IBInspectable var text: String = Spec.emptyTitle {
         didSet { setupViews() }
     }
 
@@ -85,30 +98,30 @@ class FloatingTitleTextField: UIView {
         titleLabel.text = title
         titleLabel.font = UIFont(name: "SFProText-Regular", size: 10) //почему без строчки 76 не срабатывает size из этой строчки??
         titleLabel.font = titleLabel.font.withSize(10)
-        titleLabel.textColor = UIColor(named: "darkGray")
+        titleLabel.textColor = Spec.titleLabelColor
 
         textField.text = text
         textField.font = UIFont(name: "SFProText-Regular", size: 5) //почему не срабатывает size из этой строчки??
-        textField.textColor = UIColor(named: "black")
+        textField.textColor = Spec.textFieldColor
         textField.isSecureTextEntry = hasHideButton
 
         clearButton.isHidden = !hasClearButton || text.isEmpty
         hideButton.isHidden = !hasHideButton
 
-        clearButton.setImage(UIImage(systemName: "xmark.circle"), for: .normal)
-        clearButton.tintColor = UIColor(named: "darkGray")
-        hideButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
-        hideButton.setTitleColor(UIColor(named: "darkGray"), for: .normal)
-        hideButton.tintColor = UIColor(named: "darkGray")
+        clearButton.setImage(Spec.clearButtonIcon, for: .normal)
+        clearButton.tintColor = Spec.clearButtonColor
+        hideButton.setImage(Spec.hideOnIcon, for: .normal)
+        hideButton.setTitleColor(Spec.hideButtonColor, for: .normal)
+        hideButton.tintColor = Spec.hideButtonColor
 
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = 12
+        layer.borderWidth = Spec.textFieldBorderWidth
+        layer.borderColor = Spec.textFieldBorderColor
+        layer.cornerRadius = Spec.textFieldCornerRadius
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
     @objc func clearTextField() {
-        textField.text = ""
+        textField.text = Spec.emptyTitle
     }
 
     @objc func hidePassword() {
@@ -124,6 +137,6 @@ class FloatingTitleTextField: UIView {
 
     @objc private func textFieldDidChange() {
         guard textField.text != text else { return }
-        text = textField.text ?? ""
+        text = textField.text ?? Spec.emptyTitle
     }
 }

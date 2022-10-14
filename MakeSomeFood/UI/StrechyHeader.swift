@@ -2,6 +2,11 @@ import UIKit
 
 class StrechyHeader: UIView {
 
+    private struct Spec {
+        static var headerBottomViewCornerRadius: CGFloat = 10
+        static var headerFavouriteButtonCornerRadius: CGFloat = 22
+    }
+
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var headerBottomView: UIView!
@@ -24,10 +29,9 @@ class StrechyHeader: UIView {
 
     private func setShapes() {
         headerBottomView.clipsToBounds = true
-        headerBottomView.layer.cornerRadius = 10
+        headerBottomView.layer.cornerRadius = Spec.headerBottomViewCornerRadius
         headerBottomView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        headerFavouriteButton.layer.cornerRadius = 22
-//        headerFavouriteButton.isHidden = true
+        headerFavouriteButton.layer.cornerRadius = Spec.headerFavouriteButtonCornerRadius
     }
 
     private func setContentView() {

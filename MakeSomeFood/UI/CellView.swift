@@ -1,6 +1,26 @@
 import UIKit
 
 class CellView: UIView {
+
+    private struct Spec {
+
+        static var maxHeighOfImage: CGFloat = 230
+        static var minHeighOfImage: CGFloat = 160
+
+        static var shadowCornerRadius: CGFloat = 12
+        static var viewShadowColor = UIColor(named: "black")!.cgColor
+        static var shadowOpacity: Float = 0.06
+        static var shadowRadius: CGFloat = 10
+        static var shadowOffsetHeoght: CGFloat = 12
+        static var shadowOffsetWidth: CGFloat = 0
+
+        static var viewCornerRadius: CGFloat = 12
+        static var labelColor = UIColor(named: "white")!.cgColor
+        static var viewBorderWidth: CGFloat = 1
+
+        static var likeButtomIconName = "heart"
+        static var likeSelectedButtomIconName = "heart.fill"
+    }
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var nameOfMeal: UILabel!
@@ -12,7 +32,7 @@ class CellView: UIView {
 
     var hasLargeImage: Bool = false {
         didSet {
-            let height: CGFloat = hasLargeImage ? 230 : 160
+            let height: CGFloat = hasLargeImage ? Spec.maxHeighOfImage : Spec.minHeighOfImage
             coverImageHeight.constant = height
         }
     }
@@ -32,29 +52,28 @@ class CellView: UIView {
 
     private func setShadowView(_ view: UIView) {
         view.layer.masksToBounds = false
-        view.layer.cornerRadius = 12
-
-        view.layer.shadowColor = UIColor(named: "black")!.cgColor
-        view.layer.shadowOpacity = 0.06
-        view.layer.shadowRadius = 10
-        view.layer.shadowOffset = CGSize(width: 0, height: 12)
+        view.layer.cornerRadius = Spec.shadowCornerRadius
+        view.layer.shadowColor = Spec.viewShadowColor
+        view.layer.shadowOpacity = Spec.shadowOpacity
+        view.layer.shadowRadius = Spec.shadowRadius
+        view.layer.shadowOffset = CGSize(width: Spec.shadowOffsetWidth, height: Spec.shadowOffsetHeoght)
     }
 
     private func setContainerView(_ view: UIView) {
         view.layer.masksToBounds = true
-        view.layer.cornerRadius = 12
+        view.layer.cornerRadius = Spec.viewCornerRadius
     }
 
     private func setTags(_ label: UILabel) {
         label.layer.masksToBounds = true
-        label.layer.backgroundColor = UIColor.white.cgColor
+        label.layer.backgroundColor = Spec.labelColor
         label.layer.borderColor = label.textColor.cgColor
-        label.layer.borderWidth = 1
+        label.layer.borderWidth = Spec.viewBorderWidth
         label.layer.cornerRadius = label.bounds.height / 2
     }
 
     func setIsFavourite(_ value: Bool) {
-        let imageName = value ? "heart.fill" : "heart"
+        let imageName = value ? Spec.likeSelectedButtomIconName : Spec.likeButtomIconName
         let image = UIImage(systemName: imageName)
         favouriteButton.setImage(image, for: .normal)
     }
