@@ -8,7 +8,6 @@ class CategoryCell: UITableViewCell {
     private struct Spec {
         static var categoryViewCornerRadius: CGFloat = 12
         static var categoryImageCornerRadius: CGFloat = 12
-
     }
     
     override func awakeFromNib() {

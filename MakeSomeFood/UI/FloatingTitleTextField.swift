@@ -3,22 +3,25 @@ import UIKit
 @IBDesignable
 class FloatingTitleTextField: UIView {
 
-    //надо ли пустые стркои выносить?
-
     private struct Spec {
         static var emptyTitle = ""
+
         static var titleLabelFont = UIFont(name: "SFProText-Regular", size: 10)
         static var titleLabelColor = UIColor(named: "darkGray")
+
         static var textFieldFont = UIFont(name: "SFProText-Regular", size: 5)
         static var textFieldColor = UIColor(named: "black")
-        static var clearButtonIcon = UIImage(systemName: "xmark.circle")
-        static var clearButtonColor = UIColor(named: "darkGray")
-        static var hideOnIcon = UIImage(systemName: "eye.slash")!
-        static var hideOffIcon = UIImage(systemName: "eye")!
-        static var hideButtonColor = UIColor(named: "darkGray")
         static var textFieldBorderWidth: CGFloat = 1
         static var textFieldBorderColor = UIColor(named: "black")?.cgColor
         static var textFieldCornerRadius: CGFloat = 12
+
+        static var clearButtonIcon = UIImage(systemName: "xmark.circle")
+        static var clearButtonColor = UIColor(named: "darkGray")
+
+        static var hideOnIcon = UIImage(systemName: "eye.slash")!
+        static var hideOffIcon = UIImage(systemName: "eye")!
+        static var hideButtonColor = UIColor(named: "darkGray")
+
     }
 
     @IBInspectable var title: String = Spec.emptyTitle {
@@ -73,6 +76,7 @@ class FloatingTitleTextField: UIView {
         stackView.addArrangedSubview(hideButton)
         contentStackView.addArrangedSubview(titleLabel)
         contentStackView.addArrangedSubview(textField)
+
         setupConstraints()
         setupViews()
     }
@@ -96,12 +100,12 @@ class FloatingTitleTextField: UIView {
 
     private func setupViews() {
         titleLabel.text = title
-        titleLabel.font = UIFont(name: "SFProText-Regular", size: 10) //почему без строчки 76 не срабатывает size из этой строчки??
+        titleLabel.font = UIFont(name: "SFProText-Regular", size: 10)
         titleLabel.font = titleLabel.font.withSize(10)
         titleLabel.textColor = Spec.titleLabelColor
 
         textField.text = text
-        textField.font = UIFont(name: "SFProText-Regular", size: 5) //почему не срабатывает size из этой строчки??
+        textField.font = UIFont(name: "SFProText-Regular", size: 15)
         textField.textColor = Spec.textFieldColor
         textField.isSecureTextEntry = hasHideButton
 

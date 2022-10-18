@@ -1,10 +1,15 @@
 import Foundation
 
+struct Recepie {
+    var nameAndTags: NameAndTagsSection
+    var ingredients: [IngredientsSection]
+    var description: DescriptionSection
+}
+
 struct NameAndTagsSection {
     var nameOfRecepie: String
     var categoryTagLabel: String
     var areaTagLabel: String
-
 }
 
 struct IngredientsSection {
@@ -16,6 +21,9 @@ struct IngredientsSection {
 struct DescriptionSection {
     var description: String
 }
+
+
+var recepie = Recepie(nameAndTags: nameAndTags, ingredients: ingredients, description: description)
 
 var nameAndTags = NameAndTagsSection(nameOfRecepie: "Какое-то длинное название рецепта", categoryTagLabel: "Категория", areaTagLabel: "Откуда рецепт")
 

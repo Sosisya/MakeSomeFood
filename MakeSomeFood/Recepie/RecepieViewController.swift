@@ -10,6 +10,14 @@ class RecepieViewController: UIViewController {
         static var descritionHeaderTitle = "Описание"
     }
 
+    enum Section: Int, CaseIterable {
+        case nameAndTags
+        case ingredientsHeader
+        case ingredients
+        case descriptionHeader
+        case description
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,20 +37,20 @@ class RecepieViewController: UIViewController {
 extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return Section.allCases.count
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
+        switch Section(rawValue: section) {
+        case .nameAndTags:
             return 1
-        case 1:
+        case .ingredientsHeader:
             return 1
-        case 2:
+        case .ingredients:
             return ingredients.count
-        case 3:
+        case .descriptionHeader:
             return 1
-        case 4:
+        case .description:
             return 1
         default:
             fatalError()
@@ -50,28 +58,28 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
+        switch Section(rawValue: indexPath.section) {
+        case .nameAndTags:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
             cell.nameOfRecepieLabel.text = nameAndTags.nameOfRecepie
             cell.categoryTagLabel.text = nameAndTags.categoryTagLabel
             cell.areaTagLabel.text = nameAndTags.areaTagLabel
             return cell
-        case 1:
+        case .ingredientsHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientHeaderViewCell", for: indexPath) as! IngredientHeaderViewCell
             cell.ingredientHeaderView.headerTitle.text = Spec.ingredientHeaderTitle
             return cell
-        case 2:
+        case .ingredients:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
             let item = ingredients[indexPath.row]
             cell.ingredientLabel.text = item.nameOfIngredient
             cell.amountLabel.text = item.amountOfIngredient
             return cell
-        case 3:
+        case .descriptionHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionHeaderViewCell", for: indexPath) as! DescriptionHeaderViewCell
             cell.descriptionHeaderView.headerTitle.text = Spec.descritionHeaderTitle
             return cell
-        case 4:
+        case .description:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
             cell.descriptionOfRecepie.text = description
             return cell

@@ -1,9 +1,13 @@
 import UIKit
 
-class FavouritesTableViewController: UITableViewController {
+class FavouritesTableViewController: UITableViewController, RecepiePresenting {
 
     private struct Spec {
         static let titleOfHeader = "Избранное"
+    }
+
+    enum Section: Int, CaseIterable {
+        case favouriteRecepies
     }
     
     override func viewDidLoad() {
@@ -13,12 +17,12 @@ class FavouritesTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return Section.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
+        switch Section(rawValue: section) {
+        case .favouriteRecepies:
             return favouriteRecepies.count
         default:
             fatalError()
@@ -27,8 +31,8 @@ class FavouritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UINib(nibName: "TableSectionHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
-        switch section {
-        case 0:
+        switch Section(rawValue: section) {
+        case .favouriteRecepies:
             header.configure(title: Spec.titleOfHeader)
         default:
             return nil
@@ -37,8 +41,8 @@ class FavouritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
+        switch Section(rawValue: indexPath.section) {
+        case .favouriteRecepies:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             let item = favouriteRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal
@@ -51,5 +55,9 @@ class FavouritesTableViewController: UITableViewController {
         default:
             fatalError()
         }
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showRecepie(recepie)
     }
 }

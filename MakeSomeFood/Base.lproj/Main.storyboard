@@ -42,13 +42,13 @@
                                 <rect key="frame" x="0.0" y="491" width="414" height="405"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="make some" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baR-wc-lvB">
-                                <rect key="frame" x="16" y="228" width="382" height="47"/>
+                                <rect key="frame" x="16" y="228" width="382" height="49"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKO-cd-VT7">
-                                <rect key="frame" x="283.5" y="275" width="114.5" height="65.5"/>
+                                <rect key="frame" x="264.5" y="277" width="133.5" height="68.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="56"/>
                                 <color key="textColor" name="orange"/>
                                 <nil key="highlightedColor"/>
@@ -120,7 +120,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет, Луиза!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B26-V5-1zE">
-                                    <rect key="frame" x="16" y="27" width="169" height="28"/>
+                                    <rect key="frame" x="16" y="26.5" width="191" height="29.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                             <color key="backgroundColor" name="black"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rps-rA-o9k">
-                                            <rect key="frame" x="32" y="30" width="59" height="32.5"/>
+                                            <rect key="frame" x="32" y="30" width="67.5" height="32.5"/>
                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -226,7 +226,7 @@
         <!--Recepie View Controller-->
         <scene sceneID="p7q-WV-bmf">
             <objects>
-                <viewController id="mdl-re-8S5" customClass="RecepieViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecepieViewController" id="mdl-re-8S5" customClass="RecepieViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t3j-CC-RTg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Горячее" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-aT-P3P" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="53" width="50.5" height="21"/>
+                                                    <rect key="frame" x="16" y="53" width="55" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Msr-He-YMx"/>
                                                     </constraints>
@@ -257,7 +257,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Русская" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edW-Ch-IX3" customClass="LabelWithInsets" customModule="MakeSomeFood" customModuleProvider="target">
-                                                    <rect key="frame" x="82.5" y="53" width="50" height="21"/>
+                                                    <rect key="frame" x="87" y="53" width="54.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="S0r-ti-mhx"/>
                                                     </constraints>
@@ -320,13 +320,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCc-Cj-ZpH">
-                                                    <rect key="frame" x="325.5" y="8" width="72.5" height="17"/>
+                                                    <rect key="frame" x="318.5" y="8" width="79.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ингредиент" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXG-60-78R">
-                                                    <rect key="frame" x="16" y="4" width="72.5" height="25"/>
+                                                    <rect key="frame" x="16" y="4" width="83" height="25"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L02-it-kki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6028.985507246377" y="-1278.3482142857142"/>
+            <point key="canvasLocation" x="5112" y="-1278"/>
         </scene>
         <!--Поиск-->
         <scene sceneID="XCq-5w-8vb">
@@ -942,24 +942,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofl-cB-vQx" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3599" y="825"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="daU-fl-6wl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dtH-L8-k4z" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bsW-eE-gBn">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mdl-re-8S5" kind="relationship" relationship="rootViewController" id="TYA-ts-Qnv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-xI-Aoj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5118.840579710145" y="-1278.3482142857142"/>
         </scene>
     </scenes>
     <resources>
