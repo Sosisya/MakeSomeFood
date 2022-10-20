@@ -2,6 +2,10 @@ import UIKit
 
 class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    private var categoriesTag: [CategoryTag] = []
+    private var areasTag: [AreaTag] = []
+    private var ingredietsTag: [IngredientTag] = []
+
     private struct Spec {
         static let titleOfCategory = "Категории"
         static let titleOfKitchen = "Кухня"
@@ -23,6 +27,42 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
         collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
         collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
+
+        ApiManager.getCategoriesTags { [weak self] result in
+            switch result {
+            case .success(let categoriesTagsList):
+                DispatchQueue.main.async {
+                    self?.categoriesTag = categoriesTagsList.meals
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+
+        ApiManager.getAreasTags { [weak self] result in
+            switch result {
+            case .success(let areasTagsList):
+                DispatchQueue.main.async {
+                    self?.areasTag = areasTagsList.meals
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+
+        ApiManager.getIngredientsTags { [weak self] result in
+            switch result {
+            case .success(let ingredientsTagsList):
+                DispatchQueue.main.async {
+                    self?.ingredietsTag = ingredientsTagsList.meals
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -50,11 +90,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
         switch Section(rawValue: section) {
         case .category:
-            return categoryTags.count
+            return categoriesTag.count
         case .kitchen:
-            return areaTags.count
+            return areasTag.count
         case .ingredient:
-            return ingredientTags.count
+            return ingredietsTag.count
         case .allRecepies:
             return 3
         default:
@@ -71,18 +111,20 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         switch Section(rawValue: indexPath.section) {
         case .category:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
-            cell.tagLabel.text = categoryTags[indexPath.row]
+            let item = categoriesTag[indexPath.row]
+            cell.tagLabel.text = item.category
             cell.backgroundColor = Spec.colorOfTagOrange
             return cell
         case .kitchen:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
-            cell.tagLabel.text = areaTags[indexPath.row]
+            let item = areasTag[indexPath.row]
+            cell.tagLabel.text = item.area
             cell.backgroundColor = Spec.colorOfTagsGreen
-
             return cell
         case .ingredient:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
-            cell.tagLabel.text = ingredientTags[indexPath.row]
+            let item = ingredietsTag[indexPath.row]
+            cell.tagLabel.text = item.ingredient
             cell.backgroundColor = Spec.colorOfTagOrange
             return cell
         case .allRecepies:
@@ -92,4 +134,8 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             fatalError()
         }
     }
+
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        showRecepie(recepie)
+//    }
 }

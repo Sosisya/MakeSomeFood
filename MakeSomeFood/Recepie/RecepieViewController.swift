@@ -4,6 +4,7 @@ class RecepieViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var recepieHeader: StrechyHeader!
 
+
     private struct Spec {
         static var headerHeight: CGFloat = 280
         static var ingredientHeaderTitle = "Ингредиенты"
