@@ -10,9 +10,9 @@ class HomeViewController: UITableViewController, RecepiePresenting {
     private var recepie: ToodayCooking?
 
     private struct Spec {
-        static let titleTodayCooking = "Сегодня готовим"
-        static let titleActionAllRecepies = "Все рецепты"
-        static let titleCategory = "Категории"
+        static let titleTodayCooking = "Today we're cooking"
+        static let titleActionAllRecepies = "All recipes"
+        static let titleCategory = "Categories"
         static let profileImageCornerRadius: CGFloat = 12
     }
 
@@ -119,12 +119,11 @@ extension HomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        switch indexPath.section {
-        case 0:
+        switch Section(rawValue: indexPath.section) {
+        case .todayCooking:
             guard let recepie = recepie else { return }
             showRecepie(recepie)
-        case 1:
+        case .allCategories:
             guard indexPath.section == 1 else { return }
             selectedCategory = categories[indexPath.row]
             performSegue(withIdentifier: "toCategory", sender: self)

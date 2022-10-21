@@ -3,7 +3,7 @@ import UIKit
 class FavouritesTableViewController: UITableViewController, RecepiePresenting {
 
     private struct Spec {
-        static let titleOfHeader = "Избранное"
+        static let titleOfHeader = "Favourites"
     }
 
     enum Section: Int, CaseIterable {

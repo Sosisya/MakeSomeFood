@@ -5,7 +5,6 @@ struct ToodayCookingList: Decodable {
 }
 
 struct ToodayCooking: Decodable {
-
     let id: String
     let name: String
     let drink: String?
@@ -72,7 +71,6 @@ struct ToodayCooking: Decodable {
         case measure18 = "strMeasure18"
         case measure19 = "strMeasure19"
         case measure20 = "strMeasure20"
-
         case source = "strSource"
         case imageSource = "strImageSource"
         case creativeCommonsConfirmed = "strCreativeCommonsConfirmed"

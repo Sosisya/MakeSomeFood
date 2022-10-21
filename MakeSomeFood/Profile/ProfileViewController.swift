@@ -3,18 +3,18 @@ import UIKit
 class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     private struct Spec {
-        static var navigationTitle = "Профиль"
+        static var navigationTitle = "Profile"
         static var navigationTitleFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
         static var profileImageCornerRadius: CGFloat = 12
         static var takePhotoButtonCornerRadius: CGFloat = 22
 
-        static var takePhotoButtonFirstAlertTitle = "Сделать фото"
-        static var takePhotoButtonSecondAlertTitle = "Выбрать из галлереи"
-        static var takePhotoButtonCancelAlertTitle = "Отмена"
+        static var takePhotoButtonFirstAlertTitle = "Take a photo"
+        static var takePhotoButtonSecondAlertTitle = "Choose from gallery"
+        static var takePhotoButtonCancelAlertTitle = "Cancel"
 
-        static var exitButtonMainAlertTitle = "Вы уверены, что хотите выйти из профиля?"
-        static var exitButtonFirstAlertTitle = "Выйти из профиля"
-        static var exitButtonCancelAlertTitle = "Отмена"
+        static var exitButtonMainAlertTitle = "Are you sure you want to log out of your profile?"
+        static var exitButtonFirstAlertTitle = "Log out"
+        static var exitButtonCancelAlertTitle = "Cancel"
 
         static var emptyString = ""
     }

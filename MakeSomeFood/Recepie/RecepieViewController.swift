@@ -8,8 +8,8 @@ class RecepieViewController: UIViewController {
 
     private struct Spec {
         static var headerHeight: CGFloat = 280
-        static var ingredientHeaderTitle = "Ингредиенты"
-        static var descritionHeaderTitle = "Описание"
+        static var ingredientHeaderTitle = "Ingredients"
+        static var descritionHeaderTitle = "Instructions"
     }
 
     enum Section: Int, CaseIterable {

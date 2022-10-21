@@ -119,8 +119,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет, Луиза!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B26-V5-1zE">
-                                    <rect key="frame" x="16" y="26.5" width="191" height="29.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Luiza!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B26-V5-1zE">
+                                    <rect key="frame" x="16" y="26.5" width="110.5" height="29.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -421,11 +421,11 @@
             </objects>
             <point key="canvasLocation" x="5112" y="-1278"/>
         </scene>
-        <!--Поиск-->
+        <!--Searching-->
         <scene sceneID="XCq-5w-8vb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgo-SK-o3O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Поиск" image="icon.search" id="Qzd-bK-eOi"/>
+                    <tabBarItem key="tabBarItem" title="Searching" image="icon.search" id="Qzd-bK-eOi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DDN-Vx-rXj">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -461,11 +461,11 @@
             </objects>
             <point key="canvasLocation" x="3538" y="-587"/>
         </scene>
-        <!--Избранное-->
+        <!--Favourite-->
         <scene sceneID="eF5-yj-ORy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xtv-XY-fRK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Избранное" image="icon.heart" id="Prm-1C-c9l"/>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="icon.heart" id="Prm-1C-c9l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q4B-TG-E8Y">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -480,11 +480,11 @@
             </objects>
             <point key="canvasLocation" x="2729" y="82"/>
         </scene>
-        <!--Профиль-->
+        <!--Profile-->
         <scene sceneID="Z6M-J1-rYI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QYZ-kD-uYU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" image="icon.profile" id="hKn-Ev-fKB"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icon.profile" id="hKn-Ev-fKB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="guI-p4-ipD">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -517,7 +517,7 @@
                                         </constraints>
                                         <color key="tintColor" name="white"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
                                             <backgroundConfiguration key="background" cornerRadius="12">
                                                 <color key="backgroundColor" name="orange"/>
                                             </backgroundConfiguration>
@@ -538,7 +538,7 @@
                                             <constraint firstAttribute="height" constant="44" id="HqH-VI-mY6"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Имя"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Name"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="NO"/>
                                         </userDefinedRuntimeAttributes>
@@ -550,7 +550,7 @@
                                             <constraint firstAttribute="height" constant="44" id="iT1-hA-EVl"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Пароль"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -562,7 +562,7 @@
                                             <constraint firstAttribute="height" constant="44" id="vxx-QI-cPg"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Почта"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="E-mail"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasClearButton" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="hasHideButton" value="NO"/>
                                         </userDefinedRuntimeAttributes>
@@ -612,7 +612,7 @@
                                 </constraints>
                                 <color key="tintColor" name="coral"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right" catalog="system" title="Выйти из приложения">
+                                <buttonConfiguration key="configuration" style="plain" image="rectangle.portrait.and.arrow.right" catalog="system" title="Log out">
                                     <backgroundConfiguration key="background" cornerRadius="12">
                                         <color key="backgroundColor" name="grayFill"/>
                                     </backgroundConfiguration>
@@ -657,11 +657,11 @@
             </objects>
             <point key="canvasLocation" x="4405.7971014492759" y="825"/>
         </scene>
-        <!--Главная-->
+        <!--Home-->
         <scene sceneID="t2q-pL-nEt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OUy-Uj-UEz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Главная" image="icon.home" id="7wm-L1-Jm1"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icon.home" id="7wm-L1-Jm1"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Uxp-xl-iNh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQ4-Qf-cxK">
@@ -782,14 +782,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTP-3r-NY7">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-bo-rZ5">
-                                        <rect key="frame" x="16" y="60" width="382" height="29.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-bo-rZ5">
+                                        <rect key="frame" x="18" y="60" width="382" height="29.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCT-UL-aui" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="113.5" width="382" height="44"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCT-UL-aui" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="113.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Bmp-5u-1zw"/>
@@ -797,8 +797,8 @@
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-q0-4HX" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="173.5" width="382" height="44"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-q0-4HX" customClass="BorderedTextField" customModule="MakeSomeFood" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="173.5" width="382" height="44"/>
                                         <color key="backgroundColor" name="grayFill"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="w3j-65-Ebo"/>
@@ -807,13 +807,13 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw3-Td-mam">
-                                        <rect key="frame" x="16" y="241.5" width="382" height="48"/>
+                                        <rect key="frame" x="18" y="241.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="AcC-gL-Qpf"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Войти"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                        <buttonConfiguration key="configuration" style="plain" title="Log in">
                                             <backgroundConfiguration key="background" cornerRadius="12">
                                                 <color key="backgroundColor" name="orange"/>
                                             </backgroundConfiguration>
@@ -825,13 +825,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBk-TJ-aFS">
-                                        <rect key="frame" x="16" y="369.5" width="382" height="48"/>
+                                        <rect key="frame" x="18" y="369.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="0sF-hd-frh"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                         <state key="normal" title="Войти с помощью Google" image="icon.google"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icon.google" title="Войти с помощью Google" imagePadding="8">
+                                        <buttonConfiguration key="configuration" style="plain" image="icon.google" title="Log in using Google" imagePadding="8">
                                             <backgroundConfiguration key="background" cornerRadius="12">
                                                 <color key="backgroundColor" name="grayFill"/>
                                             </backgroundConfiguration>
@@ -840,13 +840,13 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlf-jl-pq4">
-                                        <rect key="frame" x="16" y="313.5" width="382" height="48"/>
+                                        <rect key="frame" x="18" y="313.5" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="IJI-pm-4j6"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
                                         <state key="normal" title="Войти с помощью Apple" image="icon.apple"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="icon.apple" title="Войти с помощью Apple" imagePadding="8">
+                                        <buttonConfiguration key="configuration" style="plain" image="icon.apple" title="Log in using Apple" imagePadding="8">
                                             <backgroundConfiguration key="background" cornerRadius="12">
                                                 <color key="backgroundColor" name="grayFill"/>
                                             </backgroundConfiguration>
@@ -855,24 +855,24 @@
                                         </buttonConfiguration>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GiE-9o-9r2">
-                                        <rect key="frame" x="82.5" y="441.5" width="249.5" height="20"/>
+                                        <rect key="frame" x="94.5" y="441.5" width="229.5" height="20"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Впервые здесь?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-tJ-GWA">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First time here?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-tJ-GWA">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MP-ya-t6q">
-                                                <rect key="frame" x="141.5" y="0.0" width="108" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MP-ya-t6q">
+                                                <rect key="frame" x="131.5" y="0.0" width="98" height="20"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" name="green"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Входя в аккаунт, я  cоглашаюсь c правилами и условиями" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-EX-2zN">
-                                        <rect key="frame" x="16" y="479.5" width="382" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By logging into my account, I agree to the terms and conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsc-EX-2zN">
+                                        <rect key="frame" x="18" y="479.5" width="382" height="32"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

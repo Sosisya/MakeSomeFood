@@ -10,7 +10,6 @@ struct IngredientTag: Codable {
     let ingredient: String
     let description: String?
 
-
     enum CodingKeys: String, CodingKey {
         case id = "idIngredient"
         case ingredient = "strIngredient"

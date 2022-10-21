@@ -7,10 +7,10 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     private var ingredietsTag: [IngredientTag] = []
 
     private struct Spec {
-        static let titleOfCategory = "Категории"
-        static let titleOfKitchen = "Кухня"
-        static let titleOfIngredient = "Ингредиенты"
-        static let titleOfAllRecepies = "Все рецепты"
+        static let titleOfCategory = "Categories"
+        static let titleOfKitchen = "Area"
+        static let titleOfIngredient = "Ingredients"
+        static let titleOfAllRecepies = "All recipes"
         static let colorOfTagOrange = UIColor(named: "orange")
         static let colorOfTagsGreen = UIColor(named: "green")
     }
