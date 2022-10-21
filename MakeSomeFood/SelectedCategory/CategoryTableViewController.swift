@@ -53,6 +53,6 @@ class CategoryTableViewController: UITableViewController, RecepiePresenting {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showRecepie(recepie)
+//        showRecepie(recepie)
     }
 }

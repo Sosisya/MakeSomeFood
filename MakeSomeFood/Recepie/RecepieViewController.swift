@@ -4,6 +4,7 @@ class RecepieViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var recepieHeader: StrechyHeader!
 
+    var recepie: ToodayCooking?
 
     private struct Spec {
         static var headerHeight: CGFloat = 280
@@ -32,6 +33,8 @@ class RecepieViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: Spec.headerHeight, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerHeight)
         updateHeader()
+
+ 
     }
 }
 
@@ -48,7 +51,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         case .ingredientsHeader:
             return 1
         case .ingredients:
-            return ingredients.count
+            return recepie?.ingredients.count ?? 0
         case .descriptionHeader:
             return 1
         case .description:
@@ -62,9 +65,9 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         switch Section(rawValue: indexPath.section) {
         case .nameAndTags:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
-            cell.nameOfRecepieLabel.text = nameAndTags.nameOfRecepie
-            cell.categoryTagLabel.text = nameAndTags.categoryTagLabel
-            cell.areaTagLabel.text = nameAndTags.areaTagLabel
+            cell.nameOfRecepieLabel.text = recepie?.name
+            cell.categoryTagLabel.text = recepie?.category
+            cell.areaTagLabel.text = recepie?.area
             return cell
         case .ingredientsHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientHeaderViewCell", for: indexPath) as! IngredientHeaderViewCell
@@ -72,9 +75,10 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .ingredients:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
-            let item = ingredients[indexPath.row]
-            cell.ingredientLabel.text = item.nameOfIngredient
-            cell.amountLabel.text = item.amountOfIngredient
+            let itemIngredients = recepie?.ingredients[indexPath.row]
+            cell.ingredientLabel.text = itemIngredients
+            let itemMeasure = recepie?.measures[indexPath.row]
+            cell.amountLabel.text = itemMeasure
             return cell
         case .descriptionHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionHeaderViewCell", for: indexPath) as! DescriptionHeaderViewCell
@@ -82,7 +86,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .description:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.descriptionOfRecepie.text = description
+            cell.descriptionOfRecepie.text = recepie?.instruction
             return cell
         default:
             fatalError()

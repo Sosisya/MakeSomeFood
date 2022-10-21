@@ -15,7 +15,6 @@ struct Category: Codable {
         case category = "strCategory"
         case thumb = "strCategoryThumb"
         case description = "strCategoryDescription"
-
     }
 }
 

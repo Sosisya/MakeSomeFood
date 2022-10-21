@@ -8,12 +8,13 @@
 import UIKit
 
 protocol RecepiePresenting: UIViewController {
-    func showRecepie(_ recepie: Recepie)
+    func showRecepie(_ recepie: ToodayCooking)
 }
 
 extension RecepiePresenting {
-    func showRecepie(_ recepie: Recepie) {
-        let recepieVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecepieViewController")
+    func showRecepie(_ recepie: ToodayCooking) {
+        let recepieVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecepieViewController") as! RecepieViewController
+        recepieVC.recepie = recepie
         show(recepieVC, sender: self)
     }
 }

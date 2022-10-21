@@ -63,12 +63,12 @@
 		8E9034E82899294600D65515 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9034CC2898E7AA00D65515 /* Montserrat-ThinItalic.ttf */; };
 		8E9034EA28992AEF00D65515 /* ScreenSaverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */; };
 		8E9034EC2899753D00D65515 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9034EB2899753D00D65515 /* HomeViewController.swift */; };
-		8E9BB4A328E87492008B9FF6 /* RecepieFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */; };
 		8EB083F928FF181800FF9C24 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB083F828FF181800FF9C24 /* CategoriesList.swift */; };
 		8EB083FB28FF189700FF9C24 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB083FA28FF189700FF9C24 /* ApiManager.swift */; };
 		8EB083FF28FFFE7800FF9C24 /* CategoryTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB083FE28FFFE7800FF9C24 /* CategoryTagList.swift */; };
 		8EB084012900000300FF9C24 /* IngredientTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB084002900000300FF9C24 /* IngredientTagList.swift */; };
 		8EB08403290000D500FF9C24 /* AreaTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB08402290000D400FF9C24 /* AreaTagList.swift */; };
+		8EB084072901B9BF00FF9C24 /* TodayCookingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB084062901B9BF00FF9C24 /* TodayCookingList.swift */; };
 		8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */; };
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
@@ -151,12 +151,12 @@
 		8E9034D62898E7AB00D65515 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8E9034E928992AEF00D65515 /* ScreenSaverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSaverViewController.swift; sourceTree = "<group>"; };
 		8E9034EB2899753D00D65515 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieFiles.swift; sourceTree = "<group>"; };
 		8EB083F828FF181800FF9C24 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
 		8EB083FA28FF189700FF9C24 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		8EB083FE28FFFE7800FF9C24 /* CategoryTagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTagList.swift; sourceTree = "<group>"; };
 		8EB084002900000300FF9C24 /* IngredientTagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTagList.swift; sourceTree = "<group>"; };
 		8EB08402290000D400FF9C24 /* AreaTagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTagList.swift; sourceTree = "<group>"; };
+		8EB084062901B9BF00FF9C24 /* TodayCookingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCookingList.swift; sourceTree = "<group>"; };
 		8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionSectionHeaderView.xib; sourceTree = "<group>"; };
 		8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompositionalLayout.swift; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 				8EDBF57E28D74E150013AD0D /* IngredientsForRecepieTableViewCell.swift */,
 				8E4148B328F3DA6B00DEB191 /* DescriptionHeaderViewCell.swift */,
 				8E37564428D982220033E360 /* DescritionOfRecepieTableViewCell.swift */,
-				8E9BB4A228E87492008B9FF6 /* RecepieFiles.swift */,
 			);
 			path = Recepie;
 			sourceTree = "<group>";
@@ -297,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				8EB083F828FF181800FF9C24 /* CategoriesList.swift */,
+				8EB084062901B9BF00FF9C24 /* TodayCookingList.swift */,
 				8EB083FE28FFFE7800FF9C24 /* CategoryTagList.swift */,
 				8EB084002900000300FF9C24 /* IngredientTagList.swift */,
 				8EB08402290000D400FF9C24 /* AreaTagList.swift */,
@@ -507,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB084072901B9BF00FF9C24 /* TodayCookingList.swift in Sources */,
 				8E37564528D982220033E360 /* DescritionOfRecepieTableViewCell.swift in Sources */,
 				8EFBA2C128B4D5790098644F /* SearchAllRecepiesCollectionViewCell.swift in Sources */,
 				8EFEDAA428983B2C001A2908 /* LoginViewController.swift in Sources */,
@@ -529,7 +530,6 @@
 				8EB083FB28FF189700FF9C24 /* ApiManager.swift in Sources */,
 				8EFEDAA228983B2C001A2908 /* SceneDelegate.swift in Sources */,
 				8E6ED28028A54AB200EB0CB2 /* RecepieViewController.swift in Sources */,
-				8E9BB4A328E87492008B9FF6 /* RecepieFiles.swift in Sources */,
 				8EB083FF28FFFE7800FF9C24 /* CategoryTagList.swift in Sources */,
 				8E4148B428F3DA6B00DEB191 /* DescriptionHeaderViewCell.swift in Sources */,
 				8E59C98728E0355F00D6FEBE /* FloatingTitleTextField.swift in Sources */,

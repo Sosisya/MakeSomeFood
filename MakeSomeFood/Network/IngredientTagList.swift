@@ -8,12 +8,12 @@ struct IngredientsTagList: Codable {
 struct IngredientTag: Codable {
     let id: String
     let ingredient: String
-    let description: String
+    let description: String?
 
 
     enum CodingKeys: String, CodingKey {
         case id = "idIngredient"
-        case ingredient = "strCategory"
+        case ingredient = "strIngredient"
         case description = "strDescription"
     }
 }

@@ -24,11 +24,11 @@ class FloatingTitleTextField: UIView {
 
     }
 
-    @IBInspectable var title: String = Spec.emptyTitle {
+    @IBInspectable var title: String = "" {
         didSet { setupViews() }
     }
 
-    @IBInspectable var text: String = Spec.emptyTitle {
+    @IBInspectable var text: String = "" {
         didSet { setupViews() }
     }
 
@@ -125,7 +125,7 @@ class FloatingTitleTextField: UIView {
     }
 
     @objc func clearTextField() {
-        textField.text = Spec.emptyTitle
+        textField.text = ""
     }
 
     @objc func hidePassword() {
@@ -141,6 +141,6 @@ class FloatingTitleTextField: UIView {
 
     @objc private func textFieldDidChange() {
         guard textField.text != text else { return }
-        text = textField.text ?? Spec.emptyTitle
+        text = textField.text ?? ""
     }
 }
