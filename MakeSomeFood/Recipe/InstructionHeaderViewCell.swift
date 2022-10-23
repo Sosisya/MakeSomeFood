@@ -7,9 +7,9 @@
 
 import UIKit
 
-class DescriptionHeaderViewCell: UITableViewCell {
+class InstructionHeaderViewCell: UITableViewCell {
 
-    @IBOutlet var descriptionHeaderView: Header!
+    @IBOutlet var instructionHeaderView: Header!
 
     override func awakeFromNib() {
         super.awakeFromNib()

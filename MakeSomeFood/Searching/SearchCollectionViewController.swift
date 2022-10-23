@@ -25,7 +25,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
-        collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
+        collectionView.register(UINib(nibName: "SearchAllRecipesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecipesCollectionViewCell")
         collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
 
         ApiManager.getTagsOfCategories { [weak self] result in
@@ -128,7 +128,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             cell.backgroundColor = Spec.colorOfTagOrange
             return cell
         case .allRecipes:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepiesCollectionViewCell", for: indexPath) as! SearchAllRecepiesCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecipesCollectionViewCell", for: indexPath) as! SearchAllRecipesCollectionViewCell
             return cell
         default:
             fatalError()

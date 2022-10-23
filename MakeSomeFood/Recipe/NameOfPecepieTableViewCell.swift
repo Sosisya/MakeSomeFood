@@ -1,6 +1,6 @@
 import UIKit
 
-class NameOfRecepieTableViewCell: UITableViewCell {
+class NameOfRecipeTableViewCell: UITableViewCell {
 
     private struct Spec {
         static var labelBorderWidth: CGFloat = 1

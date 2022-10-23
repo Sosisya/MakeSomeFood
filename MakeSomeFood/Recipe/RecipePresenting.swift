@@ -13,7 +13,7 @@ protocol RecipePresenting: UIViewController {
 
 extension RecipePresenting {
     func showRecipe(_ recipe: Recipe) {
-        let recipeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecepieViewController") as! RecepieViewController
+        let recipeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecipeViewController") as! RecipeViewController
         recipeVC.recipe = recipe
         show(recipeVC, sender: self)
     }

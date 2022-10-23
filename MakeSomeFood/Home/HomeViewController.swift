@@ -10,14 +10,14 @@ class HomeViewController: UITableViewController, RecipePresenting {
     private var recipe: Recipe?
 
     private struct Spec {
-        static let titleTodayCooking = "Today we're cooking"
+        static let titleSpecial = "Special"
         static let titleActionAllRecipes = "All recipes"
         static let titleCategory = "Categories"
         static let profileImageCornerRadius: CGFloat = 12
     }
 
     enum Section: Int, CaseIterable {
-        case todayCooking
+        case special
         case allCategories
     }
     
@@ -25,7 +25,7 @@ class HomeViewController: UITableViewController, RecipePresenting {
         super.viewDidLoad()
         setImage()
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
+        tableView.register(UINib(nibName: "SpecialTableViewCell", bundle: nil), forCellReuseIdentifier: "SpecialTableViewCell")
         
         ApiManager.getCategories { [weak self] result in
             switch result {
@@ -74,7 +74,7 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section) {
-        case .todayCooking:
+        case .special:
             return recipe == nil ? 0 : 1
         case .allCategories:
             return categories.count
@@ -88,8 +88,8 @@ extension HomeViewController {
             .instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
         //        let header = TableSectionHeaderView.f_loadInstanceFromNib()
         switch Section(rawValue: section) {
-        case .todayCooking:
-            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecipes)
+        case .special:
+            header.configure(title: Spec.titleSpecial , actionTitle: Spec.titleActionAllRecipes)
         case .allCategories:
             header.configure(title: Spec.titleCategory)
         default:
@@ -100,8 +100,8 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
-        case .todayCooking:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
+        case .special:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
             cell.cellView.hasLargeImage = true
             cell.cellView.areaTagLabel.text = recipe?.area
             cell.cellView.categoryTagLabel.text = recipe?.category
@@ -120,7 +120,7 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(rawValue: indexPath.section) {
-        case .todayCooking:
+        case .special:
             guard let recipe = recipe else { return }
             showRecipe(recipe)
         case .allCategories:

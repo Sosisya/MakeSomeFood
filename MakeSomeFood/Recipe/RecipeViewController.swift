@@ -1,6 +1,6 @@
 import UIKit
 
-class RecepieViewController: UIViewController {
+class RecipeViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var recipeHeader: StrechyHeader!
 
@@ -16,8 +16,8 @@ class RecepieViewController: UIViewController {
         case nameAndTags
         case ingredientsHeader
         case ingredients
-        case descriptionHeader
-        case description
+        case instructionHeader
+        case instruction
     }
 
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class RecepieViewController: UIViewController {
     }
 }
 
-extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
+extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
@@ -50,9 +50,9 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         case .ingredients:
             return recipe?.ingredients.count ?? 0
-        case .descriptionHeader:
+        case .instructionHeader:
             return 1
-        case .description:
+        case .instruction:
             return 1
         default:
             fatalError()
@@ -62,7 +62,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
         case .nameAndTags:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecipeTableViewCell", for: indexPath) as! NameOfRecipeTableViewCell
             cell.nameOfRecipeLabel.text = recipe?.name
             cell.categoryTagLabel.text = recipe?.category
             cell.areaTagLabel.text = recipe?.area
@@ -78,13 +78,13 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             let itemMeasure = recipe?.measures[indexPath.row]
             cell.amountLabel.text = itemMeasure
             return cell
-        case .descriptionHeader:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionHeaderViewCell", for: indexPath) as! DescriptionHeaderViewCell
-            cell.descriptionHeaderView.headerTitle.text = Spec.descritionHeaderTitle
+        case .instructionHeader:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionHeaderViewCell", for: indexPath) as! InstructionHeaderViewCell
+            cell.instructionHeaderView.headerTitle.text = Spec.descritionHeaderTitle
             return cell
-        case .description:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.descriptionOfRecepie.text = recipe?.instruction
+        case .instruction:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionOfRecipeTableViewCell", for: indexPath) as! InstructionOfRecipeTableViewCell
+            cell.recipeInsctruction.text = recipe?.instruction
             return cell
         default:
             fatalError()

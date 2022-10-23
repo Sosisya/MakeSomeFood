@@ -1,10 +1,3 @@
-//
-//  Header.swift
-//  MakeSomeFood
-//
-//  Created by Луиза Самойленко on 11.10.2022.
-//
-
 import UIKit
 
 class Header: UIView {

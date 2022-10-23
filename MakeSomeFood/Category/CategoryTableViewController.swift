@@ -18,7 +18,7 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
         tableView.dataSource = self
         title = category.category
         self.navigationController?.navigationBar.titleTextAttributes = [.font: Spec.fontOfHeaderFont]
-        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
+        tableView.register(UINib(nibName: "SpecialTableViewCell", bundle: nil), forCellReuseIdentifier: "SpecialTableViewCell")
         tableView.separatorStyle = .none
     }
     
@@ -38,7 +38,7 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
         case .recipeOfCategory:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
             let item = selectedCategoryRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal
             cell.cellView.coverImageView.image = item.image

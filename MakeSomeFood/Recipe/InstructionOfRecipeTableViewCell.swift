@@ -1,8 +1,8 @@
 import UIKit
 
-class DescritionOfRecepieTableViewCell: UITableViewCell {
+class InstructionOfRecipeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var descriptionOfRecepie: UILabel!
+    @IBOutlet weak var recipeInsctruction: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

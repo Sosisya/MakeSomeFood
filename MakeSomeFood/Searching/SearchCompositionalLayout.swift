@@ -14,14 +14,14 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
         return { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             guard let sectionKind = Section(rawValue: sectionIndex) else { return nil }
             if sectionKind == .allRecipes {
-                return createRecepieLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
+                return createRecipeLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
             } else {
                 return createChipsLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
             }
         }
     }
 
-    private static func createRecepieLayout(sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
+    private static func createRecipeLayout(sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
 
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),

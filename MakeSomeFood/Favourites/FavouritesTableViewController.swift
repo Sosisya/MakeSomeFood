@@ -2,6 +2,8 @@ import UIKit
 
 class FavouritesTableViewController: UITableViewController, RecipePresenting {
 
+    private var recipe: Recipe?
+
     private struct Spec {
         static let titleOfHeader = "Favourites"
     }
@@ -12,7 +14,7 @@ class FavouritesTableViewController: UITableViewController, RecipePresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "TodayCookingTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayCookingTableViewCell")
+        tableView.register(UINib(nibName: "SpecialTableViewCell", bundle: nil), forCellReuseIdentifier: "SpecialTableViewCell")
         tableView.separatorStyle = .none
     }
     
@@ -43,7 +45,7 @@ class FavouritesTableViewController: UITableViewController, RecipePresenting {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
         case .favouriteRecipes:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
             let item = favouriteRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal
             cell.cellView.coverImageView.image = item.image
@@ -57,7 +59,8 @@ class FavouritesTableViewController: UITableViewController, RecipePresenting {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        showRecepie(recepie)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard let recipe = recipe else { return }
+//        showRecipe(recipe)
+//    }
 }
