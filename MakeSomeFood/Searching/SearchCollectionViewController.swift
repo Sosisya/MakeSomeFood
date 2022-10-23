@@ -8,7 +8,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     private struct Spec {
         static let titleOfCategory = "Categories"
-        static let titleOfKitchen = "Area"
+        static let titleOfArea = "Area"
         static let titleOfIngredient = "Ingredients"
         static let titleOfAllRecepies = "All recipes"
         static let colorOfTagOrange = UIColor(named: "orange")
@@ -17,9 +17,9 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     enum Section: Int, CaseIterable {
         case category
-        case kitchen
+        case area
         case ingredient
-        case allRecepies
+        case allRecipes
     }
 
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         collectionView.register(UINib(nibName: "SearchAllRecepiesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchAllRecepiesCollectionViewCell")
         collectionView.register(UINib(nibName: "CollectionSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionSectionHeaderView")
 
-        ApiManager.getCategoriesTags { [weak self] result in
+        ApiManager.getTagsOfCategories { [weak self] result in
             switch result {
             case .success(let categoriesTagsList):
                 DispatchQueue.main.async {
@@ -40,7 +40,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             }
         }
 
-        ApiManager.getAreasTags { [weak self] result in
+        ApiManager.getTagsOfArea { [weak self] result in
             switch result {
             case .success(let areasTagsList):
                 DispatchQueue.main.async {
@@ -52,7 +52,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             }
         }
 
-        ApiManager.getIngredientsTags { [weak self] result in
+        ApiManager.getTagsOfIngredients { [weak self] result in
             switch result {
             case .success(let ingredientsTagsList):
                 DispatchQueue.main.async {
@@ -74,11 +74,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         switch Section(rawValue: indexPath.section) {
         case .category:
             header.configure(title: Spec.titleOfCategory)
-        case .kitchen:
-            header.configure(title: Spec.titleOfKitchen)
+        case .area:
+            header.configure(title: Spec.titleOfArea)
         case .ingredient:
             header.configure(title: Spec.titleOfIngredient)
-        case .allRecepies:
+        case .allRecipes:
             header.configure(title: Spec.titleOfAllRecepies, offset: 16)
         default:
             break
@@ -91,11 +91,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         switch Section(rawValue: section) {
         case .category:
             return categoriesTag.count
-        case .kitchen:
+        case .area:
             return areasTag.count
         case .ingredient:
             return ingredietsTag.count
-        case .allRecepies:
+        case .allRecipes:
             return 3
         default:
             fatalError()
@@ -115,7 +115,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             cell.tagLabel.text = item.category
             cell.backgroundColor = Spec.colorOfTagOrange
             return cell
-        case .kitchen:
+        case .area:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
             let item = areasTag[indexPath.row]
             cell.tagLabel.text = item.area
@@ -127,7 +127,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             cell.tagLabel.text = item.ingredient
             cell.backgroundColor = Spec.colorOfTagOrange
             return cell
-        case .allRecepies:
+        case .allRecipes:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecepiesCollectionViewCell", for: indexPath) as! SearchAllRecepiesCollectionViewCell
             return cell
         default:

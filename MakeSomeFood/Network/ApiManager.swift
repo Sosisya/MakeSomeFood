@@ -20,7 +20,7 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getCategoriesTags(completion: @escaping (Result<CategoriesTagList, Error>) -> Void) {
+    static func getTagsOfCategories(completion: @escaping (Result<CategoriesTagList, Error>) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
         guard let url = URL(string: urlString) else { return }
 
@@ -38,7 +38,7 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getAreasTags(completion: @escaping (Result<AreasTagList, Error>) -> Void) {
+    static func getTagsOfArea(completion: @escaping (Result<AreasTagList, Error>) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/list.php?a=list"
         guard let url = URL(string: urlString) else { return }
 
@@ -56,7 +56,7 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getIngredientsTags(completion: @escaping (Result<IngredientsTagList, Error>) -> Void) {
+    static func getTagsOfIngredients(completion: @escaping (Result<IngredientsTagList, Error>) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/list.php?i=list"
         guard let url = URL(string: urlString) else { return }
 
@@ -74,7 +74,7 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getRecepie(completion: @escaping (Result<ToodayCookingList, Error>) -> Void) {
+    static func getRecipe(completion: @escaping (Result<ReсipeList, Error>) -> Void) {
         let urlString = "https://www.themealdb.com/api/json/v1/1/random.php"
         guard let url = URL(string: urlString) else { return }
 
@@ -84,7 +84,7 @@ struct ApiManager {
             guard error == nil else { return }
 
             do {
-                let categories = try JSONDecoder().decode(ToodayCookingList.self, from: data)
+                let categories = try JSONDecoder().decode(ReсipeList.self, from: data)
                 completion(.success(categories))
             } catch let error {
                 completion(.failure(error))

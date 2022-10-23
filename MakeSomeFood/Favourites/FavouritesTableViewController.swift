@@ -1,13 +1,13 @@
 import UIKit
 
-class FavouritesTableViewController: UITableViewController, RecepiePresenting {
+class FavouritesTableViewController: UITableViewController, RecipePresenting {
 
     private struct Spec {
         static let titleOfHeader = "Favourites"
     }
 
     enum Section: Int, CaseIterable {
-        case favouriteRecepies
+        case favouriteRecipes
     }
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class FavouritesTableViewController: UITableViewController, RecepiePresenting {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section) {
-        case .favouriteRecepies:
+        case .favouriteRecipes:
             return favouriteRecepies.count
         default:
             fatalError()
@@ -32,7 +32,7 @@ class FavouritesTableViewController: UITableViewController, RecepiePresenting {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UINib(nibName: "TableSectionHeaderView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! TableSectionHeaderView
         switch Section(rawValue: section) {
-        case .favouriteRecepies:
+        case .favouriteRecipes:
             header.configure(title: Spec.titleOfHeader)
         default:
             return nil
@@ -42,7 +42,7 @@ class FavouritesTableViewController: UITableViewController, RecepiePresenting {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
-        case .favouriteRecepies:
+        case .favouriteRecipes:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             let item = favouriteRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal
@@ -56,7 +56,7 @@ class FavouritesTableViewController: UITableViewController, RecepiePresenting {
             fatalError()
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        showRecepie(recepie)
     }

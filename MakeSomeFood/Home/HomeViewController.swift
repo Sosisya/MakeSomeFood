@@ -1,17 +1,17 @@
 import UIKit
 
-class HomeViewController: UITableViewController, RecepiePresenting {
+class HomeViewController: UITableViewController, RecipePresenting {
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     private var selectedCategory: Category?
     private var categories: [Category] = []
 
-    private var recepie: ToodayCooking?
+    private var recipe: Recipe?
 
     private struct Spec {
         static let titleTodayCooking = "Today we're cooking"
-        static let titleActionAllRecepies = "All recipes"
+        static let titleActionAllRecipes = "All recipes"
         static let titleCategory = "Categories"
         static let profileImageCornerRadius: CGFloat = 12
     }
@@ -39,11 +39,11 @@ class HomeViewController: UITableViewController, RecepiePresenting {
             }
         }
 
-        ApiManager.getRecepie { [weak self] result in
+        ApiManager.getRecipe { [weak self] result in
             switch result {
             case .success(let recepieList):
                 DispatchQueue.main.async {
-                    self?.recepie = recepieList.meals.first
+                    self?.recipe = recepieList.meals.first
                     self?.tableView.reloadData()
                 }
             case .failure(let error):
@@ -75,7 +75,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section) {
         case .todayCooking:
-            return recepie == nil ? 0 : 1
+            return recipe == nil ? 0 : 1
         case .allCategories:
             return categories.count
         default:
@@ -89,7 +89,7 @@ extension HomeViewController {
         //        let header = TableSectionHeaderView.f_loadInstanceFromNib()
         switch Section(rawValue: section) {
         case .todayCooking:
-            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecepies)
+            header.configure(title: Spec.titleTodayCooking , actionTitle: Spec.titleActionAllRecipes)
         case .allCategories:
             header.configure(title: Spec.titleCategory)
         default:
@@ -103,9 +103,9 @@ extension HomeViewController {
         case .todayCooking:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             cell.cellView.hasLargeImage = true
-            cell.cellView.areaTagLabel.text = recepie?.area
-            cell.cellView.categoryTagLabel.text = recepie?.category
-            cell.cellView.nameOfMeal.text = recepie?.name
+            cell.cellView.areaTagLabel.text = recipe?.area
+            cell.cellView.categoryTagLabel.text = recipe?.category
+            cell.cellView.nameOfMeal.text = recipe?.name
             return cell
         case .allCategories:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
@@ -121,8 +121,8 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(rawValue: indexPath.section) {
         case .todayCooking:
-            guard let recepie = recepie else { return }
-            showRecepie(recepie)
+            guard let recipe = recipe else { return }
+            showRecipe(recipe)
         case .allCategories:
             guard indexPath.section == 1 else { return }
             selectedCategory = categories[indexPath.row]

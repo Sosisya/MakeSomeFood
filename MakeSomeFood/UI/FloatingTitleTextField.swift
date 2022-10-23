@@ -4,8 +4,6 @@ import UIKit
 class FloatingTitleTextField: UIView {
 
     private struct Spec {
-        static var emptyTitle = ""
-
         static var titleLabelFont = UIFont(name: "SFProText-Regular", size: 10)
         static var titleLabelColor = UIColor(named: "darkGray")
 

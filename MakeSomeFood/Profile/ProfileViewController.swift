@@ -15,8 +15,6 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         static var exitButtonMainAlertTitle = "Are you sure you want to log out of your profile?"
         static var exitButtonFirstAlertTitle = "Log out"
         static var exitButtonCancelAlertTitle = "Cancel"
-
-        static var emptyString = ""
     }
 
     struct ProfileData: Equatable {
@@ -27,18 +25,15 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     }
 
     @IBOutlet weak var profileImage: UIImageView!
-
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-
     @IBOutlet weak var nameTextField: FloatingTitleTextField!
     @IBOutlet weak var emailTextField: FloatingTitleTextField!
     @IBOutlet weak var passwordTextField: FloatingTitleTextField!
-
     @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
 
-    private var initialValues = ProfileData(changedPhoto: false, name: Spec.emptyString, email: Spec.emptyString, password: Spec.emptyString)
+    private var initialValues = ProfileData(changedPhoto: false, name: "", email: "", password: "")
     private var currentValues: ProfileData {
         ProfileData(changedPhoto: false, name: nameTextField.text, email: emailTextField.text, password: passwordTextField.text)
     }

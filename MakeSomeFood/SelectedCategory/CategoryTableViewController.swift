@@ -1,6 +1,6 @@
 import UIKit
 
-class CategoryTableViewController: UITableViewController, RecepiePresenting {
+class CategoryTableViewController: UITableViewController, RecipePresenting {
 
     var category: Category!
 
@@ -9,7 +9,7 @@ class CategoryTableViewController: UITableViewController, RecepiePresenting {
     }
 
     enum Section: Int, CaseIterable {
-        case categoryRecepie
+        case recipeOfCategory
     }
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class CategoryTableViewController: UITableViewController, RecepiePresenting {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section) {
-        case .categoryRecepie:
+        case .recipeOfCategory:
             return selectedCategoryRecepies.count
         default:
             fatalError()
@@ -37,7 +37,7 @@ class CategoryTableViewController: UITableViewController, RecepiePresenting {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch Section(rawValue: indexPath.section) {
-        case .categoryRecepie:
+        case .recipeOfCategory:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TodayCookingTableViewCell", for: indexPath) as! TodayCookingTableViewCell
             let item = selectedCategoryRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal

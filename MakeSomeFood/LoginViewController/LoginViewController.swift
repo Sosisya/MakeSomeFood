@@ -14,17 +14,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var linksLabel: UILabel!
 
+//    struct Spec {
+//
+//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
         let filledHeight = registerStackView.frame.maxY
         let fullHeight = scrollView.frame.height
         let minOffset = 8 + linksLabel.frame.height

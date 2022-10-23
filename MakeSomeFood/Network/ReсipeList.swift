@@ -1,10 +1,10 @@
 import Foundation
 
-struct ToodayCookingList: Decodable {
-    let meals: [ToodayCooking]
+struct ReсipeList: Decodable {
+    let meals: [Recipe]
 }
 
-struct ToodayCooking: Decodable {
+struct Recipe: Decodable {
     let id: String
     let name: String
     let drink: String?

@@ -2,12 +2,12 @@ import UIKit
 
 class NameOfRecepieTableViewCell: UITableViewCell {
 
-    private struct  Spec {
+    private struct Spec {
         static var labelBorderWidth: CGFloat = 1
         static var labelBackgroundColor = UIColor(named: "white")?.cgColor
     }
 
-    @IBOutlet weak var nameOfRecepieLabel: UILabel!
+    @IBOutlet weak var nameOfRecipeLabel: UILabel!
     @IBOutlet weak var categoryTagLabel: LabelWithInsets!
     @IBOutlet weak var areaTagLabel: LabelWithInsets!
 

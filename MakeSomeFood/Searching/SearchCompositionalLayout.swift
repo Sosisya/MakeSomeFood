@@ -4,16 +4,16 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
 
     enum Section: Int, CaseIterable {
         case category
-        case kitchen
+        case area
         case ingredient
-        case allRecepie
+        case allRecipes
     }
 
     private static func createLayout() -> ((Int, NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection?) {
 
         return { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             guard let sectionKind = Section(rawValue: sectionIndex) else { return nil }
-            if sectionKind == .allRecepie {
+            if sectionKind == .allRecipes {
                 return createRecepieLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)
             } else {
                 return createChipsLayout(sectionIndex: sectionIndex, layoutEnvironment: layoutEnvironment)

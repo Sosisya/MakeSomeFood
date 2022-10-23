@@ -2,9 +2,9 @@ import UIKit
 
 class RecepieViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var recepieHeader: StrechyHeader!
+    @IBOutlet weak var recipeHeader: StrechyHeader!
 
-    var recepie: ToodayCooking?
+    var recipe: Recipe?
 
     private struct Spec {
         static var headerHeight: CGFloat = 280
@@ -27,14 +27,12 @@ class RecepieViewController: UIViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
 
-        recepieHeader = tableView.tableHeaderView as? StrechyHeader
+        recipeHeader = tableView.tableHeaderView as? StrechyHeader
         tableView.tableHeaderView = nil
-        tableView.addSubview(recepieHeader)
+        tableView.addSubview(recipeHeader)
         tableView.contentInset = UIEdgeInsets(top: Spec.headerHeight, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerHeight)
         updateHeader()
-
- 
     }
 }
 
@@ -51,7 +49,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         case .ingredientsHeader:
             return 1
         case .ingredients:
-            return recepie?.ingredients.count ?? 0
+            return recipe?.ingredients.count ?? 0
         case .descriptionHeader:
             return 1
         case .description:
@@ -65,9 +63,9 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
         switch Section(rawValue: indexPath.section) {
         case .nameAndTags:
             let cell = tableView.dequeueReusableCell(withIdentifier: "NameOfRecepieTableViewCell", for: indexPath) as! NameOfRecepieTableViewCell
-            cell.nameOfRecepieLabel.text = recepie?.name
-            cell.categoryTagLabel.text = recepie?.category
-            cell.areaTagLabel.text = recepie?.area
+            cell.nameOfRecipeLabel.text = recipe?.name
+            cell.categoryTagLabel.text = recipe?.category
+            cell.areaTagLabel.text = recipe?.area
             return cell
         case .ingredientsHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientHeaderViewCell", for: indexPath) as! IngredientHeaderViewCell
@@ -75,9 +73,9 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .ingredients:
             let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsForRecepieTableViewCell", for: indexPath) as! IngredientsForRecepieTableViewCell
-            let itemIngredients = recepie?.ingredients[indexPath.row]
+            let itemIngredients = recipe?.ingredients[indexPath.row]
             cell.ingredientLabel.text = itemIngredients
-            let itemMeasure = recepie?.measures[indexPath.row]
+            let itemMeasure = recipe?.measures[indexPath.row]
             cell.amountLabel.text = itemMeasure
             return cell
         case .descriptionHeader:
@@ -86,7 +84,7 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .description:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DescritionOfRecepieTableViewCell", for: indexPath) as! DescritionOfRecepieTableViewCell
-            cell.descriptionOfRecepie.text = recepie?.instruction
+            cell.descriptionOfRecepie.text = recipe?.instruction
             return cell
         default:
             fatalError()
@@ -108,9 +106,9 @@ extension RecepieViewController: UITableViewDelegate, UITableViewDataSource {
 
     func updateHeader() {
         if tableView.contentOffset.y <= -Spec.headerHeight {
-            recepieHeader.frame.origin.y = tableView.contentOffset.y
-            recepieHeader.frame.size.height = -tableView.contentOffset.y
-            recepieHeader.frame.size.width = tableView.frame.size.width
+            recipeHeader.frame.origin.y = tableView.contentOffset.y
+            recipeHeader.frame.size.height = -tableView.contentOffset.y
+            recipeHeader.frame.size.width = tableView.frame.size.width
         }
     }
 

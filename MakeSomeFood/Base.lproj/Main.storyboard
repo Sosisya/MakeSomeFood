@@ -286,7 +286,7 @@
                                         <connections>
                                             <outlet property="areaTagLabel" destination="edW-Ch-IX3" id="xLs-UV-A2A"/>
                                             <outlet property="categoryTagLabel" destination="MUZ-aT-P3P" id="oa1-RT-J0Y"/>
-                                            <outlet property="nameOfRecepieLabel" destination="PVX-FD-T45" id="Hw9-ZG-7Or"/>
+                                            <outlet property="nameOfRecipeLabel" destination="PVX-FD-T45" id="Hw9-ZG-7Or"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientHeaderViewCell" id="Lfx-DW-O1a" customClass="IngredientHeaderViewCell" customModule="MakeSomeFood" customModuleProvider="target">
@@ -413,7 +413,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vVH-y9-TJO"/>
                     <connections>
-                        <outlet property="recepieHeader" destination="st5-rP-tQR" id="C1F-VQ-TXS"/>
+                        <outlet property="recipeHeader" destination="st5-rP-tQR" id="C1F-VQ-TXS"/>
                         <outlet property="tableView" destination="eOT-OH-GeX" id="ETa-D7-Wdp"/>
                     </connections>
                 </viewController>
