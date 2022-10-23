@@ -10,9 +10,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         static let titleOfCategory = "Categories"
         static let titleOfArea = "Area"
         static let titleOfIngredient = "Ingredients"
-        static let titleOfAllRecepies = "All recipes"
+        static let titleOfAllRecipes = "All recipes"
         static let colorOfTagOrange = UIColor(named: "orange")
         static let colorOfTagsGreen = UIColor(named: "green")
+        static let headerTitleOfAllRecipesOffset: CGFloat = 16
+        static let collectionViewLayoutHeight: CGFloat = 42
     }
 
     enum Section: Int, CaseIterable {
@@ -79,7 +81,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         case .ingredient:
             header.configure(title: Spec.titleOfIngredient)
         case .allRecipes:
-            header.configure(title: Spec.titleOfAllRecepies, offset: 16)
+            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset)
         default:
             break
         }
@@ -103,7 +105,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 42)
+        return CGSize(width: collectionView.bounds.width, height: Spec.collectionViewLayoutHeight)
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -14,6 +14,9 @@ class HomeViewController: UITableViewController, RecipePresenting {
         static let titleActionAllRecipes = "All recipes"
         static let titleCategory = "Categories"
         static let profileImageCornerRadius: CGFloat = 12
+        static let countOfCellWithoutRecipe = 0
+        static let countOfCellWithRecipe = 1
+
     }
 
     enum Section: Int, CaseIterable {
@@ -75,7 +78,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section) {
         case .special:
-            return recipe == nil ? 0 : 1
+            return recipe == nil ? Spec.countOfCellWithoutRecipe : Spec.countOfCellWithRecipe
         case .allCategories:
             return categories.count
         default:

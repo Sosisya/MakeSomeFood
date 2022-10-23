@@ -6,7 +6,7 @@ struct AreasTagList: Codable {
 
 struct AreaTag: Codable {
     let area: String
-
+    
     enum CodingKeys: String, CodingKey {
         case area = "strArea"
     }

@@ -6,7 +6,7 @@ struct CategoriesTagList: Codable {
 
 struct CategoryTag: Codable {
     let category: String
-
+    
     enum CodingKeys: String, CodingKey {
         case category = "strCategory"
     }

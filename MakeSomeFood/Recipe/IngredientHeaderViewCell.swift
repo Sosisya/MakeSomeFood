@@ -1,10 +1,3 @@
-//
-//  IngredientHeader.swift
-//  MakeSomeFood
-//
-//  Created by Луиза Самойленко on 10.10.2022.
-//
-
 import UIKit
 
 class IngredientHeaderViewCell: UITableViewCell {

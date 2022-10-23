@@ -1,10 +1,3 @@
-//
-//  RecepiePresenting.swift
-//  MakeSomeFood
-//
-//  Created by Луиза Самойленко on 16.10.2022.
-//
-
 import UIKit
 
 protocol RecipePresenting: UIViewController {

@@ -1,10 +1,3 @@
-//
-//  DescriptionHeaderViewCell.swift
-//  MakeSomeFood
-//
-//  Created by Луиза Самойленко on 10.10.2022.
-//
-
 import UIKit
 
 class InstructionHeaderViewCell: UITableViewCell {
@@ -18,5 +11,4 @@ class InstructionHeaderViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }

@@ -7,11 +7,9 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         static var navigationTitleFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
         static var profileImageCornerRadius: CGFloat = 12
         static var takePhotoButtonCornerRadius: CGFloat = 22
-
-        static var takePhotoButtonFirstAlertTitle = "Take a photo"
-        static var takePhotoButtonSecondAlertTitle = "Choose from gallery"
+        static var takePhotoButtonFirstAlertTitle = "Take photo"
+        static var takePhotoButtonSecondAlertTitle = "Open gallery"
         static var takePhotoButtonCancelAlertTitle = "Cancel"
-
         static var exitButtonMainAlertTitle = "Are you sure you want to log out of your profile?"
         static var exitButtonFirstAlertTitle = "Log out"
         static var exitButtonCancelAlertTitle = "Cancel"
@@ -106,15 +104,15 @@ class ProfileViewController: UIViewController, UITextViewDelegate, UITextFieldDe
         let alert = UIAlertController(title: Spec.exitButtonMainAlertTitle, message: nil, preferredStyle: .actionSheet)
 
         alert.addAction(UIAlertAction(title: Spec.exitButtonFirstAlertTitle, style: .destructive , handler:{ (UIAlertAction)in
-                print("User click Approve button")
-            }))
+            print("User click Approve button")
+        }))
 
         alert.addAction(UIAlertAction(title: Spec.exitButtonCancelAlertTitle, style: .cancel, handler:{ (UIAlertAction)in
-                print("User click Dismiss button")
-            }))
+            print("User click Dismiss button")
+        }))
 
-            self.present(alert, animated: true, completion: {
-                print("completion block")
-            })
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
     }
 }

@@ -7,9 +7,15 @@ class RecipeViewController: UIViewController {
     var recipe: Recipe?
 
     private struct Spec {
-        static var headerHeight: CGFloat = 280
+        static var headerContentInsetTop: CGFloat = 280
+        static var headerContentInsetLeft: CGFloat = 0
+        static var headerContentInsetBottom: CGFloat = 0
+        static var headerContentInsetRight: CGFloat = 0
+
+        static var headerContentOffsetX: CGFloat = 0
+
         static var ingredientHeaderTitle = "Ingredients"
-        static var descritionHeaderTitle = "Instructions"
+        static var instructionHeaderTitle = "Instructions"
     }
 
     enum Section: Int, CaseIterable {
@@ -30,8 +36,8 @@ class RecipeViewController: UIViewController {
         recipeHeader = tableView.tableHeaderView as? StrechyHeader
         tableView.tableHeaderView = nil
         tableView.addSubview(recipeHeader)
-        tableView.contentInset = UIEdgeInsets(top: Spec.headerHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerHeight)
+        tableView.contentInset = UIEdgeInsets(top: Spec.headerContentInsetTop, left: Spec.headerContentInsetLeft, bottom: Spec.headerContentInsetBottom, right: Spec.headerContentInsetRight)
+        tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerContentInsetTop)
         updateHeader()
     }
 }
@@ -80,7 +86,7 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .instructionHeader:
             let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionHeaderViewCell", for: indexPath) as! InstructionHeaderViewCell
-            cell.instructionHeaderView.headerTitle.text = Spec.descritionHeaderTitle
+            cell.instructionHeaderView.headerTitle.text = Spec.instructionHeaderTitle
             return cell
         case .instruction:
             let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionOfRecipeTableViewCell", for: indexPath) as! InstructionOfRecipeTableViewCell
@@ -105,7 +111,7 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func updateHeader() {
-        if tableView.contentOffset.y <= -Spec.headerHeight {
+        if tableView.contentOffset.y <= -Spec.headerContentInsetTop {
             recipeHeader.frame.origin.y = tableView.contentOffset.y
             recipeHeader.frame.size.height = -tableView.contentOffset.y
             recipeHeader.frame.size.width = tableView.frame.size.width

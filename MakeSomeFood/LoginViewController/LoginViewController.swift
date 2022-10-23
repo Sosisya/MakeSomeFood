@@ -14,9 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var linksLabel: UILabel!
 
-//    struct Spec {
-//
-//    }
+    private struct Spec {
+
+        static let linksLabelMinOffsetHeight: CGFloat = 8
+        static let linksLabelRealOffsetHeight: CGFloat = 18
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +30,8 @@ class LoginViewController: UIViewController {
         super.viewDidLayoutSubviews()
         let filledHeight = registerStackView.frame.maxY
         let fullHeight = scrollView.frame.height
-        let minOffset = 8 + linksLabel.frame.height
-        let realOffSet = fullHeight - filledHeight - 16
+        let minOffset = Spec.linksLabelMinOffsetHeight + linksLabel.frame.height
+        let realOffSet = fullHeight - filledHeight - Spec.linksLabelRealOffsetHeight
         linksTopConstraint.constant = max(realOffSet, minOffset)
     }
     
