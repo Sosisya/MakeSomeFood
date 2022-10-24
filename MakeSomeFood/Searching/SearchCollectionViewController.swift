@@ -7,14 +7,14 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     private var ingredietsTag: [IngredientTag] = []
 
     private struct Spec {
-        static let titleOfCategory = "Categories"
-        static let titleOfArea = "Area"
-        static let titleOfIngredient = "Ingredients"
-        static let titleOfAllRecipes = "All recipes"
-        static let colorOfTagOrange = UIColor(named: "orange")
-        static let colorOfTagsGreen = UIColor(named: "green")
-        static let headerTitleOfAllRecipesOffset: CGFloat = 16
-        static let collectionViewLayoutHeight: CGFloat = 42
+        static var titleOfCategory = "Categories"
+        static var titleOfArea = "Area"
+        static var titleOfIngredient = "Ingredients"
+        static var titleOfAllRecipes = "All recipes"
+        static var colorOfTagOrange = UIColor(named: "orange")
+        static var colorOfTagsGreen = UIColor(named: "green")
+        static var headerTitleOfAllRecipesOffset: CGFloat = 16
+        static var collectionViewLayoutHeight: CGFloat = 42
     }
 
     enum Section: Int, CaseIterable {

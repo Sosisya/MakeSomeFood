@@ -6,20 +6,27 @@ class FloatingTitleTextField: UIView {
     private struct Spec {
         static var titleLabelFont = UIFont(name: "SFProText-Regular", size: 10)
         static var titleLabelColor = UIColor(named: "darkGray")
-
-        static var textFieldFont = UIFont(name: "SFProText-Regular", size: 5)
+        static var textFieldFont = UIFont(name: "SFProText-Regular", size: 15)
         static var textFieldColor = UIColor(named: "black")
         static var textFieldBorderWidth: CGFloat = 1
         static var textFieldBorderColor = UIColor(named: "black")?.cgColor
         static var textFieldCornerRadius: CGFloat = 12
-
         static var clearButtonIcon = UIImage(systemName: "xmark.circle")
         static var clearButtonColor = UIColor(named: "darkGray")
-
         static var hideOnIcon = UIImage(systemName: "eye.slash")!
         static var hideOffIcon = UIImage(systemName: "eye")!
         static var hideButtonColor = UIColor(named: "darkGray")
-
+        static var stackViewSpacing: CGFloat = 6
+        static var contentStackViewSpacing: CGFloat = 0
+        static var contentStackViewHeightAnchor: CGFloat = 32
+        static var contentStackViewTopAnchor: CGFloat = 6
+        static var contentStackViewBottomAnchor: CGFloat = -6
+        static var clearButtonHeightAnchor: CGFloat = 32
+        static var clearButtonWidthAnchor: CGFloat = 32
+        static var hideButtonHeightAnchor: CGFloat = 32
+        static var hideButtonWidthAnchor: CGFloat = 32
+        static var stackViewFrameX: CGFloat = 12
+        static var stackViewFrameY: CGFloat = 0
     }
 
     @IBInspectable var title: String = "" {
@@ -66,9 +73,9 @@ class FloatingTitleTextField: UIView {
     private func commonInit() {
         addSubview(stackView)
         stackView.axis = .horizontal
-        stackView.spacing = 6
+        stackView.spacing = Spec.stackViewSpacing
         contentStackView.axis = .vertical
-        contentStackView.spacing = 0
+        contentStackView.spacing = Spec.contentStackViewSpacing
         stackView.addArrangedSubview(contentStackView)
         stackView.addArrangedSubview(clearButton)
         stackView.addArrangedSubview(hideButton)
@@ -93,17 +100,16 @@ class FloatingTitleTextField: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        stackView.frame = CGRect(x: 12, y: 0, width: bounds.width - 24, height: bounds.height)
+        stackView.frame = CGRect(x: Spec.stackViewFrameX, y: Spec.stackViewFrameY, width: bounds.width - 24, height: bounds.height)
     }
 
     private func setupViews() {
         titleLabel.text = title
-        titleLabel.font = UIFont(name: "SFProText-Regular", size: 10)
-        titleLabel.font = titleLabel.font.withSize(10)
+        titleLabel.font = Spec.titleLabelFont
         titleLabel.textColor = Spec.titleLabelColor
 
         textField.text = text
-        textField.font = UIFont(name: "SFProText-Regular", size: 15)
+        textField.font = Spec.textFieldFont
         textField.textColor = Spec.textFieldColor
         textField.isSecureTextEntry = hasHideButton
 

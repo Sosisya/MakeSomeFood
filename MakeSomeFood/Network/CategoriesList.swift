@@ -17,4 +17,3 @@ struct Category: Codable {
         case description = "strCategoryDescription"
     }
 }
-

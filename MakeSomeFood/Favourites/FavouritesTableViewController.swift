@@ -3,7 +3,7 @@ import UIKit
 class FavouritesTableViewController: UITableViewController, RecipePresenting {
 
     private struct Spec {
-        static let titleOfHeader = "Favourites"
+        static var titleOfHeader = "Favourites"
     }
     
     override func viewDidLoad() {

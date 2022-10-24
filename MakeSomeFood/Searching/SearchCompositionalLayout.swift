@@ -10,29 +10,28 @@ class SearchCompositionalLayout: UICollectionViewCompositionalLayout {
     }
 
     private struct Spec {
-        static let chipsItemSizeWidth: CGFloat = 1
-        static let chipsItemSizeHeight: CGFloat = 200
-        static let chipsGroupLayoutSizeWidth = 1.0
-        static let chipsGroupInterItemSpacing: CGFloat = 0
-        static let chipsSectionContentInsetsTop: CGFloat = 10
-        static let chipsSectionContentInsetsLeading: CGFloat = 0
-        static let chipsSectionContentInsetsTrailing: CGFloat = 0
-        static let chipsSectionContentInsetsBottom: CGFloat = 16
-        static let chipsSectionInterGroupSpacing: CGFloat = 0
-        static let chipsFooterHeaderSizeWidth = 1.0
-        static let chipsFooterHeaderSizeHeight = 42.0
-
-        static let recipeItemSizeWidth: CGFloat = 100
-        static let recipeItemSizeHeight: CGFloat = 100
-        static let recipeGroupLayoutSizeWidth = 1.0
-        static let recipeGroupInterItemSpacing: CGFloat = 8
-        static let recipeSectionContentInsetsTop: CGFloat = 10
-        static let recipeSectionContentInsetsLeading: CGFloat = 16
-        static let recipeSectionContentInsetsTrailing: CGFloat = 16
-        static let recipeSectionContentInsetsBottom: CGFloat = 16
-        static let recipeSectionInterGroupSpacing: CGFloat = 12
-        static let recipeFooterHeaderSizeWidth = 1.0
-        static let recipeFooterHeaderSizeHeight = 42.0
+        static var chipsItemSizeWidth: CGFloat = 1
+        static var chipsItemSizeHeight: CGFloat = 200
+        static var chipsGroupLayoutSizeWidth = 1.0
+        static var chipsGroupInterItemSpacing: CGFloat = 0
+        static var chipsSectionContentInsetsTop: CGFloat = 10
+        static var chipsSectionContentInsetsLeading: CGFloat = 0
+        static var chipsSectionContentInsetsTrailing: CGFloat = 0
+        static var chipsSectionContentInsetsBottom: CGFloat = 16
+        static var chipsSectionInterGroupSpacing: CGFloat = 0
+        static var chipsFooterHeaderSizeWidth = 1.0
+        static var chipsFooterHeaderSizeHeight = 42.0
+        static var recipeItemSizeWidth: CGFloat = 100
+        static var recipeItemSizeHeight: CGFloat = 100
+        static var recipeGroupLayoutSizeWidth = 1.0
+        static var recipeGroupInterItemSpacing: CGFloat = 8
+        static var recipeSectionContentInsetsTop: CGFloat = 10
+        static var recipeSectionContentInsetsLeading: CGFloat = 16
+        static var recipeSectionContentInsetsTrailing: CGFloat = 16
+        static var recipeSectionContentInsetsBottom: CGFloat = 16
+        static var recipeSectionInterGroupSpacing: CGFloat = 12
+        static var recipeFooterHeaderSizeWidth = 1.0
+        static var recipeFooterHeaderSizeHeight = 42.0
     }
 
     private static func createLayout() -> ((Int, NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection?) {

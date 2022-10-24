@@ -11,5 +11,3 @@ struct CategoryTag: Codable {
         case category = "strCategory"
     }
 }
-
-

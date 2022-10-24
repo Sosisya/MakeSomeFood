@@ -15,9 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var linksLabel: UILabel!
 
     private struct Spec {
-
-        static let linksLabelMinOffsetHeight: CGFloat = 8
-        static let linksLabelRealOffsetHeight: CGFloat = 18
+        static var linksLabelMinOffsetHeight: CGFloat = 8
+        static var linksLabelRealOffsetHeight: CGFloat = 18
     }
 
     override func viewDidLoad() {

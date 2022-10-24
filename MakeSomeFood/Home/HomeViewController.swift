@@ -10,13 +10,12 @@ class HomeViewController: UITableViewController, RecipePresenting {
     private var recipe: Recipe?
 
     private struct Spec {
-        static let titleSpecial = "Special"
-        static let titleActionAllRecipes = "All recipes"
-        static let titleCategory = "Categories"
-        static let profileImageCornerRadius: CGFloat = 12
-        static let countOfCellWithoutRecipe = 0
-        static let countOfCellWithRecipe = 1
-
+        static var titleSpecial = "Special"
+        static var titleActionAllRecipes = "All recipes"
+        static var titleCategory = "Categories"
+        static var profileImageCornerRadius: CGFloat = 12
+        static var countOfCellWithoutRecipe = 0
+        static var countOfCellWithRecipe = 1
     }
 
     enum Section: Int, CaseIterable {

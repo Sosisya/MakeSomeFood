@@ -2,7 +2,17 @@ import UIKit
 
 class BorderedTextField: UITextField {
 
-    let padding = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+    private struct Spec {
+        static var paddingInsetTop: CGFloat = 0
+        static var paddingInsetLeft: CGFloat = 12
+        static var paddingInsetBottom: CGFloat = 0
+        static var paddingInsetRight: CGFloat = 12
+        static var borderWidth: CGFloat = 1
+        static var borderCornerRadius: CGFloat = 12
+        static var borderColor = UIColor(named: "gray")?.cgColor
+    }
+
+    let padding = UIEdgeInsets(top: Spec.paddingInsetTop, left: Spec.paddingInsetLeft, bottom: Spec.paddingInsetBottom, right: Spec.paddingInsetRight)
 
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
@@ -29,10 +39,9 @@ class BorderedTextField: UITextField {
     }
 
     private func commonInit() {
-        layer.borderWidth = 1
-        layer.borderColor = UIColor(named: "gray")?.cgColor
-        layer.cornerRadius = 12
+        layer.borderWidth = Spec.borderWidth
+        layer.borderColor = Spec.borderColor
+        layer.cornerRadius = Spec.borderCornerRadius
         layer.masksToBounds = true
     }
 }
-

@@ -3,24 +3,21 @@ import UIKit
 class CellView: UIView {
 
     private struct Spec {
-
         static var maxHeighOfImage: CGFloat = 230
         static var minHeighOfImage: CGFloat = 160
-
         static var shadowCornerRadius: CGFloat = 12
         static var viewShadowColor = UIColor(named: "black")!.cgColor
         static var shadowOpacity: Float = 0.06
         static var shadowRadius: CGFloat = 10
         static var shadowOffsetHeoght: CGFloat = 12
         static var shadowOffsetWidth: CGFloat = 0
-
         static var viewCornerRadius: CGFloat = 12
         static var labelColor = UIColor(named: "white")!.cgColor
         static var viewBorderWidth: CGFloat = 1
-
         static var likeButtomIconName = "heart"
         static var likeSelectedButtomIconName = "heart.fill"
     }
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var nameOfMeal: UILabel!
@@ -85,4 +82,3 @@ class CellView: UIView {
         return self
     }
 }
-

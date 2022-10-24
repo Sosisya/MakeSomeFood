@@ -11,9 +11,7 @@ class RecipeViewController: UIViewController {
         static var headerContentInsetLeft: CGFloat = 0
         static var headerContentInsetBottom: CGFloat = 0
         static var headerContentInsetRight: CGFloat = 0
-
         static var headerContentOffsetX: CGFloat = 0
-
         static var ingredientHeaderTitle = "Ingredients"
         static var instructionHeaderTitle = "Instructions"
     }
