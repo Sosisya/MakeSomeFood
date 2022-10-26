@@ -91,4 +91,22 @@ struct ApiManager {
             }
         }.resume()
     }
+
+    static func getRecipes(category: String, completion: @escaping (Result<ReсipeList, Error>) -> Void) {
+        let urlString = "www.themealdb.com/api/json/v1/1/filter.php?c=\(category)"
+        guard let url = URL(string: urlString) else { return }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+
+            guard let data = data else { return }
+            guard error == nil else { return }
+
+            do {
+                let categories = try JSONDecoder().decode(ReсipeList.self, from: data)
+                completion(.success(categories))
+            } catch let error {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
 }

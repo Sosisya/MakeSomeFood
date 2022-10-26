@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryView: UIView!
@@ -28,5 +29,11 @@ class CategoryCell: UITableViewCell {
     private func setCellView(_ view: UIView) {
         view.layer.masksToBounds = true
         view.layer.cornerRadius = Spec.categoryViewCornerRadius
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        categoryImage.kf.cancelDownloadTask()
+        categoryImage.image = nil
     }
 }

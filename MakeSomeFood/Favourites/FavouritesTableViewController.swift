@@ -2,6 +2,8 @@ import UIKit
 
 class FavouritesTableViewController: UITableViewController, RecipePresenting {
 
+//    private var recipe: Recipe?
+
     private struct Spec {
         static var titleOfHeader = "Favourites"
     }
@@ -38,8 +40,8 @@ class FavouritesTableViewController: UITableViewController, RecipePresenting {
         return cell
     }
 
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        guard let recipe = recipe else { return }
-    //        showRecipe(recipe)
-    //    }
+//        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            guard let recipe = recipe else { return }
+//            showRecipe(recipe)
+//        }
 }

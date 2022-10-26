@@ -3,7 +3,6 @@ import UIKit
 class CategoryTableViewController: UITableViewController, RecipePresenting {
 
     var category: Category!
-    private var recipe: Recipe!
 
     private struct Spec {
         static var fontOfHeaderFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
@@ -28,7 +27,7 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
             let item = selectedCategoryRecepies[indexPath.row]
             cell.cellView.nameOfMeal.text = item.nameOfMeal
             cell.cellView.coverImageView.image = item.image

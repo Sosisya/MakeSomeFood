@@ -69,6 +69,7 @@
 		8EB084012900000300FF9C24 /* IngredientTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB084002900000300FF9C24 /* IngredientTagList.swift */; };
 		8EB08403290000D500FF9C24 /* AreaTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB08402290000D400FF9C24 /* AreaTagList.swift */; };
 		8EB084072901B9BF00FF9C24 /* ReсipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB084062901B9BF00FF9C24 /* ReсipeList.swift */; };
+		8EB0840B2908542700FF9C24 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB0840A2908542700FF9C24 /* Kingfisher */; };
 		8EDBF57128BBFA4C0013AD0D /* CollectionSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */; };
 		8EDBF57328BBFA5C0013AD0D /* CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */; };
 		8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDBF57428CDE0440013AD0D /* SearchCompositionalLayout.swift */; };
@@ -189,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB0840B2908542700FF9C24 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,14 +254,6 @@
 		8E9034C42898E7AA00D65515 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */,
-				8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */,
-				8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */,
-				8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */,
-				8E9034CA2898E7AA00D65515 /* Montserrat-ExtraBold.ttf */,
-				8E9034C82898E7AA00D65515 /* Montserrat-ExtraBoldItalic.ttf */,
-				8E9034D42898E7AB00D65515 /* Montserrat-ExtraLight.ttf */,
-				8E9034CF2898E7AA00D65515 /* Montserrat-ExtraLightItalic.ttf */,
 				8E59C96928DCB21000D6FEBE /* SF-Pro-Text-Black.otf */,
 				8E59C96128DCB21000D6FEBE /* SF-Pro-Text-BlackItalic.otf */,
 				8E59C96D28DCB21000D6FEBE /* SF-Pro-Text-Bold.otf */,
@@ -278,6 +272,14 @@
 				8E59C96328DCB21000D6FEBE /* SF-Pro-Text-ThinItalic.otf */,
 				8E59C96E28DCB21000D6FEBE /* SF-Pro-Text-Ultralight.otf */,
 				8E59C96C28DCB21000D6FEBE /* SF-Pro-Text-UltralightItalic.otf */,
+				8E9034CE2898E7AA00D65515 /* Montserrat-Black.ttf */,
+				8E9034D12898E7AB00D65515 /* Montserrat-BlackItalic.ttf */,
+				8E9034D02898E7AB00D65515 /* Montserrat-Bold.ttf */,
+				8E9034C62898E7AA00D65515 /* Montserrat-BoldItalic.ttf */,
+				8E9034CA2898E7AA00D65515 /* Montserrat-ExtraBold.ttf */,
+				8E9034C82898E7AA00D65515 /* Montserrat-ExtraBoldItalic.ttf */,
+				8E9034D42898E7AB00D65515 /* Montserrat-ExtraLight.ttf */,
+				8E9034CF2898E7AA00D65515 /* Montserrat-ExtraLightItalic.ttf */,
 				8E9034CB2898E7AA00D65515 /* Montserrat-Italic.ttf */,
 				8E9034CD2898E7AA00D65515 /* Montserrat-Light.ttf */,
 				8E9034D52898E7AB00D65515 /* Montserrat-LightItalic.ttf */,
@@ -408,6 +410,9 @@
 			dependencies = (
 			);
 			name = MakeSomeFood;
+			packageProductDependencies = (
+				8EB0840A2908542700FF9C24 /* Kingfisher */,
+			);
 			productName = MakeSomeFood;
 			productReference = 8EFEDA9C28983B2C001A2908 /* MakeSomeFood.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +441,9 @@
 				Base,
 			);
 			mainGroup = 8EFEDA9328983B2C001A2908;
+			packageReferences = (
+				8EB084092908542700FF9C24 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8EFEDA9D28983B2C001A2908 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -764,6 +772,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8EB084092908542700FF9C24 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8EB0840A2908542700FF9C24 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EB084092908542700FF9C24 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EFEDA9428983B2C001A2908 /* Project object */;
 }

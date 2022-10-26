@@ -34,6 +34,7 @@ class RecipeViewController: UIViewController {
         recipeHeader = tableView.tableHeaderView as? StrechyHeader
         tableView.tableHeaderView = nil
         tableView.addSubview(recipeHeader)
+        recipeHeader.headerImageView.kf.setImage(with: URL(string: recipe?.thumb ?? ""))
         tableView.contentInset = UIEdgeInsets(top: Spec.headerContentInsetTop, left: Spec.headerContentInsetLeft, bottom: Spec.headerContentInsetBottom, right: Spec.headerContentInsetRight)
         tableView.contentOffset = CGPoint(x: 0, y: -Spec.headerContentInsetTop)
         updateHeader()
@@ -92,19 +93,6 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         default:
             fatalError()
-        }
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        switch section {
-        case 0:
-            return 0.01
-        case 1:
-            return UITableView.automaticDimension
-        case 2:
-            return UITableView.automaticDimension
-        default:
-            return 0.01
         }
     }
 

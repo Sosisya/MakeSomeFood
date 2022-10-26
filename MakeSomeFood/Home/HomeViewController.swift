@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class HomeViewController: UITableViewController, RecipePresenting {
     @IBOutlet weak var greetingLabel: UILabel!
@@ -108,12 +109,14 @@ extension HomeViewController {
             cell.cellView.areaTagLabel.text = recipe?.area
             cell.cellView.categoryTagLabel.text = recipe?.category
             cell.cellView.nameOfMeal.text = recipe?.name
+            cell.cellView.coverImageView.kf.setImage(with: URL(string: recipe?.thumb ?? ""))
             return cell
         case .allCategories:
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
             let item = categories[indexPath.row]
             cell.categoryLabel.text = item.category
-            //            cell.categoryImage.image = item.imageOfCategory
+            let url = URL(string: item.thumb)
+            cell.categoryImage.kf.setImage(with: url)
             return cell
         default:
             fatalError()
