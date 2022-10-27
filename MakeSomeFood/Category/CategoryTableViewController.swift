@@ -1,8 +1,10 @@
 import UIKit
+import Kingfisher
 
 class CategoryTableViewController: UITableViewController, RecipePresenting {
 
     var category: Category!
+    private var recipeOfCategory: [RecipeOfCategory] = []
 
     private struct Spec {
         static var fontOfHeaderFont = UIFont(name: "Montserrat-SemiBold", size: 24)!
@@ -16,6 +18,18 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
         self.navigationController?.navigationBar.titleTextAttributes = [.font: Spec.fontOfHeaderFont]
         tableView.register(UINib(nibName: "SpecialTableViewCell", bundle: nil), forCellReuseIdentifier: "SpecialTableViewCell")
         tableView.separatorStyle = .none
+
+        ApiManager.getRecipes(category: category.category){ [weak self] result in
+            switch result {
+            case .success(let recipesOfCategoryList):
+                DispatchQueue.main.async {
+                    self?.recipeOfCategory = recipesOfCategoryList.meals
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,16 +37,16 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return selectedCategoryRecepies.count
+        return recipeOfCategory.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpecialTableViewCell", for: indexPath) as! SpecialTableViewCell
-            let item = selectedCategoryRecepies[indexPath.row]
-            cell.cellView.nameOfMeal.text = item.nameOfMeal
-            cell.cellView.coverImageView.image = item.image
-            cell.cellView.areaTagLabel.text = item.areaTagLabel
-            cell.cellView.categoryTagLabel.text = item.categoryTagLabel
+        let item = recipeOfCategory[indexPath.row]
+        cell.cellView.nameOfMeal.text = item.name
+        cell.cellView.coverImageView.kf.setImage(with: URL(string: item.thumb))
+//            cell.cellView.areaTagLabel.text = item.areaTagLabel
+//            cell.cellView.categoryTagLabel.text = item.categoryTagLabel
             cell.cellView.setIsFavourite(false)
             cell.cellView.hasLargeImage = false
             return cell

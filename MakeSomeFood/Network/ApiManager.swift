@@ -92,7 +92,7 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getRecipes(category: String, completion: @escaping (Result<ReсipeList, Error>) -> Void) {
+    static func getRecipes (category: String, completion: @escaping (Result<RecipesOfCategoryList, Error>) -> Void) {
         let urlString = "www.themealdb.com/api/json/v1/1/filter.php?c=\(category)"
         guard let url = URL(string: urlString) else { return }
 
@@ -102,8 +102,8 @@ struct ApiManager {
             guard error == nil else { return }
 
             do {
-                let categories = try JSONDecoder().decode(ReсipeList.self, from: data)
-                completion(.success(categories))
+                let meals = try JSONDecoder().decode(RecipesOfCategoryList.self, from: data)
+                completion(.success(meals))
             } catch let error {
                 completion(.failure(error))
             }

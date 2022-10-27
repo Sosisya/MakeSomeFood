@@ -75,13 +75,13 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
         switch Section(rawValue: indexPath.section) {
         case .category:
-            header.configure(title: Spec.titleOfCategory)
+            header.configure(title: Spec.titleOfCategory, actionTitle: "All categories")
         case .area:
-            header.configure(title: Spec.titleOfArea)
+            header.configure(title: Spec.titleOfArea, actionTitle: "All areas")
         case .ingredient:
-            header.configure(title: Spec.titleOfIngredient)
+            header.configure(title: Spec.titleOfIngredient, actionTitle: "All ingredients" )
         case .allRecipes:
-            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset)
+            header.configure(title: Spec.titleOfAllRecipes, actionTitle: "", offset: Spec.headerTitleOfAllRecipesOffset)
         default:
             break
         }
