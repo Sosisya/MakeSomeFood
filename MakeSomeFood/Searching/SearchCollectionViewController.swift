@@ -136,8 +136,4 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             fatalError()
         }
     }
-
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        showRecepie(recepie)
-//    }
 }
