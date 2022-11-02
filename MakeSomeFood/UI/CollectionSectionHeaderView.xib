@@ -35,7 +35,7 @@
                         <color key="baseForegroundColor" name="black"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="openAllTags:" destination="iN0-l3-epB" eventType="touchUpInside" id="kQh-7N-HMo"/>
+                        <action selector="pressAllTagsButton" destination="iN0-l3-epB" eventType="touchUpInside" id="gYG-ko-UBc"/>
                     </connections>
                 </button>
             </subviews>

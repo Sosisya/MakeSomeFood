@@ -10,7 +10,6 @@
 		8E0CAC242908F4CB00F31207 /* RecipesOfCategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */; };
 		8E0CAC282909B2E500F31207 /* AllChipsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC272909B2E500F31207 /* AllChipsCollectionViewController.swift */; };
 		8E0CAC2A2909B38900F31207 /* AllChipsCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC292909B38900F31207 /* AllChipsCompositionalLayout.swift */; };
-		8E0CAC2E290C108F00F31207 /* AllTagsPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC2D290C108E00F31207 /* AllTagsPresenting.swift */; };
 		8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19074028ABFE3B00ECD830 /* CellView.swift */; };
 		8E1E99FC28A90E37007349A9 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */; };
 		8E1E9A0228A91805007349A9 /* FavouriteFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1E9A0128A91805007349A9 /* FavouriteFiles.swift */; };
@@ -103,7 +102,6 @@
 		8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesOfCategoryList.swift; sourceTree = "<group>"; };
 		8E0CAC272909B2E500F31207 /* AllChipsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChipsCollectionViewController.swift; sourceTree = "<group>"; };
 		8E0CAC292909B38900F31207 /* AllChipsCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChipsCompositionalLayout.swift; sourceTree = "<group>"; };
-		8E0CAC2D290C108E00F31207 /* AllTagsPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTagsPresenting.swift; sourceTree = "<group>"; };
 		8E19074028ABFE3B00ECD830 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
 		8E1E9A0128A91805007349A9 /* FavouriteFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteFiles.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			children = (
 				8E0CAC272909B2E500F31207 /* AllChipsCollectionViewController.swift */,
 				8E0CAC292909B38900F31207 /* AllChipsCompositionalLayout.swift */,
-				8E0CAC2D290C108E00F31207 /* AllTagsPresenting.swift */,
 			);
 			path = AllChipsCollectionViewController;
 			sourceTree = "<group>";
@@ -319,8 +316,8 @@
 				8EB084062901B9BF00FF9C24 /* ReсipeList.swift */,
 				8EB083FE28FFFE7800FF9C24 /* CategoryTagList.swift */,
 				8EB084002900000300FF9C24 /* IngredientTagList.swift */,
-				8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */,
 				8EB08402290000D400FF9C24 /* AreaTagList.swift */,
+				8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */,
 				8EB083FA28FF189700FF9C24 /* ApiManager.swift */,
 			);
 			path = Network;
@@ -550,7 +547,6 @@
 				8E0CAC282909B2E500F31207 /* AllChipsCollectionViewController.swift in Sources */,
 				8EDBF57B28D43BB70013AD0D /* ProfileViewController.swift in Sources */,
 				8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */,
-				8E0CAC2E290C108F00F31207 /* AllTagsPresenting.swift in Sources */,
 				8E0CAC242908F4CB00F31207 /* RecipesOfCategoryList.swift in Sources */,
 				8E6ED28428A8E81800EB0CB2 /* TableSectionHeaderView.swift in Sources */,
 				8EDBF57528CDE0440013AD0D /* SearchCompositionalLayout.swift in Sources */,

@@ -75,13 +75,19 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
         switch Section(rawValue: indexPath.section) {
         case .category:
-            header.configure(title: Spec.titleOfCategory, actionTitle: "All categories")
+            header.configure(title: Spec.titleOfCategory, actionTitle: "All categories") { [weak self] in
+                self?.showAllTags(.category)
+            }
         case .area:
-            header.configure(title: Spec.titleOfArea, actionTitle: "All areas")
+            header.configure(title: Spec.titleOfArea, actionTitle: "All areas") { [weak self] in
+                self?.showAllTags(.area)
+            }
         case .ingredient:
-            header.configure(title: Spec.titleOfIngredient, actionTitle: "All ingredients" )
+            header.configure(title: Spec.titleOfIngredient, actionTitle: "All ingredients") { [weak self] in
+                self?.showAllTags(.ingredient)
+            }
         case .allRecipes:
-            header.configure(title: Spec.titleOfAllRecipes, actionTitle: "", offset: Spec.headerTitleOfAllRecipesOffset)
+            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset)
         default:
             break
         }
@@ -92,11 +98,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
         switch Section(rawValue: section) {
         case .category:
-            return categoriesTag.count
+            return min(categoriesTag.count, 6)
         case .area:
-            return areasTag.count
+            return min(areasTag.count, 6)
         case .ingredient:
-            return ingredietsTag.count
+            return min(ingredietsTag.count, 6)
         case .allRecipes:
             return 3
         default:
@@ -135,5 +141,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         default:
             fatalError()
         }
+    }
+
+    func showAllTags(_ tag: TagsType) {
+        let allTagsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllChipsCollectionViewController") as! AllChipsCollectionViewController
+        allTagsVC.tagsType = tag
+        show(allTagsVC, sender: self)
     }
 }
