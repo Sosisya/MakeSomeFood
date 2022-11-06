@@ -2,6 +2,8 @@ import UIKit
 
 class CellView: UIView {
 
+
+
     private struct Spec {
         static var maxHeighOfImage: CGFloat = 230
         static var minHeighOfImage: CGFloat = 160
@@ -26,6 +28,7 @@ class CellView: UIView {
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var coverImageHeight: NSLayoutConstraint!
+    @IBOutlet weak var tagsStackView: UIStackView!
 
     var hasLargeImage: Bool = false {
         didSet {

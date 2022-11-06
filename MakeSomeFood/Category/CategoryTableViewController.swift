@@ -45,14 +45,26 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
         let item = recipeOfCategory[indexPath.row]
         cell.cellView.nameOfMeal.text = item.name
         cell.cellView.coverImageView.kf.setImage(with: URL(string: item.thumb))
-//            cell.cellView.areaTagLabel.text = item.areaTagLabel
-//            cell.cellView.categoryTagLabel.text = item.categoryTagLabel
-            cell.cellView.setIsFavourite(false)
-            cell.cellView.hasLargeImage = false
-            return cell
+        cell.cellView.tagsStackView.isHidden = true
+        cell.cellView.setIsFavourite(false)
+        cell.cellView.hasLargeImage = false
+        return cell
     }
 
-//        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//            showRecipe(recipe)
-//        }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //        showRecipe(recipeOfCategory[indexPath.row])
+        let item = recipeOfCategory[indexPath.row]
+
+        ApiManager.getRecipeById(id: item.id){ [weak self] result in
+            switch result {
+            case .success(let recipesOfCategoryList):
+                DispatchQueue.main.async {
+                    guard let recipe = recipesOfCategoryList.meals.first else { return }
+                    self?.showRecipe(recipe)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

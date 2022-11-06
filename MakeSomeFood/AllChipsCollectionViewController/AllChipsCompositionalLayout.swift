@@ -45,12 +45,12 @@ class AllChipsCompositionalLayout: UICollectionViewCompositionalLayout {
             heightDimension: .absolute(Spec.recipeFooterHeaderSizeHeight)
         )
 
-        let header = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: footerHeaderSize,
-            elementKind: UICollectionView.elementKindSectionHeader,
-            alignment: .top
-        )
-        section.boundarySupplementaryItems = [header]
+//        let header = NSCollectionLayoutBoundarySupplementaryItem(
+//            layoutSize: footerHeaderSize,
+//            elementKind: UICollectionView.elementKindSectionHeader,
+//            alignment: .top
+//        )
+//        section.boundarySupplementaryItems = [header]
 
         return section
     }

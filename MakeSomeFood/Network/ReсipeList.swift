@@ -92,51 +92,52 @@ struct Recipe: Decodable {
         imageSource = try? values.decode(String.self, forKey: .imageSource)
         creativeCommonsConfirmed = try? values.decode(String.self, forKey: .creativeCommonsConfirmed)
         dateModified = try? values.decode(String.self, forKey: .dateModified)
-        let ingredientStrings: [String] = [
-            try values.decode(String.self, forKey: .ingredient1),
-            try values.decode(String.self, forKey: .ingredient2),
-            try values.decode(String.self, forKey: .ingredient3),
-            try values.decode(String.self, forKey: .ingredient4),
-            try values.decode(String.self, forKey: .ingredient5),
-            try values.decode(String.self, forKey: .ingredient6),
-            try values.decode(String.self, forKey: .ingredient7),
-            try values.decode(String.self, forKey: .ingredient8),
-            try values.decode(String.self, forKey: .ingredient9),
-            try values.decode(String.self, forKey: .ingredient10),
-            try values.decode(String.self, forKey: .ingredient11),
-            try values.decode(String.self, forKey: .ingredient12),
-            try values.decode(String.self, forKey: .ingredient13),
-            try values.decode(String.self, forKey: .ingredient14),
-            try values.decode(String.self, forKey: .ingredient15),
-            try values.decode(String.self, forKey: .ingredient16),
-            try values.decode(String.self, forKey: .ingredient17),
-            try values.decode(String.self, forKey: .ingredient18),
-            try values.decode(String.self, forKey: .ingredient19),
-            try values.decode(String.self, forKey: .ingredient20)
+        let ingredientStrings: [String?] = [
+            try? values.decode(String.self, forKey: .ingredient1),
+            try? values.decode(String.self, forKey: .ingredient2),
+            try? values.decode(String.self, forKey: .ingredient3),
+            try? values.decode(String.self, forKey: .ingredient4),
+            try? values.decode(String.self, forKey: .ingredient5),
+            try? values.decode(String.self, forKey: .ingredient6),
+            try? values.decode(String.self, forKey: .ingredient7),
+            try? values.decode(String.self, forKey: .ingredient8),
+            try? values.decode(String.self, forKey: .ingredient9),
+            try? values.decode(String.self, forKey: .ingredient10),
+            try? values.decode(String.self, forKey: .ingredient11),
+            try? values.decode(String.self, forKey: .ingredient12),
+            try? values.decode(String.self, forKey: .ingredient13),
+            try? values.decode(String.self, forKey: .ingredient14),
+            try? values.decode(String.self, forKey: .ingredient15),
+            try? values.decode(String.self, forKey: .ingredient16),
+            try? values.decode(String.self, forKey: .ingredient17),
+            try? values.decode(String.self, forKey: .ingredient18),
+            try? values.decode(String.self, forKey: .ingredient19),
+            try? values.decode(String.self, forKey: .ingredient20)
         ]
-        measures = [
-            try values.decode(String.self, forKey: .measure1),
-            try values.decode(String.self, forKey: .measure2),
-            try values.decode(String.self, forKey: .measure3),
-            try values.decode(String.self, forKey: .measure4),
-            try values.decode(String.self, forKey: .measure5),
-            try values.decode(String.self, forKey: .measure6),
-            try values.decode(String.self, forKey: .measure7),
-            try values.decode(String.self, forKey: .measure8),
-            try values.decode(String.self, forKey: .measure9),
-            try values.decode(String.self, forKey: .measure10),
-            try values.decode(String.self, forKey: .measure11),
-            try values.decode(String.self, forKey: .measure12),
-            try values.decode(String.self, forKey: .measure13),
-            try values.decode(String.self, forKey: .measure14),
-            try values.decode(String.self, forKey: .measure15),
-            try values.decode(String.self, forKey: .measure16),
-            try values.decode(String.self, forKey: .measure17),
-            try values.decode(String.self, forKey: .measure18),
-            try values.decode(String.self, forKey: .measure19),
-            try values.decode(String.self, forKey: .measure20)
+        let measuresArray: [String?] = [
+            try? values.decode(String.self, forKey: .measure1),
+            try? values.decode(String.self, forKey: .measure2),
+            try? values.decode(String.self, forKey: .measure3),
+            try? values.decode(String.self, forKey: .measure4),
+            try? values.decode(String.self, forKey: .measure5),
+            try? values.decode(String.self, forKey: .measure6),
+            try? values.decode(String.self, forKey: .measure7),
+            try? values.decode(String.self, forKey: .measure8),
+            try? values.decode(String.self, forKey: .measure9),
+            try? values.decode(String.self, forKey: .measure10),
+            try? values.decode(String.self, forKey: .measure11),
+            try? values.decode(String.self, forKey: .measure12),
+            try? values.decode(String.self, forKey: .measure13),
+            try? values.decode(String.self, forKey: .measure14),
+            try? values.decode(String.self, forKey: .measure15),
+            try? values.decode(String.self, forKey: .measure16),
+            try? values.decode(String.self, forKey: .measure17),
+            try? values.decode(String.self, forKey: .measure18),
+            try? values.decode(String.self, forKey: .measure19),
+            try? values.decode(String.self, forKey: .measure20)
         ]
-        ingredients = ingredientStrings.filter {
+        measures = measuresArray.compactMap { $0 }
+        ingredients = ingredientStrings.compactMap { $0 }.filter {
             !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         }
     }
