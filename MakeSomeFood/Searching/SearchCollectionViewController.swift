@@ -5,6 +5,10 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     private var categoriesTag: [CategoryTag] = []
     private var areasTag: [AreaTag] = []
     private var ingredietsTag: [IngredientTag] = []
+    private var recipe: [Recipe] = []
+
+    private var recipes: Recipe?
+
 
     private struct Spec {
         static var titleOfCategory = "Categories"
@@ -65,6 +69,18 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
                 print(error.localizedDescription)
             }
         }
+
+        ApiManager.getAllRecipes { [weak self] result in
+            switch result {
+            case .success(let recipes):
+                DispatchQueue.main.async {
+                    self?.recipe = recipes.meals
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -87,7 +103,9 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
                 self?.showAllTags(.ingredient)
             }
         case .allRecipes:
-            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset)
+            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset) { [weak self] in
+                self?.showAllTags(.ingredient)
+            }
         default:
             break
         }
@@ -104,7 +122,7 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         case .ingredient:
             return min(ingredietsTag.count, 6)
         case .allRecipes:
-            return 3
+            return recipe.count
         default:
             fatalError()
         }
@@ -137,6 +155,12 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
             return cell
         case .allRecipes:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchAllRecipesCollectionViewCell", for: indexPath) as! SearchAllRecipesCollectionViewCell
+            let item = recipe[indexPath.row]
+            cell.searchingView.hasLargeImage = true
+            cell.searchingView.areaTagLabel.text = item.area
+            cell.searchingView.categoryTagLabel.text = item.category
+            cell.searchingView.nameOfMeal.text = item.name
+            cell.searchingView.coverImageView.kf.setImage(with: URL(string: item.thumb ?? ""))
             return cell
         default:
             fatalError()
@@ -147,5 +171,10 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let allTagsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllChipsCollectionViewController") as! AllChipsCollectionViewController
         allTagsVC.tagsType = tag
         show(allTagsVC, sender: self)
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let recipe = recipes else { return }
+        showRecipe(recipe)
     }
 }

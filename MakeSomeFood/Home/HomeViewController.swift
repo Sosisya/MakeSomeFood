@@ -92,7 +92,9 @@ extension HomeViewController {
         //        let header = TableSectionHeaderView.f_loadInstanceFromNib()
         switch Section(rawValue: section) {
         case .special:
-            header.configure(title: Spec.titleSpecial , actionTitle: Spec.titleActionAllRecipes)
+            header.configure(title: Spec.titleSpecial , actionTitle: Spec.titleActionAllRecipes) { [weak self] in
+                self?.showAllRecipes()
+            }
         case .allCategories:
             header.configure(title: Spec.titleCategory)
         default:
@@ -135,5 +137,10 @@ extension HomeViewController {
         default:
             break
         }
+    }
+
+    func showAllRecipes() {
+        let allRecipesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllRecipesTableViewController") as! AllRecipesTableViewController
+        show(allRecipesVC, sender: self)
     }
 }
