@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class SearchCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, RecipePresenting {
 
     private var categoriesTag: [CategoryTag] = []
     private var areasTag: [AreaTag] = []
@@ -81,6 +81,18 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
                 print(error.localizedDescription)
             }
         }
+
+        ApiManager.getRecipe { [weak self] result in
+            switch result {
+            case .success(let recipes):
+                DispatchQueue.main.async {
+                    self?.recipes = recipes.meals.first
+                    self?.collectionView.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -132,8 +144,12 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         return CGSize(width: collectionView.bounds.width, height: Spec.collectionViewLayoutHeight)
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let recipes = recipes else { return }
+        showRecipe(recipes)
+    }
 
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch Section(rawValue: indexPath.section) {
         case .category:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchingViewCell", for: indexPath) as! SearchingViewCell
@@ -171,10 +187,5 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let allTagsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AllChipsCollectionViewController") as! AllChipsCollectionViewController
         allTagsVC.tagsType = tag
         show(allTagsVC, sender: self)
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let recipe = recipes else { return }
-        showRecipe(recipe)
     }
 }
