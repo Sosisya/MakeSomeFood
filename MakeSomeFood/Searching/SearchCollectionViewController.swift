@@ -13,16 +13,15 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         static var titleOfCategory = "Categories"
         static var titleOfArea = "Area"
         static var titleOfIngredient = "Ingredients"
-        static var titleOfAllCategories = "All categories"
-        static var titleOfAllAreas = "All areas"
-        static var titleOfAllIngridients = "All ingridients"
+        static var titleOfAllCategories = TagsType.category.title
+        static var titleOfAllAreas = TagsType.area.title
+        static var titleOfAllIngridients = TagsType.ingredient.title
         static var titleOfAllRecipes = "All recipes"
         static var colorOfTagOrange = UIColor(named: "orange")
         static var colorOfTagsGreen = UIColor(named: "green")
         static var headerTitleOfAllRecipesOffset: CGFloat = 16
         static var collectionViewLayoutHeight: CGFloat = 42
         static var countOfTags = 6
-
     }
 
     enum Section: Int, CaseIterable {
@@ -181,8 +180,16 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = recipe[indexPath.row]
-        showRecipe(item)
+        switch Section(rawValue: indexPath.section) {
+        case  .allRecipes:
+            let item = recipe[indexPath.row]
+            showRecipe(item)
+        default:
+            break
+        }
+
+
+
     }
 
     func showAllTags(_ tag: TagsType) {

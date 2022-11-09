@@ -64,7 +64,8 @@ class HomeViewController: UITableViewController, RecipePresenting {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? CategoryTableViewController,
            let selectedCategory = selectedCategory {
-            destination.category = selectedCategory
+            destination.category = selectedCategory.category
+            destination.tagsType = .category
         }
     }
 }

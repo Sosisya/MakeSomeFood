@@ -10,6 +10,7 @@
 		8E0CAC242908F4CB00F31207 /* RecipesOfCategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */; };
 		8E0CAC282909B2E500F31207 /* AllChipsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC272909B2E500F31207 /* AllChipsCollectionViewController.swift */; };
 		8E0CAC2A2909B38900F31207 /* AllChipsCompositionalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CAC292909B38900F31207 /* AllChipsCompositionalLayout.swift */; };
+		8E11B9E7291BF9A50002F629 /* TagsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E11B9E6291BF9A50002F629 /* TagsType.swift */; };
 		8E12F55D2917F6CA0009BB0C /* AllRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12F55C2917F6CA0009BB0C /* AllRecipesTableViewController.swift */; };
 		8E19074128ABFE3B00ECD830 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19074028ABFE3B00ECD830 /* CellView.swift */; };
 		8E1E99FC28A90E37007349A9 /* SearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */; };
@@ -102,6 +103,7 @@
 		8E0CAC232908F4CB00F31207 /* RecipesOfCategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesOfCategoryList.swift; sourceTree = "<group>"; };
 		8E0CAC272909B2E500F31207 /* AllChipsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChipsCollectionViewController.swift; sourceTree = "<group>"; };
 		8E0CAC292909B38900F31207 /* AllChipsCompositionalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllChipsCompositionalLayout.swift; sourceTree = "<group>"; };
+		8E11B9E6291BF9A50002F629 /* TagsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsType.swift; sourceTree = "<group>"; };
 		8E12F55C2917F6CA0009BB0C /* AllRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesTableViewController.swift; sourceTree = "<group>"; };
 		8E19074028ABFE3B00ECD830 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		8E1E99FB28A90E37007349A9 /* SearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewController.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				8E4148BB28F5763700DEB191 /* Header.swift */,
 				8E4148B928F5762900DEB191 /* Header.xib */,
 				8E6ED28328A8E81800EB0CB2 /* TableSectionHeaderView.swift */,
+				8E11B9E6291BF9A50002F629 /* TagsType.swift */,
 				8E6ED28128A8E65900EB0CB2 /* TableSectionHeaderView.xib */,
 				8EDBF57228BBFA5C0013AD0D /* CollectionSectionHeaderView.swift */,
 				8EDBF57028BBFA4C0013AD0D /* CollectionSectionHeaderView.xib */,
@@ -552,6 +555,7 @@
 				8EFEDAA028983B2C001A2908 /* AppDelegate.swift in Sources */,
 				8E31CFD5289BC8F0006CE7AC /* CategoryCell.swift in Sources */,
 				8E0CAC282909B2E500F31207 /* AllChipsCollectionViewController.swift in Sources */,
+				8E11B9E7291BF9A50002F629 /* TagsType.swift in Sources */,
 				8EDBF57B28D43BB70013AD0D /* ProfileViewController.swift in Sources */,
 				8EFBA2AA28AEB0500098644F /* UIView+FromNib.swift in Sources */,
 				8E0CAC242908F4CB00F31207 /* RecipesOfCategoryList.swift in Sources */,

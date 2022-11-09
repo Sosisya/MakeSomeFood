@@ -3,7 +3,8 @@ import Kingfisher
 
 class CategoryTableViewController: UITableViewController, RecipePresenting {
 
-    var category: Category!
+    var tagsType: TagsType!
+    var category:  String!
     private var recipeOfCategory: [RecipeOfCategory] = []
 
     private struct Spec {
@@ -14,12 +15,12 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        title = category.category
+        title = category
         self.navigationController?.navigationBar.titleTextAttributes = [.font: Spec.fontOfHeaderFont]
         tableView.register(UINib(nibName: "SpecialTableViewCell", bundle: nil), forCellReuseIdentifier: "SpecialTableViewCell")
         tableView.separatorStyle = .none
 
-        ApiManager.getRecipes(category: category.category){ [weak self] result in
+        ApiManager.getRecipes(filterId: tagsType.filterId, value: category){ [weak self] result in
             switch result {
             case .success(let recipesOfCategoryList):
                 DispatchQueue.main.async {

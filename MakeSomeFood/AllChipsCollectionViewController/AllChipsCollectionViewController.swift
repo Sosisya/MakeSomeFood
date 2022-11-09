@@ -1,19 +1,5 @@
 import UIKit
 
-enum TagsType {
-    case category
-    case area
-    case ingredient
-
-    var color: UIColor {
-        switch self {
-        case .category: return UIColor(named: "orange")!
-        case .area: return UIColor(named: "green")!
-        case .ingredient: return UIColor(named: "orange")!
-        }
-    }
-}
-
 class AllChipsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var tagsType: TagsType?
@@ -22,7 +8,7 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "All"
+        title = tagsType?.title
         self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "Montserrat-SemiBold", size: 24)!]
 
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")

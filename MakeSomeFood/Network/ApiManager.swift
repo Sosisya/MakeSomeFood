@@ -96,8 +96,8 @@ struct ApiManager {
         }.resume()
     }
 
-    static func getRecipes(category: String, completion: @escaping (Result<RecipesOfCategoryList, Error>) -> Void) {
-        let urlString = "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(category)"
+    static func getRecipes(filterId: String, value: String, completion: @escaping (Result<RecipesOfCategoryList, Error>) -> Void) {
+        let urlString = "https://www.themealdb.com/api/json/v1/1/filter.php?\(filterId)=\(value)"
         guard let url = URL(string: urlString) else { return }
 
         URLSession.shared.dataTask(with: url) { data, response, error in

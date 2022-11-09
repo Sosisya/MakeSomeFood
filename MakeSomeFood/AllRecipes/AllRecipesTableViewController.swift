@@ -53,6 +53,5 @@ class AllRecipesTableViewController: UITableViewController, RecipePresenting {
         let item = recipe[indexPath.row]
         showRecipe(item)
     }
-    
 }
 
