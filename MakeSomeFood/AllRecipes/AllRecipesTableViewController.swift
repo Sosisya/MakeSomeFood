@@ -48,5 +48,11 @@ class AllRecipesTableViewController: UITableViewController, RecipePresenting {
         cell.cellView.hasLargeImage = false
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = recipe[indexPath.row]
+        showRecipe(item)
+    }
+    
 }
 

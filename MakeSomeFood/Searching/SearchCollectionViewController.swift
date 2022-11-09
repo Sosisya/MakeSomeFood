@@ -9,16 +9,20 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     private var recipes: Recipe?
 
-
     private struct Spec {
         static var titleOfCategory = "Categories"
         static var titleOfArea = "Area"
         static var titleOfIngredient = "Ingredients"
+        static var titleOfAllCategories = "All categories"
+        static var titleOfAllAreas = "All areas"
+        static var titleOfAllIngridients = "All ingridients"
         static var titleOfAllRecipes = "All recipes"
         static var colorOfTagOrange = UIColor(named: "orange")
         static var colorOfTagsGreen = UIColor(named: "green")
         static var headerTitleOfAllRecipesOffset: CGFloat = 16
         static var collectionViewLayoutHeight: CGFloat = 42
+        static var countOfTags = 6
+
     }
 
     enum Section: Int, CaseIterable {
@@ -103,21 +107,19 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionSectionHeaderView", for: indexPath) as! CollectionSectionHeaderView
         switch Section(rawValue: indexPath.section) {
         case .category:
-            header.configure(title: Spec.titleOfCategory, actionTitle: "All categories") { [weak self] in
+            header.configure(title: Spec.titleOfCategory, actionTitle: Spec.titleOfAllCategories) { [weak self] in
                 self?.showAllTags(.category)
             }
         case .area:
-            header.configure(title: Spec.titleOfArea, actionTitle: "All areas") { [weak self] in
+            header.configure(title: Spec.titleOfArea, actionTitle: Spec.titleOfAllAreas) { [weak self] in
                 self?.showAllTags(.area)
             }
         case .ingredient:
-            header.configure(title: Spec.titleOfIngredient, actionTitle: "All ingredients") { [weak self] in
+            header.configure(title: Spec.titleOfIngredient, actionTitle: Spec.titleOfAllIngridients) { [weak self] in
                 self?.showAllTags(.ingredient)
             }
         case .allRecipes:
-            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset) { [weak self] in
-                self?.showAllTags(.ingredient)
-            }
+            header.configure(title: Spec.titleOfAllRecipes, offset: Spec.headerTitleOfAllRecipesOffset)
         default:
             break
         }
@@ -128,11 +130,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
         switch Section(rawValue: section) {
         case .category:
-            return min(categoriesTag.count, 6)
+            return min(categoriesTag.count, Spec.countOfTags)
         case .area:
-            return min(areasTag.count, 6)
+            return min(areasTag.count, Spec.countOfTags)
         case .ingredient:
-            return min(ingredietsTag.count, 6)
+            return min(ingredietsTag.count, Spec.countOfTags)
         case .allRecipes:
             return recipe.count
         default:
@@ -142,11 +144,6 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: Spec.collectionViewLayoutHeight)
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let recipes = recipes else { return }
-        showRecipe(recipes)
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -181,6 +178,11 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         default:
             fatalError()
         }
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = recipe[indexPath.row]
+        showRecipe(item)
     }
 
     func showAllTags(_ tag: TagsType) {

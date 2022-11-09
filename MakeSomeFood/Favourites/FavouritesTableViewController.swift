@@ -34,9 +34,4 @@ class FavouritesTableViewController: UITableViewController, RecipePresenting {
         cell.cellView.hasLargeImage = false
         return cell
     }
-
-//        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//            guard let recipe = recipe else { return }
-//            showRecipe(recipe)
-//        }
 }

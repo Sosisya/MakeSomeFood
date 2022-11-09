@@ -52,7 +52,6 @@ class CategoryTableViewController: UITableViewController, RecipePresenting {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        showRecipe(recipeOfCategory[indexPath.row])
         let item = recipeOfCategory[indexPath.row]
 
         ApiManager.getRecipeById(id: item.id){ [weak self] result in
