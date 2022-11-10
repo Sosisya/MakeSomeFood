@@ -4,7 +4,7 @@ import Kingfisher
 class CategoryTableViewController: UITableViewController, RecipePresenting {
 
     var tagsType: TagsType!
-    var category:  String!
+    var category: String!
     private var recipeOfCategory: [RecipeOfCategory] = []
 
     private struct Spec {

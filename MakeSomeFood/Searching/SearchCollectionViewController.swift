@@ -187,9 +187,6 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         default:
             break
         }
-
-
-
     }
 
     func showAllTags(_ tag: TagsType) {

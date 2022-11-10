@@ -134,7 +134,10 @@ extension HomeViewController {
         case .allCategories:
             guard indexPath.section == 1 else { return }
             selectedCategory = categories[indexPath.row]
+            print("didSelect")
+            print(categories[indexPath.row])
             performSegue(withIdentifier: "toCategory", sender: self)
+            print("переход на экран рецепта")
         default:
             break
         }

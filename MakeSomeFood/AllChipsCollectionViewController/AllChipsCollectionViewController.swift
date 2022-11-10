@@ -4,6 +4,7 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
 
     var tagsType: TagsType?
     private var tags: [String] = []
+    var selectedTag: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
                     print(error.localizedDescription)
                 }
             }
+            
         case .ingredient:
             ApiManager.getTagsOfIngredients { [weak self] result in
                 switch result {
@@ -69,6 +71,37 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
         cell.tagLabel.text = item
         cell.backgroundColor = tagsType?.color
         return cell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedTag = tags[indexPath.row]
+        performSegue(withIdentifier: "toTags", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        switch tagsType {
+        case .category:
+            if let destination = segue.destination as? CategoryTableViewController,
+               let selectedTag = selectedTag {
+                destination.category = selectedTag
+                destination.tagsType = .category
+            }
+        case .area:
+            if let destination = segue.destination as? CategoryTableViewController,
+               let selectedTag = selectedTag {
+                destination.category = selectedTag
+                destination.tagsType = .area
+            }
+        case .ingredient:
+            if let destination = segue.destination as? CategoryTableViewController,
+               let selectedTag = selectedTag {
+                destination.category = selectedTag
+                destination.tagsType = .ingredient
+            }
+        default:
+            break
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

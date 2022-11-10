@@ -207,7 +207,7 @@
         <!--Category Table View Controller-->
         <scene sceneID="JTq-LG-FwA">
             <objects>
-                <tableViewController id="99n-vH-lXv" customClass="CategoryTableViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoryTableViewController" id="99n-vH-lXv" customClass="CategoryTableViewController" customModule="MakeSomeFood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eUs-Ym-IVq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,6 +508,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="8bn-Dt-MnH"/>
+                    <connections>
+                        <segue destination="99n-vH-lXv" kind="presentation" identifier="toTags" modalPresentationStyle="fullScreen" id="kjz-1D-DWV"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSj-ZI-xZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -563,7 +566,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-ch-BZr">
-                                        <rect key="frame" x="16" y="609" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="657" width="382" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="h74-ki-hwj"/>
                                         </constraints>
@@ -996,6 +999,9 @@
             <point key="canvasLocation" x="3599" y="825"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7z7-me-hab"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="icon.apple" width="22" height="22"/>
