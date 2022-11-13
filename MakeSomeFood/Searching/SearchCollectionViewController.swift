@@ -181,6 +181,8 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch Section(rawValue: indexPath.section) {
+        case .category:
+            showRecipes(.category, categoriesTag[indexPath.item].category)
         case  .allRecipes:
             let item = recipe[indexPath.row]
             showRecipe(item)

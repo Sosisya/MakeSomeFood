@@ -59,15 +59,6 @@ class HomeViewController: UITableViewController, RecipePresenting {
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = Spec.profileImageCornerRadius
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if let destination = segue.destination as? CategoryTableViewController,
-           let selectedCategory = selectedCategory {
-            destination.category = selectedCategory.category
-            destination.tagsType = .category
-        }
-    }
 }
 
 extension HomeViewController {
@@ -133,11 +124,7 @@ extension HomeViewController {
             showRecipe(recipe)
         case .allCategories:
             guard indexPath.section == 1 else { return }
-            selectedCategory = categories[indexPath.row]
-            print("didSelect")
-            print(categories[indexPath.row])
-            performSegue(withIdentifier: "toCategory", sender: self)
-            print("переход на экран рецепта")
+            showRecipes(.category, categories[indexPath.row].category)
         default:
             break
         }

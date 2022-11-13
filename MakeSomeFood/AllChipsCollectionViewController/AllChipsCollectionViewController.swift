@@ -1,15 +1,15 @@
 import UIKit
 
-class AllChipsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class AllChipsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, RecipePresenting {
 
-    var tagsType: TagsType?
+    var tagsType: TagsType!
     private var tags: [String] = []
     var selectedTag: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = tagsType?.title
+        title = tagsType.title
         self.navigationController?.navigationBar.titleTextAttributes = [.font: UIFont(name: "Montserrat-SemiBold", size: 24)!]
 
         collectionView.register(UINib(nibName: "SearchingViewCell", bundle: nil), forCellWithReuseIdentifier: "SearchingViewCell")
@@ -74,34 +74,7 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedTag = tags[indexPath.row]
-        performSegue(withIdentifier: "toTags", sender: self)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        switch tagsType {
-        case .category:
-            if let destination = segue.destination as? CategoryTableViewController,
-               let selectedTag = selectedTag {
-                destination.category = selectedTag
-                destination.tagsType = .category
-            }
-        case .area:
-            if let destination = segue.destination as? CategoryTableViewController,
-               let selectedTag = selectedTag {
-                destination.category = selectedTag
-                destination.tagsType = .area
-            }
-        case .ingredient:
-            if let destination = segue.destination as? CategoryTableViewController,
-               let selectedTag = selectedTag {
-                destination.category = selectedTag
-                destination.tagsType = .ingredient
-            }
-        default:
-            break
-        }
+        showRecipes(tagsType, tags[indexPath.item])
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -197,7 +197,6 @@
                     <connections>
                         <outlet property="greetingLabel" destination="B26-V5-1zE" id="kiR-Wq-2rU"/>
                         <outlet property="profileImage" destination="TUZ-3h-sbA" id="8JS-oQ-ZGg"/>
-                        <segue destination="99n-vH-lXv" kind="show" identifier="toCategory" id="7z7-me-hab"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbr-ky-Ufb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -508,9 +507,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="8bn-Dt-MnH"/>
-                    <connections>
-                        <segue destination="99n-vH-lXv" kind="presentation" identifier="toTags" modalPresentationStyle="fullScreen" id="kjz-1D-DWV"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSj-ZI-xZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -999,9 +995,6 @@
             <point key="canvasLocation" x="3599" y="825"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="7z7-me-hab"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="icon.apple" width="22" height="22"/>
