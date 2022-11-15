@@ -183,6 +183,10 @@ class SearchCollectionViewController: UICollectionViewController, UICollectionVi
         switch Section(rawValue: indexPath.section) {
         case .category:
             showRecipes(.category, categoriesTag[indexPath.item].category)
+        case .area:
+            showRecipes(.area, areasTag[indexPath.item].area)
+        case .ingredient:
+            showRecipes(.ingredient, ingredietsTag[indexPath.item].ingredient)
         case  .allRecipes:
             let item = recipe[indexPath.row]
             showRecipe(item)

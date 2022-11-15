@@ -4,7 +4,6 @@ class AllChipsCollectionViewController: UICollectionViewController, UICollection
 
     var tagsType: TagsType!
     private var tags: [String] = []
-    var selectedTag: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

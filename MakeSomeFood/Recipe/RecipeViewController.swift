@@ -14,6 +14,7 @@ class RecipeViewController: UIViewController {
         static var headerContentOffsetX: CGFloat = 0
         static var ingredientHeaderTitle = "Ingredients"
         static var instructionHeaderTitle = "Instructions"
+        static var fontOfInstruction = UIFont(name: "Montserrat-Regular", size: 16)!
     }
 
     enum Section: Int, CaseIterable {
@@ -89,7 +90,9 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .instruction:
             let cell = tableView.dequeueReusableCell(withIdentifier: "InstructionOfRecipeTableViewCell", for: indexPath) as! InstructionOfRecipeTableViewCell
-            cell.recipeInsctruction.text = recipe?.instruction
+            var paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineHeightMultiple = 1.33
+            cell.recipeInsctruction.attributedText = NSMutableAttributedString(string: recipe?.instruction ?? "", attributes: [.kern: -0.41, .paragraphStyle: paragraphStyle, .font: Spec.fontOfInstruction])
             return cell
         default:
             fatalError()

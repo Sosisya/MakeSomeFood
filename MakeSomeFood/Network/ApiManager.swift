@@ -150,5 +150,4 @@ struct ApiManager {
             }
         }.resume()
     }
-
 }
